@@ -1,3 +1,14 @@
+# How to run
+
+Run:
+```bash
+conda activate rasa
+ngrok.exe http 5005
+rasa run
+rasa run actions --port 5056
+chat with https://t.me/mora_bank_en_bot
+docker run -p 8000:8000 rasa/duckling
+
 # Notes on Rasa `3.x/ 2.x / 1.x`
 
 1. The `main` branch of this repo is compatible with Rasa Open Source **version 3.x**
