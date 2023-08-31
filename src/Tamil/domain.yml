@@ -347,137 +347,137 @@ slots:
         requested_slot: zz_confirm_form
 responses:
   utter_out_of_scope:
-  - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.
+  - text: மன்னிக்கவும், அதற்கு எப்படி பதிலளிப்பது என்று தெரியவில்லை. உதவிக்கு "உதவி" என தட்டச்சு செய்யவும்.
   utter_ask_transfer_money_form_amount-of-money:
-  - text: How much money do you want to transfer?
+  - text: நீங்கள் எவ்வளவு பணத்தை மாற்ற விரும்புகிறீர்கள்?
   utter_ask_transfer_money_form_PERSON:
-  - text: Who do you want to transfer money to?
+  - text: யாருக்கு பணத்தை மாற்ற விரும்புகிறீர்கள்?
   utter_goodbye:
-  - text: Bye
+  - text: விடைபெறுகிறேன்
   utter_noworries:
-  - text: You're welcome :)
+  - text: பரவாயில்லை :)
   utter_transfer_complete:
-  - text: Successfully transferred {currency}{amount-of-money} to {PERSON}.
+  - text: "{PERSON} க்கு {currency}{amount-of-money} வெற்றிகரமாக மாற்றப்பட்டது."
   utter_transfer_charge:
-  - text: You are entitled to six transfers within a statement cycle before being charged. For subsequent transfers you will be charged {currency}10 per transaction.
+  - text: கட்டணம் விதிக்கப்படுவதற்கு முன், அறிக்கை சுழற்சியில் ஆறு பணமாற்றங்களை உங்களால் மேற்கொள்ள முடியும் .அடுத்தடுத்த பண மாற்றங்களுக்கு உங்களிடமிருந்து ஒரு பரிவர்த்தனைக்கு {currency}10 வீதம்  வசூலிக்கப்படும்.
   utter_ask_cc_payment_form_amount-of-money:
-  - text: How much do you want to pay?
+  - text: நீங்கள் எவ்வளவு செலுத்த வேண்டும்?
   utter_ask_cc_payment_form_credit_card:
-  - text: Towards which credit card account do you want to make a payment?
+  - text: எந்த கிரெடிட் கார்டு கணக்கிற்கு நீங்கள் பணம் செலுத்த விரும்புகிறீர்கள்?
   utter_ask_cc_payment_form_time:
-  - text: For which date would you like to schedule the payment?
+  - text: எந்த திகதியில்  கட்டணத்தை செலுத்த  திட்டமிட்டுள்ளீர்கள்?
   utter_ask_transaction_search_form_vendor_name:
-  - text: For which vendor do you want to see transactions?  e.g Starbucks, Target, Amazon
+  - text: எந்த விற்பனையாளருக்கான பண மாற்றங்களைப் பார்க்க விரும்புகிறீர்கள்?  உ.ம் Starbucks, Target, Amazon
   utter_ask_transaction_search_form_time:
-  - text: In which timeframe would you like to search for transactions?
+  - text: எந்தக் நேரத்தில் இடம்பெற்ற   பணமாற்றங்களை  தேட விரும்புகிறீர்கள்?
   utter_ask_transaction_search_form_search_type:
-  - text: Would you like to search incoming or outgoing transactions?
+  - text: உள்வரும் அல்லது வெளிச்செல்லும் எந்த பணமாற்றங்களை  தேட விரும்புகிறீர்கள் ?
     buttons:
-    - title: Incoming (earnings)
+    - title: உள்வரும் (வரவு)
       payload: /inform{"search_type":"deposit"}'
-    - title: Outgoing (spending)
+    - title: வெளிச்செல்லும் (செலவு)
       payload: /inform{"search_type":"spend"}'
   utter_no_payment_amount:
-  - text: Sorry, I don't understand that payment amount.
+  - text: மன்னிக்கவும் , நீங்கள் அளித்த தொகை தெளிவாக இல்லை.
   utter_no_paymentdate:
-  - text: Sorry, that is not a valid payment date.
+  - text: மன்னிக்கவும், நீங்கள் அளித்த பணம் செலுத்தும் திகதி செல்லுபடியாகாது.
   utter_no_creditcard:
-  - text: Sorry, that is not a valid credit card account to make payments towards.
+  - text: மன்னிக்கவும், பணம் செலுத்துவதற்கு இந்த  கிரெடிட் கார்டு கணக்கு செல்லுபடியாகாது.
   utter_no_vendor_name:
-  - text: Sorry, that's not a recognized vendor.
+  - text: மன்னிக்கவும், அது அங்கீகரிக்கப்பட்ட விற்பனையாளர் அல்ல.
   utter_no_transactdate:
-  - text: Sorry, that's not a recognized time frame.
+  - text: மன்னிக்கவும், நீங்கள் அளித்த நேரம்  செல்லுபடியாகாது .
   utter_cc_pay_scheduled:
-  - text: Payment of {currency}{amount-of-money}{payment_amount_type} towards your {credit_card} account scheduled to be paid at {time_formatted}.
+  - text: உங்கள் {credit_card} கணக்கிற்கான {currency}{amount-of-money}{payment_amount_type} தொகையை {time_formatted} இல் செலுத்த திட்டமிடப்பட்டுள்ளது.
   utter_searching_spend_transactions:
-  - text: Searching transactions{vendor_name} between {start_time_formatted} and {end_time_formatted}...
+  - text: "{start_time_formatted} மற்றும் {end_time_formatted} இடையே {vendor_name} இல் இடம்பெற்ற பணமாற்றங்கள் தேடப்படுகிறது ..."
   utter_found_spend_transactions:
-  - text: I found {numtransacts} transactions{vendor_name} totalling {currency}{total}.
+  - text: "{numtransacts} பணமாற்றங்கள் {vendor_name} மொத்தம் {currency}{total} ஆகும்."
   utter_searching_deposit_transactions:
-  - text: Searching deposits made to your account between {start_time_formatted} and {end_time_formatted}...
+  - text: "{start_time_formatted} மற்றும் {end_time_formatted} இடையே உங்கள் கணக்கில் இடம்பெற்ற வைப்புகள் தேடப்படுகிறது ..."
   utter_found_deposit_transactions:
-  - text: I found {numtransacts} deposits made to your account totalling {currency}{total}
+  - text: உங்கள் கணக்கில் செய்யப்பட்ட {numtransacts} வைப்புகள் {currency}{total} ஆகும் 
   utter_ask_rephrase:
-  - text: I didn't quite understand that. Can you rephrase?
+  - text: எனக்கு அது சரியாகப் விளங்கவில்லை . மீண்டும் அதை விளக்க முடியுமா?
   utter_ok:
   - text: 👍
   utter_ask_continue:
-  - text: Would you like to continue?
+  - text: நீங்கள் தொடர விரும்புகிறீர்களா?
   utter_default:
-  - text: I didn't quite understand that. Could you rephrase?
+  - text: என்னால் அதை சரியாக  விளங்கிக் கொள்ள முடியவில்லை . மீண்டும் கூற முடியுமா?
   utter_ask_cc_payment_form_AA_CONTINUE_FORM:
   - buttons:
     - payload: /affirm
-      title: Yes
+      title: ஆம்
     - payload: /deny
-      title: No, cancel the transaction
-    text: Would you like to continue scheduling the credit card payment?
+      title: இல்லை, பரிவர்த்தனையை நிறுத்தவும்
+    text: கிரெடிட் கார்டு கட்டணத்தைத் தொடர்ந்து திட்டமிட விரும்புகிறீர்களா?
   utter_ask_transfer_money_form_AA_CONTINUE_FORM:
   - buttons:
     - payload: /affirm
-      title: Yes
+      title: ஆம்
     - payload: /deny
-      title: No, cancel the transfer
-    text: Would you like to continue scheduling the money transfer?
+      title: இல்லை, பரிவர்த்தனையை நிறுத்தவும்
+    text: பணப் பரிமாற்றத்தைத் தொடர்ந்து திட்டமிட விரும்புகிறீர்களா?
   utter_ask_transaction_search_form_AA_CONTINUE_FORM:
   - buttons:
     - payload: /affirm
-      title: Yes
+      title: ஆம்
     - payload: /deny
-      title: No, cancel the search
-    text: Would you like to continue the transaction search?
+      title: இல்லை, பரிவர்த்தனையை நிறுத்தவும்
+    text: பரிவர்த்தனை தேடலைத் தொடர விரும்புகிறீர்களா?
   utter_ask_cc_payment_form_zz_confirm_form:
   - buttons:
     - payload: /affirm
-      title: Yes
+      title: ஆம்
     - payload: /deny
-      title: No, cancel the transaction
-    text: Would you like to schedule a payment of {currency}{amount-of-money}{payment_amount_type} towards your {credit_card} account for {time_formatted}?
+      title: இல்லை, பரிவர்த்தனையை நிறுத்தவும்
+    text: உங்கள் {credit_card} கணக்கிற்கு {currency}{amount-of-money}{payment_amount_type} கட்டணத்தை {time_formatted}க்கு திட்டமிட விரும்புகிறீர்களா?
   utter_ask_transfer_money_form_zz_confirm_form:
   - buttons:
     - payload: /affirm
-      title: Yes
+      title: ஆம்
     - payload: /deny
-      title: No, cancel the transaction
-    text: Would you like to transfer {currency}{amount-of-money} to {PERSON}?
+      title: இல்லை, பரிவர்த்தனையை நிறுத்தவும்
+    text: "{PERSON}க்கு {currency}{amount-of-money}ஐ மாற்ற விரும்புகிறீர்களா?"
   utter_cc_pay_cancelled:
-  - text: Credit card account payment cancelled.
+  - text: கிரெடிட் கார்டு கணக்கின் கட்டணம் ரத்து செய்யப்பட்டுள்ளது.
   utter_transfer_cancelled:
-  - text: Transfer cancelled.
+  - text: பரிவர்த்தனை ரத்து செய்யப்பட்டுள்ளது.
   utter_transaction_search_cancelled:
-  - text: Transaction search cancelled.
+  - text: பரிவர்த்தனை தேடல் ரத்துசெய்யப்பட்டது.
   utter_account_balance:
-  - text: Your bank account balance is {currency}{init_account_balance}.
+  - text: உங்கள் வங்கி  கணக்கு  மீதி  {currency}{init_account_balance}.
   utter_changed_account_balance:
-  - text: Your bank account balance was {currency}{init_account_balance} and is now {currency}{account_balance} after transfers and payments.
+  - text: உங்கள் வங்கி கணக்கு மீதி {currency}{init_account_balance} ஆக இருந்தது, பரிமாற்றங்கள் மற்றும் கட்டணங்கள் செலுத்திய பிறகு தற்போது  {currency}{account_balance} ஆக உள்ளது.
   utter_unknown_recipient:
-  - text: Sorry, {PERSON} is not in your list of known recipients.
+  - text: மன்னிக்கவும், உங்களது  பெறுநர்கள் பட்டியலில் {PERSON} இல்லை.
   utter_insufficient_funds:
-  - text: Sorry, you don't have enough money to do that!
+  - text: மன்னிக்கவும், அதற்கு  உங்களிடம் போதுமான பணம் இல்லை!
   utter_insufficient_funds_specific:
-  - text: The {payment_amount_type} on your {credit_card} credit card is {amount-of-money}, so you have insufficient funds to pay it off.
+  - text: உங்கள் {credit_card} கிரெடிட் கார்டில் {payment_amount_type}இல் உள்ள மீதி  {amount-of-money}, எனவே செலுத்துவதற்க்கு உங்களிடம் போதுமான பணம் இல்லை.
   utter_credit_card_balance:
-  - text: The current balance for your {credit_card} account is {currency}{credit_card_balance}.
+  - text: உங்கள் {credit_card} கணக்கிற்கான தற்போதைய மீதி{currency}{credit_card_balance}.
   utter_nothing_due:
-  - text: Your don't owe any money on your {credit_card} credit card bill.
+  - text: உங்கள் {credit_card} கிரெடிட் கார்டு பில்லில் நீங்கள் பணம் எதுவும் செலுத்த வேண்டியதில்லை.
   utter_recipients:
-  - text: These are your known recpients to whom you can send money:{formatted_recipients}
+  - text: நீங்கள் பணம் அனுப்ப கூடிய உங்களுக்கு தெரிந்த பெறுநர்கள்:{formatted_recipients}
   utter_greet:
-  - text: Hi! I'm your Financial Assistant!
+  - text: வணக்கம்! நான் உங்கள் நிதி உதவியாளர்!
   utter_ask_handoff:
-  - text: It looks like you want to be transferred to a human agent.
+  - text: நீங்கள் மனித முகவருடன் தொடர்பு கொள்ள விரும்புவது போல் தெரிகிறது.
   utter_handoff:
-  - text: Alright, I'll try to transfer you.
+  - text: சரி, நான் உங்களை மனித முகவருடன் தொடர்பு கொள்ள செய்ய முயற்சிக்கிறேன்.
   utter_wouldve_handed_off:
-  - text: If you were talking to me via chatroom, I would have handed you off to {handoffhost}.
+  - text: சரி, நான் உங்களை ஒரு மனித முகவரைத் தொடர்பு கொள்ள முயற்சிக்கிறேன். நீங்கள் என்னுடன் chatroom வழியாகப் பேசிக்கொண்டிருந்தால், நான் உங்களை {handoffhost} க்கு ஒப்படைத்திருப்பேன்.
   utter_no_handoff:
-  - text: Since you haven't configured a host to hand off to, I can't send you anywhere!
+  - text: நீங்கள் முகவர் ஒருவரை தொடர்பு கொள்வது குறித்து சரியான தீர்மானம் எடுக்காததால் என்னால் உங்களை எங்கும் அனுப்ப முடியாது!
   utter_ask_whatelse:
-  - text: What else can I help you with?
+  - text: நான் உங்களுக்கு வேறு என்ன உதவி செய்ய முடியும்?
   utter_bot:
-  - text: I'm a virtual assistant made with Rasa.
+  - text: நான் ராசா வால்  உருவாக்கப்பட்ட  மெய்நிகர் உதவியாளர்.
   utter_help:
-  - text: "I can help you with your financial accounts. \nYou can ask me things like: \n- What's my account balance? \n- Pay off my credit card \n- What did I spend at Target last month? \n- I need to transfer money"
+  - text: "உங்கள் நிதிக் கணக்குகள் தொடர்பாக என்னால்  உங்களுக்கு உதவ முடியும். \n- நீங்கள் என்னிடம் கேட்கக்கூடிய விடயங்கள் : \n- எனது கணக்கு மீதி  என்ன? \n- எனது கிரெடிட் கார்ட் கணக்கை  செலுத்தவும்  \n- கடந்த மாதம் Target இல் நான் என்ன செலவு செய்தேன்? \n- நான் பணத்தை மாற்ற வேண்டும்"
 actions:
 - action_session_start
 - action_restart
@@ -520,3 +520,5 @@ forms:
     - search_type
     - time
     - zz_confirm_form
+
+

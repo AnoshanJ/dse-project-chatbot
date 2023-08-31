@@ -2,246 +2,213 @@ version: "3.1"
 nlu:
 - intent: check_human
   examples: |
-    - are you a bot?
-    - am i speaking to an ai?
-    - are you a human or a bot?
-    - are you real? 
-    - are you virtual? 
-    - are you an ai?
-    - aren't you a bot
-    - are you a chatbot
-    - are you a rasa bot?
-    - are you a real bot?
-    - are you a robot
-    - are you ai
-    - are you artificial
-    - are you artificial intelligence
-    - are you real
-    - are you really a bot
-    - are you robot
-    - are you sure that you're a bot?
-    - bot?
+     - நீங்கள் ஒரு Botஆ ?
+     - நான் ஒரு AIயிடம் பேசுகிறேனா?
+     - நீங்கள் ஒரு மனிதரா அல்லது Botஆ?
+     - நீங்கள் ஒரு உண்மையான நபரா?
+     - நீங்கள் ஒரு Bot இல்லையா?
+     - நீங்கள் ஒரு ChatBotBotஆ?
+     - நீங்கள் ஒரு Rasa ChatBotBotஆ?
+     - நீங்கள் ஒரு உண்மையான BotBotஆ?
+     - நீங்கள் ஒரு ரோபோவா?
+     - நீங்கள் ஒரு AIஆ?
+     - நீங்கள் செயற்கை நுண்ணறிவா?
+     - நீங்கள் உண்மையானவரா?
+     - நீங்கள் உண்மையில் ஒரு Botதானா ?
+     - நீங்கள் ரோபோவா?
+     - நீங்கள் ஒரு Bot என்பதில் உறுதியாக இருக்கிறீர்களா?
 - intent: affirm
   examples: |
-    - indeed
-    - correct
-    - that sounds good
-    - yes
-    - yess please
-    - of course
-    - yup
-    - yeah
-    - yes please
-    - yes plz
-    - Sure
-    - Ok
-    - sweet
-    - cool,
-    - yes...
-    - y
-    - ok
-    - ye
-    - okay
-    - That would be great
-    - YES
-    - YUP
-    - Yea
-    - Yeah
-    - Yeah sure
-    - Yep
-    - Yep that's fine
-    - Yep!
-    - Yepp
-    - Yes
-    - Yes I do
-    - Yes please
-    - Yes please!
-    - Yes, I accept
+     -  உண்மையாக
+     - அது நன்றாக இருக்கிறது
+     - நிச்சயமாக
+     - ஆம்
+     - ஆமாம்
+     - ஆமாம் அதேதான்
+     - ஆமாம் தயவு செய்து
+     - ஆம் தயவு செய்து
+     - நிச்சயம்
+     - கண்டிப்பாக 
+     - சரி
+     - ஆம்...
+     - அது சரி
+     - அது நல்லது
+     - அது மிகவும் நல்லது
+     - மிக்க நல்லது  
+     - ஆம் நிச்சயமாக
+     - ஆம்!
+     - ஆம், அது பரவாயில்லை
+     - ஆம் நான் ஒரு ChatBot.
+     - ஆம், நான் ஏற்றுக்கொள்கிறேன்.
+
+   
 - intent: ask_transfer_charge
   examples: |
-    - Will I be charged for transferring money
-    - do transfers cost something?
-    - is there a transfer charge?
-    - Is there a charge
-    - will i be charged for a transaction?
-    - do xfers cost something?
-    - is there a transfer fee
-    - is there a xfer fee
-    - how much is the transfer fee
-    - whats the cost of transferring money
-    - what am I charged upon money transfer
-    - are you gonna bill me for this exchange
-    - whats the xfer price for this account
-    - okay but how much to move this money?
-    - how much is the fee to shift my money around
-    - if I send money to someone will I be charged extra for that?
-    - is there a charge when I send money to someone
-    - what is the fee for sending money to someone else
-    - I sent money to my friend will I be charged extra for that
-    - what is the percentage fee for transactions to another person
-    - are there any transaction fees or charges I should know about?
-    - tell me about transfer fees
+     -பணத்தை பரிமாற்றியதற்காக  என்னிடம் கட்டணம் வசூலிக்கப்படுமா?
+     - பரிமாற்றங்களுக்கு ஏதாவது செலவாகுமா?
+     - பரிமாற்ற கட்டணம் ஏதாவது உள்ளதா?
+     - ஏதாவது கட்டணம் உள்ளதா
+     - ஒரு பரிவர்த்தனைக்கு என்னிடம் கட்டணம் வசூலிக்கப்படுமா?
+     - மாற்ற  ஏதாவது செலவாகுமா?
+     - பரிமாற்ற கட்டணம் உள்ளதா
+     - பரிமாற் கட்டணம் ஏதும் உள்ளதா
+     - பரிமாற்ற கட்டணம் எவ்வளவு?
+     - பணத்தை பரிமாற்றுவதற்கான செலவு என்ன
+     - பணப் பரிமாற்றத்தின் போது எனக்கு எவ்வளவு கட்டணம் வசூலிக்கப்படுகிறது
+     - இந்த பரிமாற்றத்திற்காக நீங்கள் எனக்கு கட்டணம் விதிக்கப் போகிறீர்களா?
+     - இந்தக் கணக்கிற்கான பரிமாற்ற கட்டணம் என்ன
+     - எனது பணத்தை பரிமாற்றுவதற்கான கட்டணம் எவ்வளவு
+     - நான் யாருக்காவது பணம் அனுப்பினால் அதற்கு கட்டணம் வசூலிக்கப்படுமா?
+     - நான் ஒருவருக்கு பணம் அனுப்பும்போது ஏதாவது கட்டணம் உள்ளதா?
+     - இன்னொருவருக்கு பணம் அனுப்புவதற்கான கட்டணம் எவ்வளவு
+     - நான் என் நண்பருக்கு பணம் அனுப்பினேன், அதற்காக என்னிடம் கூடுதல் கட்டணம் வசூலிக்கப்படுமா
+     - மற்றொரு நபருக்கான பரிவர்த்தனைகளுக்கான கட்டணம் என்ன
+     - ஏதேனும் பரிவர்த்தனை கட்டணம் அல்லது கட்டணங்கள் பற்றி நான் தெரிந்து கொள்ள வேண்டுமா?
+     - பரிமாற்ற கட்டணம் பற்றி சொல்லுங்கள்
+
 - intent: check_balance
   examples: |
-    - How much money is on my account?
-    - How much money is on my [bank](account_type) account?
-    - what's my [balance](amount-of-money)?
-    - what's my [current balance](amount-of-money)?
-    - What's left on that account?
-    - How much do I have on that account?
-    - What's the [balance](amount-of-money) on that account?
-    - How much money is left on that account?
-    - what is my account [balance](amount-of-money)
-    - what's my account [balance](amount-of-money)?
-    - what's my account [balance](amount-of-money)
-    - whats my account [balance](amount-of-money)
-    - what is my [bank](account_type) account [balance](amount-of-money)
-    - what's my [bank](account_type) account [balance](amount-of-money)?
-    - what's my [bank](account_type) account [balance](amount-of-money)
-    - whats my [bank](account_type) account [balance](amount-of-money)
-    - What's my [credit card](account_type) [balance](amount-of-money)
-    - What's my [credit](account_type) [balance](amount-of-money)
-    - How much money do I owe on my [credit cards](account_type)
-    - Show me my [credit card](account_type) [balance](amount-of-money)
-    - What [credit](account_type) accounts do I have
-    - Show me my [credit](account_type) accounts
-    - Whats the [balance](amount-of-money) on my [credit](account_type) account
-    - What's my [credit](account_type) account
-    - What's my [emblem](credit_card) [card](account_type) [balance](amount-of-money)
-    - Show me my [iron bank](credit_card) [balance](amount-of-money)
-    - What's my [justice bank](credit_card) [balance](amount-of-money)
-    - What's the [balance](amount-of-money) on the [justice bank](credit_card) account
-    - what's my [emblm](credit_card) [credit card](account_type) [balance](amount-of-money)?
-    - what's my [credit card](account_type) [balance](amount-of-money)?
-    - what's my [credit card](account_type) account [balance](amount-of-money)?
-    - What is my [emblem](credit_card) [card](account_type) [balance](amount-of-money)?
-    - whats my [credit card](account_type) [balance](amount-of-money)
-    - What is my [emblem](credit_card) [balance](amount-of-money)?
-    - whats my [emblm](credit_card) [card](account_type) [balance](amount-of-money)?
-    - what's my [embelm](credit_card)'s [card](account_type) [balance](amount-of-money)?
-    - what's my [emblm](credit_card) account [balance](amount-of-money)?
-    - How much money have i spent lately>
-    - I should check my [credit card]{"entity": "account_type", "value": "credit"} [balance](amount-of-money) [first](account_type)
-    - check my [credit card]{"entity": "account_type", "value": "credit"} [balance](amount-of-money)
-    - check my [credit card]{"entity": "account_type", "value": "credit"} [balance](amount-of-money) [first](account_type)
-    - Can you tell me my account [balance](amount-of-money)?
-    - Hello, I would like to know how much money is in much money is in my account
-    - hi, whats my account bal please
-    - so.... what's my [balance](amount-of-money)?
-    - whats my [current balance](amount-of-money)
-    - What's my [balance](amount-of-money)?
-    - How much money do I have?
-    - Yeah, I like coffee 👀 But how much money do I have?
-    - Yeah, I know 😀 Since it's so nice: How much money do I have?
-    - what places have I spent money?
-    - Wait, I'll have to check my balance first. Can you do that please?
-    - Hi, I need to know how much money is in my [checking](account_type) account
-    - Balance please
+    - எனது கணக்கில் எவ்வளவு பணம் உள்ளது?
+    - எனது  [bank](account_type) கணக்கில் எவ்வளவு பணம் உள்ளது?
+    - எனது [balance](amount-of-money) என்ன?
+    - எனது [current balance](amount-of-money) என்ன?
+    - அந்தக் கணக்கில் எவ்வளவு மீதி இருக்கிறது?
+    - அந்தக் கணக்கில் என்னிடம் எவ்வளவு இருக்கிறது?
+    - அந்தக் கணக்கில் உள்ள [balance](amount-of-money) என்ன?
+    - அந்தக் கணக்கில் எவ்வளவு பணம் மிச்சம்?
+    - எனது கணக்கு[balance](amount-of-money) எவ்வளவு
+    - எனது கணக்கு [balance](amount-of-money) எவ்வளவு?
+    - எனது கணக்கு [balance](amount-of-money) எவ்வளவு
+    - என்னுடைய கணக்கு [balance](amount-of-money) எவ்வளவு
+    - எனது  [bank](account_type) கணக்கு [balance](amount-of-money) என்ன?
+    - எனது  [bank](account_type) கணக்கு [balance](amount-of-money) என்ன
+    - என்னுடைய  [bank](account_type) கணக்கு [balance](amount-of-money) என்ன
+    - எனது [credit card](account_type)  [balance](amount-of-money) எவ்வளவு?
+    - எனது [credit](account_type) [balance](amount-of-money) என்ன?
+    - எனது [credit card](account_type)இல்  எவ்வளவு பணம் செலுத்த வேண்டும்
+    - எனது [credit](account_type) [balance](amount-of-money)ஐ காட்டவும்  
+    - என்னிடம் என்ன [credit](account_type) கணக்குகள் உள்ளன
+    - எனது [credit](account_type)கணக்குகளைக் காட்டவும்  
+    - எனது [credit](account_type) கணக்கில் உள்ள [balance](amount-of-money) எவ்வளவு
+    - எனது [credit](account_type) கணக்கு என்ன
+    - எனது [emblem](credit_card) [card](account_type) [balance](amount-of-money) எவ்வளவு
+    - எனது [iron bank](credit_card)  [balance](amount-of-money) எவ்வளவு
+    - எனது [justice bank](credit_card) [balance](amount-of-money) என்ன
+    - [justice bank](credit_card) கணக்கில் உள்ள [balance](amount-of-money) என்ன
+    - எனது [emblem](credit_card) [credit card](account_type) [balance](amount-of-money) என்ன?
+    - எனது [credit](account_type)  [balance](amount-of-money) என்ன?
+    - எனது [credit](account_type)  கணக்கு [balance](amount-of-money) என்ன?
+    - எனது [emblem](credit_card) [card](account_type) [balance](amount-of-money) என்ன?
+    - எனது [emblem](credit_card) [balance](amount-of-money)?
+    - எனது [emblem](credit_card) [balance](amount-of-money) என்ன?
+    - எனது [emblem](credit_card) [card](account_type) [balance](amount-of-money) என்ன?
+    - எனது [emblem](credit_card) [card](account_type) [balance](amount-of-money) என்ன?
+    - எனது [emblm](credit_card) [card](account_type)கணக்கு [balance](amount-of-money) என்ன?
+    - நான் சமீபத்தில் எவ்வளவு பணம் செலவழித்தேன்>
+    - நான் எனது [credit card]{"entity": "account_type", "value": "credit"} [balance](amount-of-money) [first](account_type) சரிபார்க்க வேண்டும்
+    - எனது [credit card] {"entity": "account_type", "value": "credit"} [balance](amount-of-money) சரிபார்க்கவும்
+    - எனது [credit card] {"entity": "account_type", "value" : "credit"} [balance](amount-of-money) [first](account_type) சரிபார்க்கவும்
+    - என்னுடைய கணக்கு [balance](amount-of-money)சொல்ல முடியுமா?
+    - வணக்கம், எனது கணக்கில் எவ்வளவு பணம் உள்ளது என்பதை அறிய விரும்புகிறேன்
+    - ஹாய், என் கணக்கு மீதி?
+    - அப்படியென்றால்.... என்னுடைய [balance](amount-of-money) என்ன?
+    - எனது [[balance](amount-of-money)
+    - என்னிடம் எவ்வளவு பணம் இருக்கிறது?
+    - ஆமாம், எனக்கு காபி பிடிக்கும் 👀 ஆனால் என்னிடம் எவ்வளவு பணம் இருக்கிறது?
+    - ஆமாம், எனக்கு தெரியும் 😀 அது மிகவும் நன்றாக இருக்கும், என்னிடம் எவ்வளவு பணம் இருக்கிறது?
+    - நான் எந்த இடங்களில் பணம் செலவழித்தேன்?
+    - நான் முதலில் எனது மீதி சரிபார்க்க வேண்டும். தயவுசெய்து அதை செய்ய முடியுமா?
+    - ஹாய், எனது [checking](account_type) கணக்கில் எவ்வளவு பணம் உள்ளது என்பதை நான் தெரிந்து கொள்ள வேண்டும்
+    - கணக்கு மீதி?
 - intent: check_earnings
   examples: |
-    - How much money went into my account last month?
-    - How much money did I make last year?
-    - What did I earn last month?
-    - How much did I make last month?
-    - How much money did I make last week?
-    - how much was deposited in my account last month?
-    - how much was deposited in my account in the last two weeks?
-    - check deposits for last week
-    - total deposits over last year
-    - how much was deposited in January
-    - how much money have I earned?
-    - what did I earn?
-    - How much have i earned?
-    - how much did I make
-    - am I rich yet?
-    - am I a millionaire
-    - how much cash is rolling through my account
-    - how much money is in the money making machine account?
-    - what did I make in the last year?
-    - show me how much I've earned in the last week
-    - can i afford to go on vacation
-    - rent is due soon how much do I have in my account
+    - கடந்த மாதம் எனது கணக்கில் எவ்வளவு பணம் வந்தது?
+    - கடந்த ஆண்டு நான் எவ்வளவு பணம் சம்பாதித்தேன்?
+    - கடந்த மாதம் நான் என்ன சம்பாதித்தேன்?
+    - கடந்த மாதம் நான் எவ்வளவு சம்பாதித்தேன்?
+    - கடந்த வாரம் நான் எவ்வளவு பணம் சம்பாதித்தேன்?
+    - கடந்த மாதம் எனது கணக்கில் எவ்வளவு வைப்பிலிடப்பட்டது?
+    - கடந்த இரண்டு வாரங்களில் எனது கணக்கில் எவ்வளவு வைப்பிலிடப்பட்டது?
+    - கடந்த வாரத்திற்கான வைப்புகளை சரிபார்க்கவும்
+    - கடந்த ஆண்டு மொத்த வைப்புத்தொகை
+    - ஜனவரியில் எவ்வளவு வைப்பிலிடப்பட்டது
+    - நான் எவ்வளவு பணம் சம்பாதித்தேன்?
+    - நான் என்ன சம்பாதித்தேன்?
+    - நான் எவ்வளவு சம்பாதித்தேன்?
+    - நான் எவ்வளவு சம்பாதித்தேன்
+    - நான் இன்னும் பணக்காரனா?
+    - நான் கோடீஸ்வரனா?
+    - எனது கணக்கில் எவ்வளவு பணம் வருகிறது
+    - பணம் சம்பாதிக்கும் இயந்திரக் கணக்கில் எவ்வளவு பணம் உள்ளது?
+    - கடந்த வாரத்தில் நான் எவ்வளவு சம்பாதித்தேன் என்பதைக் காட்டு
+    - நான் விடுமுறைக்கு செல்ல என்னிடம் போதுமான பணம் உள்ளதா?
+    - எனது கணக்கில் எவ்வளவு பணம் உள்ளது? விரைவில் வாடகை செலுத்த வேண்டும்
+
 - intent: deny
   examples: |
-    - not really
-    - no
-    - I don't think so
-    - never
-    - no way
-    - nope
-    - no thanks
-    - I dunno
-    - Nothing!
-    - nevermind
-    - n
-    - i decline
-    - i don not like this
-    - i don't think so
-    - i don't want either of those
-    - i don't want to
-    - i don't want to give you my email
-    - i dont want to
-    - i dont want to accept :P lol
-    - i guess it means - no
-    - i'm afraid not
-    - i'm not sure
+    - உண்மையில் இல்லை
+    - நிச்சயமாக இல்லை
+    - இல்லை
+    - இல்
+    - நான் அப்படி நினைக்கவில்லை
+    - ஒருபோதும் இல்லை
+    - அதற்க்கு வழி இல்லை
+    - இல்லை நன்றி
+    - எனக்கு தெரியாது
+    - ஒன்றுமில்லை!
+    - நான் அதை மறுக்கிறேன்
+    - என்னால் ஏற்றுக்கொள்ள முடியாது 
+    - எனக்கு இது பிடிக்கவில்லை
+    - நான் அப்படி நினைக்கவில்லை
+    - இவை இரண்டும் எனக்கு வேண்டாம்
+    - நான் விரும்பவில்லை
+    - எனது மின்னஞ்சலை உங்களுக்கு வழங்க விரும்பவில்லை
+    - எனக்கு  விருப்பமில்லை  
+    - நான் ஏற்க விரும்பவில்லை :P
+    - அதன் அர்த்தம் - இல்லை என்று நினைக்கிறேன்
+    - என்னால் உறுதியாக சொல்ல முடியாது
 - intent: goodbye
   examples: |
-    - see you later
-    - goodbye
-    - i'm done
-    - quit
-    - stop
-    - bye
-    - Adios
-    - BYEE
-    - GOODBYE
-    - Thanks a lot. See ya later
-    - have a good day. time to go, bye
-    - bye bye
-    - ok i gtg
-    - bye bye bot
-    - bye for now
-    - bye udo
-    - bye was nice talking to you
-    - bye!
-    - byee
-    - catch you later
-    - ciao
-    - cya
-    - farewell
-    - good bye
-    - good bye rasa bot!
-    - good night
-    - goodbye
-    - goodbye.
-    - goodnight
-    - gotta go
+    - பிறகு பார்க்கலாம்
+    - நான் முடித்துவிட்டேன்
+    - நிறுத்து
+    - வருகிறேன்
+    - மீண்டும் சந்திக்கலாம்
+    - வருக
+    - பிரியாவிடை
+    - மிக்க நன்றி. பிறகு பார்க்கலாம்
+    - இந்த நாள் இனிய நாளாகட்டும், விடைபெறுகிறேன்
+    - விடைபெறுகிறேன்
+    - சரி நான் போய் வருகிறேன்
+    - உங்களுடன் பேசியதில் மகிழ்ச்சி
+    - பை பை Bot
+    - தற்காலிகமாக விடைபெறுகிறேன்
+    - உங்களுடன் பேசுவது நன்றாக இருந்தது
+    - வருகிறேன்!
+    - வருகிறேன்
+    - உன்னை பிறகு சந்திக்கிறேன்
+    - பிரியாவிடை
+    - குட் பை Rasa Bot!
+    - இனிய இரவு
+    - பிரியாவிடை
+    - பிரியாவிடை.
+    - போக வேண்டும்
+    - நிறுத்தவும்
 - intent: greet
   examples: |
-    - yo
-    - good morning
-    - hi
-    - hey there
-    - hey
-    - good evening
-    - hello
-    - Hello?
-    - HEY
-    - hello are you still there
-    - hallo
-    - HI
-    - Hey
-    - Hi
-    - hi!
-    - hello there
-    - hi there
-    - Hello
-    - hello its ella
-    - Hola.
-    - welcome
-    - howdy
-    - good day
+    - காலை வணக்கம்
+    - வணக்கம் 
+    - வணக்
+    - வணக்கம் நான் குமார்
+    - மாலை வணக்கம்
+    - ஹலோ நீங்கள் இன்னும் இருக்கிறீர்களா?
+    - ஹலோ
+    - வணக்கம்
+    - வணக்கம்!
+    - ஹாய்.
+    - நல்வரவு
+    - நல்லது
+    - நல்ல நாளாக அமையட்டும்
 - intent: inform
   examples: |
     - $10
@@ -249,35 +216,35 @@ nlu:
     - 500
     - $100
     - $500
-    - 100 dollars
-    - 1000 dollars
-    - tomorrow
-    - next week
-    - yesterday
-    - for today
-    - last week
-    - the past month
-    - the past two days
-    - the last two weeks
-    - at [amazon](vendor_name)
+    - 100 டாலர்கள்
+    - 1000 டாலர்கள்
+    - நாளை
+    - அடுத்த வாரம்
+    - நேற்று
+    - இன்றைக்கு
+    - கடந்த வாரம்
+    - கடந்த மாதம்
+    - கடந்த இரண்டு நாட்களாக
+    - கடந்த இரண்டு வாரங்களாக
+    - [amazon](vendor_name) இல்
     - [starbucks](vendor_name)
-    - at [target](vendor_name)
-    - at [starbucks](vendor_name)
+    - [target](vendor_name) இல்
+    - [starbucks](vendor_name) இல்
     - [target](vendor_name)
     - [Amazon](vendor_name)
     - [Starbucks](vendor_name)
     - [Target](vendor_name)
-    - I want to pay the [current balance](amount-of-money)
+    - நான் [current balance](amount-of-money) செலுத்த விரும்புகிறேன்
     - [current balance](amount-of-money)
     - [full](amount-of-money)
-    - in [full](amount-of-money)
+    - [full](amount-of-money) ஆக
     - the [full balance](amount-of-money)
     - [minimum balance](amount-of-money)
-    - I want to pay the [minimum balance](amount-of-money)
-    - the [current balance](amount-of-money)
-    - the [minimum balance](amount-of-money)
-    - my [minimum balance](amount-of-money)
-    - my [current balance](amount-of-money)
+    - நான் [minimum balance](amount-of-money) செலுத்த விரும்புகிறேன்
+    - [current balance](amount-of-money)
+    - [minimum balance](amount-of-money)
+    - எனது [minimum balance](amount-of-money)
+    - எனது [current balance](amount-of-money)
     - [emblem](credit_card) [card](account_type)
     - all [cards](account_type)
     - [iron bank](credit_card) [card](account_type)
@@ -285,40 +252,39 @@ nlu:
     - [emblem](credit_card)
     - [iron bank](credit_card)
     - [justice bank](credit_card)
-    - [emblem](credit_card) account
-    - [iron bank](credit_card) account
-    - [justice bank](credit_card) account
+    - [emblem](credit_card) கணக்கு
+    - [iron bank](credit_card) கணக்கு
+    - [justice bank](credit_card) கணக்கு
     - [emblem](credit_card) [credit card](account_type)
     - [iron bank](credit_card) [credit card](account_type)
     - [justice bank](credit_card) [credit card](account_type)
-    - my [emblem](credit_card) [credit card](account_type)
-    - my [iron bank](credit_card) [credit card](account_type)
-    - my [justice bank](credit_card) [credit card](account_type)
-    - my [emblem](credit_card) [card](account_type)
-    - my [iron bank](credit_card) [card](account_type)
-    - my [justice bank](credit_card) [card](account_type)
-    - towards my [emblem](credit_card) [card](account_type)
-    - towards my [iron bank](credit_card) [card](account_type)
-    - towards my [justice bank](credit_card) [card](account_type)
-    - for sunday
-    - for friday
-    - for tomorrow
-    - for saturday
-    - I want to pay the [minimum balance](amount-of-money) on my [emblem](credit_card) [credit card](account_type) today
-    - today
-    - Please schedule it for the first of next month
-    - a hundred dollars
+    - எனது [emblem](credit_card) [credit card](account_type)
+    - எனது [iron bank](credit_card) [credit card](account_type)
+    - எனது [justice bank](credit_card) [credit card](account_type)
+    - எனது [emblem](credit_card) [card](account_type)
+    - எனது [iron bank](credit_card) [card](account_type)
+    - எனது [justice bank](credit_card) [card](account_type) இற்கு
+    - எனது [emblem](credit_card) [card](account_type) இற்கு
+    - எனது [iron bank](credit_card) [card](account_type) இற்கு
+    - ஞாயிற்றுக்கிழமைக்கு
+    - வெள்ளிக்கிழமைக்கு
+    - நாளைக்காக
+    - சனிக்கிழமைக்கு
+    - இன்று எனது [minimum balance](amount-of-money) on my [emblem](credit_card) [credit card](account_type)  செலுத்த விரும்புகிறேன்
+    - இன்று
+    - அடுத்த மாதம் முதலாம் திகதிக்கு திட்டமிடவும்
+    - நூறு டாலர்கள்
     - [mastercard](credit_card)
     - [visa](credit_card)
     - [american express](credit_card)
-    - my [rasa](credit_card) account
-    - my [credit card]{"entity": "account_type", "value": "credit"} account ending in 4321
-    - My [Visa](credit_card) account
-    - A friend.
+    - எனது [rasa](credit_card) account
+    - எனது [credit card]{"entity": "account_type", "value": "credit"} account ending in 4321
+    - எனது [Visa](credit_card) account
+    - ஒரு நண்பர்.
     - [Alexandra](PERSON)?
-    - today please
+    - இன்று தயவுசெய்து
     - [Iron Bank](credit_card)
-    - My [visa](credit_card)
+    - எனது [visa](credit_card)
     - [Bob](PERSON)
     - [bill](PERSON)
     - [anusha](PERSON)
@@ -329,9 +295,9 @@ nlu:
     - [darnell](PERSON)
     - [Guangchen](PERSON)
     - [cheng](PERSON)
-    - to my [brother](PERSON)
-    - to my [sister](PERSON)
-    - my [dad](PERSON)
+    - என்னுடைய[brother](PERSON) இற்கு
+    - என்னுடைய [sister](PERSON) இற்கு
+    - என்னுடைய [dad](PERSON)
     - William Baker
     - Evan Oslo
     - Lisa Macintyre
@@ -341,15 +307,15 @@ nlu:
     - Katy Parrow
     - Percy please
     - Laura Schilling
-    - In that case, let's go with Percy
-    - My chase
+    - அப்படியானால், Percy
+    - என் chase
     - Jane
     - Melinda
     - Sara
-    - my wife's
+    - என் மனைவியின்
     - Andreas
-    - htthis weekend
-    - all of them
+    - இந்ந்ந்த வார இறுதியில்
+    - அவர்கள் அனைவரும்
     - Darren Smith
     - Percy
     - percy donald
@@ -357,261 +323,232 @@ nlu:
     - [Gringtos](credit_card)
 - intent: pay_cc
   examples: |
-    - I would like to pay the [minimum balance](amount-of-money) on my [embelm](credit_card) [card](account_type)
-    - I want to pay my [credit card](account_type)
+    - எனது [minimum balance](amount-of-money) on my [embelm](credit_card) [card](account_type) செலுத்த விரும்புகிறேன்
+    - நான் எனது [credit card](account_type) செலுத்த வேண்டும்
     - I want to pay my [card](account_type)
     - Pay my [card](account_type)
-    - I want to pay my [justice bank](credit_card) bill
-    - Pay my [discover](credit_card)
-    - I want to pay my [iron bank](credit_card) bill
-    - Pay my [visa](credit_card)
-    - I want to pay my [visa](credit_card) bill
-    - Pay my [mastercard](credit_card)
-    - I want to pay my [MasterCard](credit_card) bill
-    - I want to pay my [credit card](account_type) bill
+    - நான் எனது [justice bank](credit_card) கட்டணத்தை செலுத்த வேண்டும்
+    - [discover](credit_card) செலுத்தவும் 
+    - நான் எனது [iron bank](credit_card) கட்டணத்தை செலுத்த வேண்டும்
+    - [visa](credit_card) செலுத்தவும்
+    - நான் எனது [visa](credit_card) கட்டணத்தை செலுத்த வேண்டும்
+    - [mastercard](credit_card) செலுத்தவும்
+    - நான் எனது [MasterCard](credit_card) கட்டணத்தை செலுத்த வேண்டும்
+    - நான் எனது [credit card](account_type) கட்டணத்தை செலுத்த வேண்டும்
     - I want to pay the [current balance](amount-of-money) on my [credit card](account_type)
-    - can you help me pay the [current balance](amount-of-money) on my [credit card](account_type)
-    - i want to pay off my [credit card](account_type)
-    - I want to pay off my [credit card](account_type)
-    - i want to pay my [credit card](account_type)
-    - i want to pay off my [emblem](credit_card) [credit card](account_type)
-    - I want to pay my [current balance](amount-of-money) on my [embelm](credit_card) [credit card](account_type)
-    - i want to pay my [current balance](amount-of-money) on my [emblem](credit_card) [credit card](account_type)
-    - I want to pay $500 on my [emblem](credit_card) [credit card](account_type) on Sunday
-    - I want to pay my [current balance](amount-of-money) on my [emblem](credit_card) [credit card](account_type) today
-    - i need to pay off my [emblm](credit_card) [credit card](account_type)
-    - Please schedule  a payment towards my [credit card](account_type) for April 12th
-    - Can I schedule a payment towards my [credit card](account_type) for tomorrow?
-    - Pay off my [minimum balance](amount-of-money) please
-    - i would like to pay $1200 to my [credit card]{"entity": "account_type", "value": "credit"}
-    - I would also like to pay my [visa](credit_card) bill
-    - Pay off my [credit card]{"entity": "account_type", "value": "credit"}, please
-    - I guess it is. Since it's so much, let's pay off my [credit](account_type)
-    - Let's pay that [credit card]{"entity": "account_type", "value": "credit"} bill
+    - எனது [credit card](account_type)இல் [current balance](amount-of-money) செலுத்த எனக்கு உதவ முடியுமா?
+    - நான் எனது [credit card](account_type) செலுத்த விரும்புகிறேன்
+    - நான் [credit card](account_type) செலுத்த விரும்புகிறேன்
+    - நான் எனது [credit card](account_type) செலுத்த வேண்டும்
+    - நான் எனது [emblem](credit_card)இல் [credit card](account_type) செலுத்த விரும்புகிறேன்
+    - எனது [embelm](credit_card)இல் [credit card](account_type) எனது[current balance](amount-of-money) செலுத்த விரும்புகிறேன்.
+    - எனது [emblem](credit_card)இல் [credit card](account_type)
+    - எனது[current balance](amount-of-money) செலுத்த விரும்புகிறேன்
+    - ஞாயிற்றுக்கிழமை எனது [emblem](credit_card)இல் $500 செலுத்த விரும்புகிறேன்
+    - இன்று நான் எனது [emblem](credit_card) [credit card](account_type)இல் [current balance](amount-of-money) செலுத்த விரும்புகிறேன்
+    - நான் எனது  [emblm](credit_card) [credit card](account_type) செலுத்த விரும்புகிறேன்
+    - ஏப்ரல் 12 ஆம் தேதிக்கு எனது [credit card](account_type)க்கு பணம் செலுத்த திட்டமிடவும்
+    - நாளை எனது [credit card](account_type)க்கு பணம் செலுத்த திட்டமிட முடியுமா?
+    - தயவுசெய்து எனது [minimum balance](amount-of-money) செலுத்தவும்
+    - எனது [credit card]{"entity": "account_type", "value": "credit"}க்கு $1200 செலுத்த விரும்புகிறேன்
+    - எனது [visa](credit_card) கட்டணத்தையும் செலுத்த விரும்புகிறேன்
+    - தயவுசெய்து எனது [credit card]{"entity": "account_type", "value": "credit"} செலுத்தவும்
+    - அப்படிதான் நான் நினைக்கிறேன். இது மிகவும் அதிகமாக இருப்பதால், எனது  [credit](account_type)க்கு பணம் செலுத்தவும்
+    - அந்த [credit card]{"entity": "account_type", "value": "credit"} கட்டணத்தை செலுத்துவோம்
     - I want to pay 100 dollars toward my [Emblem](credit_card) [card](account_type), tomorrow
     - pay 100 towards [emblem](credit_card) [card](account_type), tomorrow
     - id like to pay my bill
-    - could I pay off my [credit card]{"entity": "account_type", "value": "credit"}?
-    - pay off my [credit card]{"entity": "account_type", "value": "credit"}
-    - i wanna pay my [credit card]{"entity": "account_type", "value": "credit"}
-    - pay a bill
-    - can I pay my [card]{"entity": "account_type", "value": "credit"}?
+    - எனது [credit card]{"entity": "account_type", "value": "credit"}ஐ செலுத்த முடியுமா?
+    - [credit card]{"entity": "account_type", "value": "credit"} செலுத்தவும்
+    - நான் எனது [credit card]{"entity": "account_type", "value": "credit"} செலுத்த விரும்புகிறேன்
+    - ஒரு கட்டணம் செலுத்தவும்    
 - intent: search_transactions
   examples: |
-    - how much did I spend at [Target](vendor_name) this week?
-    - what is my typical spending at [Amazon](vendor_name)?
-    - I want to check my spending history
-    - how much did I spend at [Starbucks](vendor_name) last week?
-    - I need to check my spending history
-    - I want to check my spending
-    - I want to check my spending history at [starbucks](vendor_name)
-    - i want to check my spending history
-    - i want to see my transaction history
-    - I want to search my past transactions
-    - can I search my transaction history
-    - can I look at past transactions
-    - I want to search my transactions with [amazon](vendor_name)
-    - can i seem my transactions with [target](vendor_name)
-    - how much did i spend at [starbucks](vendor_name) last month?
-    - what did i spend last month?
-    - How much did I spend last month?
-    - What did I spend at [Legoland](vendor_name) last month?
-    - What did I spend at [Legoland](vendor_name) last year?
-    - how much did i spend at [starbucks](vendor_name) last year
-    - Yes! How much did I spend on [Starbucks](vendor_name) last month?
-    - How much did I spend at Burger King last month?
-    - what places have I spent money?
-    - What did I spend at [Starbucks](vendor_name) in may?
-    - How much money did I lose to [starbucks](vendor_name) in may?
-    - Oh how much did I actually spend at [target](vendor_name) last month? I'd love to know.
-    - Can you tell me how much I spent at [Ikea](vendor_name) this month?
-    - Can you tell me how much I spent at coffeeshops this month?
-    - Can you tell me how much I spent on coffee this month?
-    - What did I spend at [Costco](vendor_name) last month?
-    - what did I spend at [target](vendor_name) last month
-    - where did I spend the most money last month?
+    -இந்த வாரம் [Target](vendor_name) இல் எவ்வளவு செலவு செய்தேன்?
+    - [Amazon] (vendor_name) இல் எனது வழக்கமான செலவு என்ன?
+    - எனது செலவு வரலாற்றைச் சரிபார்க்க விரும்புகிறேன்
+    - கடந்த வாரம் [Starbucks] (vendor_name) இல் நான் எவ்வளவு செலவு செய்தேன்?
+    - எனது செலவு வரலாற்றை நான் சரிபார்க்க வேண்டும்
+    - எனது செலவினங்களைச் சரிபார்க்க விரும்புகிறேன்
+    - நான் [starbucks] (vendor_name) இல் எனது செலவு வரலாற்றைச் சரிபார்க்க விரும்புகிறேன்
+    - எனது செலவு வரலாற்றைச் சரிபார்க்க விரும்புகிறேன்
+    - எனது பணமாற்ற வரலாற்றைப் பார்க்க விரும்புகிறேன்
+    - எனது கடந்த கால பணமாற்றங்களை நான் தேட விரும்புகிறேன்
+    - எனது பணமாற்ற வரலாற்றைத் தேட முடியுமா?
+    - நான் கடந்த பணமாற்றங்களை பார்க்கலாமா?
+    - எனது பணமாற்றங்களை [amazon] (vendor_name) மூலம் தேட விரும்புகிறேன்
+    - கடந்த மாதம் நான் எவ்வளவு செலவு செய்தேன்?
+    - கடந்த மாதம் நான் [Legoland] (vendor_name) இல் என்ன செலவு செய்தேன்?
+    - கடந்த ஆண்டு நான் [Legoland] (vendor_name) இல் என்ன செலவு செய்தேன்?
+    - கடந்த ஆண்டு [starbucks] (vendor_name) இல் எவ்வளவு செலவு செய்தேன்
+    - ஆம்! கடந்த மாதம் [Starbucks] (vendor_name)க்கு எவ்வளவு செலவு செய்தேன்?
+    - கடந்த மாதம் பகல் நான் எவ்வளவு செலவு செய்தேன்?
+    - நான் எந்த இடங்களில் பணம் செலவழித்தேன்?
+    -  மே மாதம் [Starbucks](vendor_name) இல் நான் என்ன செலவு செய்தேன்?
+    - மே மாதத்தில் நான் [starbucks](vendor_name) எவ்வளவு பணத்தை இழந்தேன்?
+    - ஓ, கடந்த மாதம் [target](vendor_name) இல் நான் எவ்வளவு செலவு செய்தேன்? நான் அறிய விரும்புகிறேன்.
+    - இந்த மாதம் நான் [Ikea] (vendor_name) இல் எவ்வளவு செலவு செய்தேன் என்று சொல்ல முடியுமா?
+    - இந்த மாதம் காப்பிஷாப்பில் நான் எவ்வளவு செலவு செய்தேன் என்று சொல்ல முடியுமா?
+    - இந்த மாதம் நான் காபிக்கு எவ்வளவு செலவு செய்தேன் என்று சொல்ல முடியுமா?
+    - கடந்த மாதம் நான் [Costco] (vendor_name) இல் என்ன செலவு செய்தேன்?
+    - கடந்த மாதம் [target](vendor_name) இல் நான் என்ன செலவு செய்தேன்
+    - கடந்த மாதம் நான் எங்கு அதிக பணம் செலவழித்தேன்?
 - intent: thankyou
   examples: |
-    - thank you goodbye
-    - okay thank you goodbye
-    - thank you bye
-    - um okay thank you good bye
-    - thank you
-    - and thats all thank you and good bye
-    - okay thank you
-    - thanks
-    - thanks goodbye
-    - thank you and good bye
-    - Thanks!
-    - Awesome, you are a good bot!
-    - great!
-    - I see, thanks
-    - Oh thats good!
-    - it's good :-)
-    - thnaks
-    - good job bot
-    - great
-    - thanks for the help
-    - thanks you
-    - thanks!
-    - thankyou
-    - thnks
-    - thx
-    - thanks for your information
-    - thanks f
+    - நன்றி வணக்கம்
+    - சரி நன்றி குட்பை
+    - நன்றி வருகிறேன்
+    - சரி நன்றி
+    - நன்றி குட்பை
+    - நன்றி நான் விடைபெறுகிறேன்
+    - நன்றி!
+    - அருமை, நீங்கள் ஒரு சிறந்த  Bot!
+    - நன்று!
+    - மீண்டும் பார்க்கலாம் 
+    - ஓ நல்லது!
+    - நன்றாக இருந்தது :-)
+    - நன்றி
+    - உங்கள் உதவிக்கு நன்றி     
+    - உதவிக்கு நன்றி
+    - நன்றி
+    - நன்றி!
+    -தகவலுக்கு  நன்றி
 - intent: transfer_money
   examples: |
-    - I want to pay [John](PERSON)
-    - I want to transfer $100 to [Bob](PERSON)
-    - can i transfer money to [Sally](PERSON)
-    - I want to transfer money
-    - I want to pay someone
-    - can I pay someone
-    - I need to transfer money to a friend
-    - can I transfer money to my [mom](PERSON)
-    - I want to pay [Bert](PERSON)
-    - pay my friend
-    - transfer money
-    - I want to transfer $100 to [Tommy](PERSON)
-    - i want to transfer $400 to [Akela](PERSON)
-    - I want to pay [Paula Handy](PERSON)
-    - pay Katy Parrow $40 please
-    - transfer $60 to [Jason Jacob](PERSON)
-    - pay [Evan Oslo](PERSON)
-    - pay [Lisa](PERSON) please
-    - can I transfer money to [Kyle Gardner](PERSON)?
-    - Pay [Karen](PERSON) 60 Euros
-    - pay [Mona](PERSON) $60
-    - transfer $60 to [Sally](PERSON)
-    - need to transfer money
-    - II want to transfer to [Kelly](PERSON)
-    - Pay [Percy](PERSON) $50
-    - Pay $50 to [Pat](PERSON)
-    - Ok pay [Emma](PERSON)
-    - pay [Emanual](PERSON)
-    - i want to transfer $100 to [Jane smith](PERSON)
-    - i want to transfer $100 to my [daughter](PERSON)
-    - i want to transfer money please
-    - i mean i want to transfer money
-    - I need to pay a friend.
-    - transfer money to [ethan oswald](PERSON)
-    - transfer money to [sara](PERSON)
-    - I need to transfer money to my grandma [Judith](PERSON).
-    - i want to transfer money to [Latisha](PERSON)
-    - I need to make an urgent transfer to [Bob](PERSON), can you do it?
-    - Ahh, okay so I want to make a transfer to [Bob](PERSON).
-    - Can I transfer money to a friend?
-    - I need to transfer money to [Jeff](PERSON), my son
-    - I need to send money to my kid
-    - I need to transfer money
-    - send $50 to [john jacob](PERSON)
-    - I need to transfer money to my co-worker who paid for lunch
-    - Hi I like to send money
-    - I'd like to send 50$ to [John](PERSON)
-    - Hi I like to send money to [John](PERSON)
-    - Please transfer 50 dollars to [Andreas](PERSON)
-    - I would like to transfer money to [Philipp](PERSON)
-    - I would like to transfer 50$ to [Joschka](PERSON)
+    - நான் [John](PERSON) இற்கு பணம் செலுத்த விரும்புகிறேன்
+    - நான் $100ஐ [Bob](PERSON) க்கு அனுப்ப விரும்புகிறேன்
+    - நான் [Sally](PERSON) க்கு பணத்தை மாற்றலாமா
+    - நான் பணத்தை அனுப்ப விரும்புகிறேன்
+    - நான் ஒருவருக்கு பணம் அனுப்ப விரும்புகிறேன்
+    - நான் யாருக்காவது பணம் அனுப்பலாமா?
+    - நான் ஒரு நண்பருக்கு பணத்தை அனுப்ப வேண்டும்
+    - எனது [mom](PERSON)க்கு பணத்தை அனுப்ப முடியுமா?
+    - நான் [Bert](PERSON)க்கு பணம் அனுப்ப வேண்டும்
+    - எனது நண்பருக்கு பணம் அனுப்புங்கள்
+    - பணத்தை மாற்ற வேண்டும்
+    - நான் $100ஐ  [Tommy](PERSON)க்கு மாற்ற விரும்புகிறேன்
+    - நான் $400  [Akela](PERSON)க்கு மாற்ற விரும்புகிறேன்
+    - நான் [Paula Handy](PERSON)க்கு பணம்  செலுத்த வேண்டும்
+    - Katy Parrowக்கு $40 அனுப்பவும்
+    - $60ஐ [Jason Jacob](PERSON) க்கு மாற்றவும்
+    - [Evan Oslo](PERSON) க்கு பணம்  செலுத்தவும்
+    - தயவுசெய்து [Lisa](PERSON) க்கு பணம்  செலுத்தவும்
+    - நான் [Kyle Gardner](PERSON)க்கு பணம்  செலுத்த முடியுமா ?
+    - [Karen](PERSON) 60 யூரோக்கள் அனுப்புங்கள்
+    - [Mona](PERSON) $60 செலுத்தவும்
+    - $60 ஐ [Sally](PERSON)க்கு செலுத்தவும்
+    - பணம் அனுப்ப வேண்டும்   
+    - நா [Kelly](PERSON)க்கு பணம்  செலுத்த வேண்டும்
+    - [Percy](PERSON)க்கு $50 செலுத்தவும்
+    - $50ஐ [Pat](PERSON)க்கு செலுத்தவும்
+    - சரி, [Emma](PERSON)கு பணம்  செலுத்தவும்
+    - [Emanual](PERSON)கு பணம்  செலுத்தவும்
+    - நான் $100ஐ  to my [daughter](PERSON)
+    - நான் தயவுசெய்து பணத்தை மாற்ற விரும்புகிறேன்
+    - அதாவது நான் பணத்தை மாற்ற விரும்புகிறேன்
+    - நான் ஒரு நண்பருக்கு பணம் செலுத்த வேண்டும்.
+    - [sara](PERSON)க்கு பணத்தை மாற்றவும்
+    - நான் என் பாட்டி [Judith](PERSON)க்கு பணத்தை மாற்ற வேண்டும்.
+    - நான் [Latisha](PERSON)க்கு பணத்தை மாற்ற விரும்புகிறேன்
+    - நான்[Bob](PERSON)க்கு அவசரமாக பணமாற்றம் செய்ய வேண்டும், உங்களால் முடியுமா?
+    - ஆ, சரி, நான் [Bob](PERSON)க்கு பணமாற்றம் செய்ய விரும்புகிறேன்.
+    - நான் ஒரு நண்பருக்கு பணத்தை மாற்றலாமா?
+    - எனது மகனுக்கு [Jeff](PERSON) பணத்தை மாற்ற வேண்டும்
+    - நான் என் குழந்தைக்கு பணம் அனுப்ப வேண்டும்
+    - நான் பணத்தை மாற்ற வேண்டும்
+    - send $50 [john jacob](PERSON)க்கு
+    - மதிய உணவுக்கு பணம் கொடுத்த எனது சக ஊழியருக்கு நான் பணத்தை மாற்ற வேண்டும்
+    - வணக்கம் நான் பணம் அனுப்ப விரும்புகிறேன்
+    - நான் [John](PERSON)க்கு 50$ அனுப்ப விரும்புகிறேன்
+    - ஹாய் நான் [John](PERSON)க்கு பணம் அனுப்ப விரும்புகிறேன்
+    - தயவுசெய்து 50 டாலர்களை [Andreas](PERSON) க்கு மாற்றவும்
+    - நான் [Philipp](PERSON)க்கு பணத்தை மாற்ற விரும்புகிறேன்
+    - நான் 50$ஐ [Joschka](PERSON)க்கு மாற்ற விரும்புகிறேன்
 - intent: check_recipients
   examples: |
-    - Who can I send money to?
-    - Who are my known recipients
-    - Show me my list of recipients
-    - Show the recipient list
-    - Show me people I can send money to
-    - Who is a valid payee
-    - who can I pay?
-    - who can I transfer money?
-    - who's in my recipient list?
-    - who can I transfer money to?
-    - Who is on your list?
-    - who is in my list of kown recipients?
-    - Who all can I transfer money to?
-    - Who can I transfer money to?
-    - Okay. Who can I transfer money to then?
-    - can I see the list of known recipients?
-    - tell me who I can share my money with
-    - whats my recipient list
-    - can I send money to anyone?
-    - who exactly am I able to send money to
-    - if I want to transfer money can i send it to anyone
-    - show me my money sending list
+    - நான் யாருக்கு பணம் அனுப்ப முடியும்?
+    - எனக்கு தெரிந்த பெறுநர்கள் யார்
+    - எனது பெறுநர்களின் பட்டியலைக் காட்டவும் 
+    - பெறுநர் பட்டியலைக் காட்டவும் 
+    - நான் பணம் அனுப்பக்கூடியவர்களை எனக்குக் காட்டவும் 
+    - சரியான பணம் பெறுபவர் யார்
+    - நான் யாருக்கு பணம் செலுத்த முடியும்?
+    - நான் யாருக்கு பணத்தை மாற்ற முடியும்?
+    - எனது பெறுநர் பட்டியலில் யார் இருக்கிறார்கள்?
+    - நான் யாருக்கு பணத்தை மாற்ற முடியும்?
+    - உங்கள் பட்டியலில் யார் இருக்கிறார்கள்?
+    - எனது பெயர் பட்டியலில் யார் இருக்கிறார்கள்?
+    - நான் யாருக்கு பணத்தை அனுப்ப  முடியும்?
+    - சரி. அப்போது நான் யாருக்கு பணத்தை அனுப்ப  முடியும்?
+    - தெரிந்த பெறுநர்களின் பட்டியலை நான் பார்க்கலாமா?
+    - எனது பணத்தை யாருடன் பகிர்ந்து கொள்ளலாம் என்று சொல்ல முடியுமா?
+    - எனது பெறுநர் பட்டியல் என்ன?
+    - நான் யாருக்காவது பணம் அனுப்பலாமா?
+    - நான் பணத்தை அனுப்ப விரும்பினால், அதை யாருக்கு அனுப்ப முடியும்
+    - எனது பணம் அனுப்பும் பட்டியலைக் காட்டவும் 
 - intent: help
   examples: |
-    - help
-    - what can you do?
-    - what can I ask you?
-    - what do you do?
-    - what can you help me with?
-    - help me
-    - help, what do you do
-    - how do I use this
-    - how can you help me
-    - What are the things that you can do?
-    - What else can you help me with?
-    - can you do anything else?
-    - can you help me?
-    - come back
-    - cool! can I do something else here?
-    - hello what can you do for me
-    - help
-    - help me
-    - help please
-    - help pls
-    - help?
-    - hep me
+    - உங்களால் என்ன செய்ய முடியும்?
+    - நான் உன்னிடம் என்ன கேட்க முடியும்?
+    - உங்களால் எனக்கு எவ்வாறு உதவ முடியுமா?
+    - எனக்கு உதவுங்கள்
+    - உதவி, நீங்கள் என்ன செய்கிறீர்கள்
+    - இதை எப்படி பயன்படுத்துவது
+    - உங்களால் எனக்கு எப்படி உதவ முடியும்
+    - உங்களால் செய்யக்கூடிய விஷயங்கள் என்ன?
+    - உங்களால் எனக்கு வேறு எவ்வாறு என்ன உதவ முடியும்?
+    - உங்களால் வேறு ஏதாவது செய்ய முடியுமா?
+    - திரும்பி வரவும்
+    - நல்லது! என்னால் இங்கே வேறு ஏதாவது செய்ய முடியுமா?
+    - வணக்கம் உங்களால் எனக்கு என்ன உதவி செய்ய முடியும்
+    - உதவி
+    - எனக்கு உதவுங்கள்
+    - தயவுசெய்து உதவுங்கள்
+    - உதவி?
 - intent: human_handoff
   examples: |
-    - handoff
-    - operator
-    - I want a human
-    - can I speak to an agent
-    - real agent please
-    - real human
-    - chat with a live agent
-    - give me a person please
-    - i want to talk to a human
-    - transfer to a human
-    - Please give me to a human
-    - can I talk to human?
-    - can I talk to human
-    - talk to human
-    - i want human :(
-    - can i talk to human
-    - i want to talk to a human
-    - i want to speak to human
-    - can i talk to a real person?
-    - connect me to a real person
-    - I need a real person
-    - can i took with a real person
-    - let me speak to a real person
-    - let me speak to a real person please
-    - i want to talk to a real person
+    - இயக்குபவர்
+    - எனக்கு ஒரு மனிதன் வேண்டும்
+    - நான் ஒரு முகவருடன் பேசலாமா?
+    - உண்மையான மனிதன்?
+    - நேரடி முகவருடன் பேசலாமா?
+    - தயவுசெய்து எனக்கு ஒரு நபரைக் கொடுங்கள்
+    - நான் ஒரு மனிதனுடன் பேச விரும்புகிறேன்
+    - தயவுசெய்து என்னை ஒரு உண்மையான நபருடன் இணைக்கவும்
+    - தயவுசெய்து என்னை ஒரு மனிதனுடன் இணைக்கவும்  
+    - நான் ஒரு மனிதனுடன் பேசலாமா?
+    - எனக்கு ஒரு மனிதன் வேண்டும் :(
+    - நான் ஒரு மனிதனுடன் பேசலாமா?
+    - நான் ஒரு மனிதனுடன் பேச விரும்புகிறேன்.
+    - நான் மனிதனிடம் பேச விரும்புகிறேன்
+    - நான் ஒரு உண்மையான நபருடன் பேசலாமா?
+    - என்னை ஒரு உண்மையான நபருடன் இணைக்கவும்
+    - எனக்கு ஒரு உண்மையான நபர் தேவை
+    - நான் ஒரு உண்மையான நபருடன் தொடர்பு கொள்ளலாமா?
+    - இந்த உரையாடலைத் தொடர எனக்கு ஒரு உண்மையான நபர் தேவை
+    - நான் ஒரு உண்மையான நபருடன் பேச விரும்புகிறேன்
 - intent: out_of_scope
   examples: |
-    - what is the square root of 5
-    - I want to know the weather
-    - what is the meaning of life.
-    - Fridge Isn't Running
-    - my tv isn't working
-    - I want a pizza
-    - my washing machine isn't working
-    - what year is it
-    - order a pizza
-    - I want to order a pizza
-    - what is the weather today
-    - what is the weather
-    - what the weather today ?
-    - hows the weather
-    - tell me a joke
-    - Can I get a hamburger?
-    - Can YouTube talk?
-    - Can you call me back ?
-    - Can you give me your datacenter's password
-    - Can you give me your datacenter's password?
-    - Can you make sandwiches?
-    - Can you please send me an uber
-    - ofif fsdfafsfs
+    - 5 இன் வர்க்கமூலம் என்ன
+    - இன்றைய வானிலை என்ன?
+    - வாழ்க்கையின் அர்த்தம் என்ன.
+    - குளிர்சாதன பெட்டி இயங்கவில்லை
+    - என் டிவி வேலை செய்யவில்லை
+    - எனக்கு பீட்சா வேண்டும்
+    - எனது சலவை இயந்திரம் வேலை செய்யவில்லை
+    - இது எந்த ஆண்டு?
+    - பீட்சா ஆர்டர் செய்யுங்கள்
+    - நான் ஒரு பீட்சாவை ஆர்டர் செய்ய விரும்புகிறேன்
+    - இன்று வானிலை என்ன
+    - வானிலை என்ன
+    - இன்று வானிலை என்ன?
+    - பருவநிலை எப்படி இருக்கிறது
+    - ஒரு ஜோக் சொல்லுங்கள்
+    - எனக்கு ஒரு ஹாம்பர்கர் கிடைக்குமா?
+    - நீங்கள் என்னை மீண்டும் தொடர்பு கொள்ள முடியுமா?
+    - உங்கள் டேட்டாசென்டரின் கடவுச்சொல்லை எனக்கு தர முடியுமா?
+    - உங்களால்  சாண்ட்விச் செய்ய முடியுமா?
+    - தயவுசெய்து எனக்கு ஒரு uber அனுப்ப முடியுமா?
 - synonym: credit
   examples: |
     - credit card
@@ -631,3 +568,5 @@ nlu:
     - balance
     - full
     - full balance
+
+
