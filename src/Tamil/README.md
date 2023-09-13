@@ -10,6 +10,24 @@ chat with https://t.me/mora_bank_ta_bot
 docker run -p 8000:8000 rasa/duckling
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Notes on Rasa `3.x/ 2.x / 1.x`
 
 1. The `main` branch of this repo is compatible with Rasa Open Source **version 3.x**
