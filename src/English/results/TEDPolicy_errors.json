@@ -1,0 +1,292 @@
+[
+  {
+    "text": "i want to pay off my emblm",
+    "entities": [
+      {
+        "start": 21,
+        "end": 26,
+        "value": "emblem",
+        "entity": "credit_card"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "i want to transfer money to Latisha",
+    "entities": [
+      {
+        "start": 28,
+        "end": 35,
+        "value": "Latisha",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "how much did I earn in January 2019",
+    "entities": [
+      {
+        "text": "how much did I earn in January 2019",
+        "start": 20,
+        "end": 35,
+        "entity": "time",
+        "value": "2019-01-01T00:00:00.000-08:00"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "i want to pay off my emblm",
+    "entities": [
+      {
+        "start": 21,
+        "end": 26,
+        "value": "emblem",
+        "entity": "credit_card"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "i want to pay off my emblm",
+    "entities": [
+      {
+        "start": 21,
+        "end": 26,
+        "value": "emblem",
+        "entity": "credit_card"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "pay credit card",
+    "entities": [
+      {
+        "start": 4,
+        "end": 15,
+        "value": "credit",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How much money is on my bank account?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 28,
+        "value": "bank",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What is my account balance?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 26,
+        "value": "current balance",
+        "entity": "amount-of-money"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "pay credit card",
+    "entities": [
+      {
+        "start": 4,
+        "end": 15,
+        "value": "credit",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "pay credit card",
+    "entities": [
+      {
+        "start": 4,
+        "end": 15,
+        "value": "credit",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "pay credit card",
+    "entities": [
+      {
+        "start": 4,
+        "end": 15,
+        "value": "credit",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "pay credit card",
+    "entities": [
+      {
+        "start": 4,
+        "end": 15,
+        "value": "credit",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "pay credit card",
+    "entities": [
+      {
+        "start": 4,
+        "end": 15,
+        "value": "credit",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "pay credit card",
+    "entities": [
+      {
+        "start": 4,
+        "end": 15,
+        "value": "credit",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "pay credit card",
+    "entities": [
+      {
+        "start": 4,
+        "end": 15,
+        "value": "credit",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "pay credit card",
+    "entities": [
+      {
+        "start": 4,
+        "end": 15,
+        "value": "credit",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "pay credit card",
+    "entities": [
+      {
+        "start": 4,
+        "end": 15,
+        "value": "credit",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "pay credit card",
+    "entities": [
+      {
+        "start": 4,
+        "end": 15,
+        "value": "credit",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "pay credit card",
+    "entities": [
+      {
+        "start": 4,
+        "end": 15,
+        "value": "credit",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "pay credit card",
+    "entities": [
+      {
+        "start": 4,
+        "end": 15,
+        "value": "credit",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "lisa",
+    "entities": [
+      {
+        "text": "lisa",
+        "start": 0,
+        "end": 4,
+        "entity": "PERSON",
+        "value": "lisa"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What's my emblem card balance",
+    "entities": [
+      {
+        "start": 10,
+        "end": 16,
+        "value": "emblem",
+        "entity": "credit_card"
+      },
+      {
+        "start": 17,
+        "end": 21,
+        "value": "credit",
+        "entity": "account_type"
+      },
+      {
+        "start": 22,
+        "end": 29,
+        "value": "current balance",
+        "entity": "amount-of-money"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What are my credit accounts",
+    "entities": [
+      {
+        "start": 12,
+        "end": 18,
+        "value": "credit",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  }
+]
