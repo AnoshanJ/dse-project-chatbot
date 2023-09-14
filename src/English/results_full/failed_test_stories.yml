@@ -1,15 +1,5 @@
 version: "3.1"
 stories:
-- story: check earnings happy path (.\tests\test_stories.yml)
-  steps:
-  - intent: check_earnings  # predicted: check_earnings: how much did I earn in January 2019
-    entities: []
-  - slot_was_set:
-    - time: '2019-01-01T00:00:00.000-08:00'
-  - action: transaction_search_form
-  - active_loop: transaction_search_form
-  - active_loop: null
-  - action: action_transaction_search
 - story: pay credit card + switch to search transactions, deny (.\tests\test_stories.yml)
   steps:
   - intent: pay_cc

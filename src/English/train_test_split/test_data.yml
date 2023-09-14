@@ -1,0 +1,186 @@
+version: "3.1"
+nlu:
+- intent: boc_smart_salary_saver_description
+  examples: |
+    - Explain the features of BOC Smart Salary Saver
+- intent: boc_smart_salary_saver_eligibility
+  examples: |
+    - Who is eligible for BOC Smart Salary Saver?
+- intent: boc_smart_salary_saver_benefits
+  examples: |
+    - Tell me the advantages of BOC Smart Salary Saver.
+- intent: boc_smartgen_description
+  examples: |
+    - Tell me about BOC SmartGen
+- intent: boc_smartgen_eligibility
+  examples: |
+    - Who is eligible for BOC SmartGen?
+- intent: boc_smartgen_benefits
+  examples: |
+    - What benefits does BOC SmartGen offer?
+- intent: check_human
+  examples: |
+    - are you a human or a bot?
+    - aren't you a bot
+- intent: help
+  examples: |
+    - help
+    - cool! can I do something else here?
+    - come back
+    - what do you do?
+- intent: ask_transfer_charge
+  examples: |
+    - what is the percentage fee for transactions to another person
+    - is there a transfer charge?
+    - is there a xfer fee
+    - do xfers cost something?
+- intent: check_earnings
+  examples: |
+    - how much was deposited in my account last month?
+    - How much money went into my account last month?
+    - total deposits over last year
+    - How much did I make last month?
+    - what did I earn?
+- intent: deny
+  examples: |
+    - nope
+    - nevermind
+    - no way
+    - i don't want to
+- intent: check_recipients
+  examples: |
+    - can I send money to anyone?
+    - who can I transfer money?
+    - show me my money sending list
+    - Okay. Who can I transfer money to then?
+- intent: greet
+  examples: |
+    - Hola.
+    - Hey
+    - welcome
+    - hello there
+    - hello are you still there
+- intent: out_of_scope
+  examples: |
+    - what is the square root of 5
+    - my washing machine isn't working
+    - tell me a joke
+    - what is the meaning of life.
+    - Can I get a hamburger?
+- intent: human_handoff
+  examples: |
+    - can i took with a real person
+    - real agent please
+    - i want to speak to human
+    - Please give me to a human
+- intent: thankyou
+  examples: |
+    - great!
+    - thanks for the help
+    - thnaks
+    - thanks
+    - Awesome, you are a good bot!
+    - Oh thats good!
+- intent: goodbye
+  examples: |
+    - catch you later
+    - stop
+    - bye!
+    - good bye rasa bot!
+    - goodbye
+    - see you later
+- intent: search_transactions
+  examples: |
+    - What did I spend at [Starbucks](vendor_name) in may?
+    - how much did i spend at [starbucks](vendor_name) last year
+    - what did i spend last month?
+    - how much did I spend at [Starbucks](vendor_name) last week?
+    - can I look at past transactions
+    - Yes! How much did I spend on [Starbucks](vendor_name) last month?
+- intent: affirm
+  examples: |
+    - ok
+    - Yep that's fine
+    - that sounds good
+    - yes please
+    - Yes
+    - indeed
+    - Yeah
+- intent: pay_cc
+  examples: |
+    - I would also like to pay my [visa](credit_card) bill
+    - pay a bill
+    - Pay off my [minimum balance](amount-of-money) please
+    - I want to pay off my [credit card](account_type)
+    - I guess it is. Since it's so much, let's pay off my [credit](account_type)
+    - Pay my [mastercard](credit_card)
+    - Please schedule  a payment towards my [credit card](account_type) for April 12th
+    - Pay off my [credit card]{"entity": "account_type", "value": "credit"}, please
+- intent: transfer_money
+  examples: |
+    - I want to transfer money
+    - I need to transfer money
+    - Ahh, okay so I want to make a transfer to [Bob](PERSON).
+    - I want to transfer $100 to [Tommy](PERSON)
+    - pay Katy Parrow $40 please
+    - transfer money to [ethan oswald](PERSON)
+    - i mean i want to transfer money
+    - pay [Emanual](PERSON)
+    - I would like to transfer money to [Philipp](PERSON)
+    - I need to pay a friend.
+- intent: check_balance
+  examples: |
+    - What [credit](account_type) accounts do I have
+    - What's my [credit](account_type) [balance](amount-of-money)
+    - What's the [balance](amount-of-money) on the [justice bank](credit_card) account
+    - What is my [emblem](credit_card) [card](account_type) [balance](amount-of-money)?
+    - what's my [credit card](account_type) [balance](amount-of-money)?
+    - I should check my [credit card]{"entity": "account_type", "value": "credit"} [balance](amount-of-money) [first](account_type)
+    - what's my [emblm](credit_card) account [balance](amount-of-money)?
+    - How much money is left on that account?
+    - what's my account [balance](amount-of-money)
+    - what's my account [balance](amount-of-money)?
+    - what's my [embelm](credit_card)'s [card](account_type) [balance](amount-of-money)?
+- intent: inform
+  examples: |
+    - Percy please
+    - Percy Donald
+    - for today
+    - for saturday
+    - [Guangchen](PERSON)
+    - Andreas
+    - Darren Smith
+    - all [cards](account_type)
+    - at [amazon](vendor_name)
+    - [Amazon](vendor_name)
+    - [justice bank](credit_card) [credit card](account_type)
+    - next week
+    - [iron bank](credit_card) [card](account_type)
+    - towards my [emblem](credit_card) [card](account_type)
+    - [Gringtos](credit_card)
+    - [justice bank](credit_card) [card](account_type)
+    - I want to pay the [minimum balance](amount-of-money)
+    - towards my [justice bank](credit_card) [card](account_type)
+    - [american express](credit_card)
+    - [Imani](PERSON)
+    - in [full](amount-of-money)
+    - my [iron bank](credit_card) [card](account_type)
+- synonym: credit
+  examples: |
+    - credit card
+    - card
+    - credit cards
+    - credit account
+    - credit accounts
+    - cards
+    - credit card account
+- synonym: emblem
+  examples: |
+    - emblm
+    - embelm
+    - Emblem
+- synonym: current balance
+  examples: |
+    - balance
+    - full
+    - full balance

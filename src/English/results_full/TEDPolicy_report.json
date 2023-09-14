@@ -6,18 +6,11 @@
     "support": 4,
     "confused_with": {}
   },
-  "PERSON": {
+  "amount-of-money": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
     "support": 2,
-    "confused_with": {}
-  },
-  "time": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 3,
     "confused_with": {}
   },
   "account_type": {
@@ -27,7 +20,14 @@
     "support": 29,
     "confused_with": {}
   },
-  "amount-of-money": {
+  "time": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3,
+    "confused_with": {}
+  },
+  "PERSON": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,

@@ -5,65 +5,29 @@
     "f1-score": 0.6666666666666666,
     "support": 1
   },
-  "utter_ok": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6
-  },
   "action_switch_forms_affirm": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 12
   },
-  "search_transactions": {
+  "affirm": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 24
+  },
+  "action_switch_forms_deny": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6
+  },
+  "[balance]{\"entity\": \"amount-of-money\", \"value\": \"current balance\"}": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 2
-  },
-  "pay_cc": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 16
-  },
-  "cc_payment_form": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 19
-  },
-  "ask_transfer_charge": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 4
-  },
-  "action_show_balance": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 11
-  },
-  "action_show_recipients": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 5
-  },
-  "action_pay_cc": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 8
-  },
-  "help": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 3
   },
   "action_switch_back_ask": {
     "precision": 1.0,
@@ -71,7 +35,25 @@
     "f1-score": 1.0,
     "support": 12
   },
-  "inform": {
+  "action_transaction_search": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7
+  },
+  "action_transfer_money": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 14
+  },
+  "utter_help": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7
+  },
+  "utter_out_of_scope": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
@@ -83,47 +65,17 @@
     "f1-score": 1.0,
     "support": 23
   },
-  "action_transaction_search": {
+  "action_pay_cc": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 7
+    "support": 8
   },
-  "action_switch_forms_deny": {
+  "deny": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 6
-  },
-  "utter_noworries": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 3
-  },
-  "utter_greet": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 4
-  },
-  "goodbye": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2
-  },
-  "action_transfer_money": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 14
-  },
-  "action_switch_forms_ask": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 18
+    "support": 12
   },
   "[credit](account_type)": {
     "precision": 1.0,
@@ -131,29 +83,11 @@
     "f1-score": 1.0,
     "support": 1
   },
-  "[lisa](PERSON)": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 1
-  },
-  "utter_out_of_scope": {
+  "action_switch_forms_ask": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 1
-  },
-  "greet": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 4
-  },
-  "check_earnings": {
-    "precision": 1.0,
-    "recall": 0.07692307692307693,
-    "f1-score": 0.14285714285714288,
-    "support": 13
+    "support": 18
   },
   "None": {
     "precision": 0.0,
@@ -161,10 +95,22 @@
     "f1-score": 0.0,
     "support": 1
   },
-  "out_of_scope": {
+  "search_transactions": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
+    "support": 2
+  },
+  "goodbye": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
+  "[lisa](PERSON)": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
     "support": 1
   },
   "[credit card]{\"entity\": \"account_type\", \"value\": \"credit\"}": {
@@ -173,11 +119,35 @@
     "f1-score": 1.0,
     "support": 13
   },
-  "action_listen": {
+  "[bank](account_type)": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 124
+    "support": 1
+  },
+  "utter_greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4
+  },
+  "thankyou": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3
+  },
+  "help": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3
+  },
+  "transfer_money_form": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 31
   },
   "[emblem](credit_card)": {
     "precision": 1.0,
@@ -185,25 +155,103 @@
     "f1-score": 1.0,
     "support": 1
   },
-  "transaction_search_form": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 17
-  },
   "utter_goodbye": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 2
   },
-  "affirm": {
+  "cc_payment_form": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 24
+    "support": 19
+  },
+  "action_show_recipients": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5
+  },
+  "pay_cc": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 16
+  },
+  "check_earnings": {
+    "precision": 1.0,
+    "recall": 0.07692307692307693,
+    "f1-score": 0.14285714285714288,
+    "support": 13
+  },
+  "greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4
   },
   "utter_ask_whatelse": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6
+  },
+  "check_balance": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11
+  },
+  "[emblm]{\"entity\": \"credit_card\", \"value\": \"emblem\"}": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3
+  },
+  "out_of_scope": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "utter_noworries": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3
+  },
+  "inform": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "[card]{\"entity\": \"account_type\", \"value\": \"credit\"}": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "action_show_balance": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11
+  },
+  "check_recipients": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5
+  },
+  "ask_transfer_charge": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4
+  },
+  "utter_ok": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
@@ -215,94 +263,46 @@
     "f1-score": 1.0,
     "support": 4
   },
-  "transfer_money_form": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 31
-  },
-  "check_balance": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 11
-  },
-  "utter_help": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 7
-  },
-  "[balance]{\"entity\": \"amount-of-money\", \"value\": \"current balance\"}": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2
-  },
   "[in January 2019]{\"entity\": \"time\", \"value\": \"2019-01-01T00:00:00.000-08:00\"}": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 1
-  },
-  "deny": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 12
-  },
-  "[emblm]{\"entity\": \"credit_card\", \"value\": \"emblem\"}": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 3
-  },
-  "thankyou": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 3
-  },
-  "[card]{\"entity\": \"account_type\", \"value\": \"credit\"}": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 1
   },
-  "[bank](account_type)": {
+  "transaction_search_form": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 1
+    "support": 17
   },
-  "check_recipients": {
+  "action_listen": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 5
+    "support": 124
   },
   "micro avg": {
-    "precision": 0.9955947136563876,
-    "recall": 0.9678800856531049,
-    "f1-score": 0.9815418023887078,
+    "precision": 0.9977973568281938,
+    "recall": 0.9700214132762313,
+    "f1-score": 0.98371335504886,
     "support": 467
   },
   "macro avg": {
-    "precision": 0.925531914893617,
-    "recall": 0.916530278232406,
-    "f1-score": 0.9108409321175279,
+    "precision": 0.9468085106382979,
+    "recall": 0.9378068739770868,
+    "f1-score": 0.9321175278622087,
     "support": 467
   },
   "weighted avg": {
-    "precision": 0.9925053533190579,
-    "recall": 0.9678800856531049,
-    "f1-score": 0.9690017334556948,
+    "precision": 0.9946466809421841,
+    "recall": 0.9700214132762313,
+    "f1-score": 0.9711430610788212,
     "support": 467
   },
-  "accuracy": 0.9678800856531049,
+  "accuracy": 0.9700214132762313,
   "conversation_accuracy": {
-    "accuracy": 0.7083333333333334,
-    "correct": 34,
+    "accuracy": 0.7291666666666666,
+    "correct": 35,
     "with_warnings": 0,
     "total": 48
   }
