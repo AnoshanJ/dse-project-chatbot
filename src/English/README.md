@@ -6,18 +6,21 @@ ngrok.exe http 5005 #starts forwarding server to telegram webhook #make sure for
 conda activate rasa
 docker run -p 8000:8000 rasa/duckling #starts duckling entitity extractor
 conda activate rasa
-rasa run #starts a server with trained model # use --debug flag for traceback
-conda activate rasa
 rasa run actions --port 5056 #starts action server
+conda activate rasa
+rasa run #starts a server with trained model # use --debug flag for traceback
 chat with https://t.me/mora_bank_en_bot
 ```
-
+rasa
 Testing:
 ```bash
 conda activate rasa
 docker run -p 8000:8000 rasa/duckling #starts duckling entitity extractor
 conda activate rasa
 rasa test
+
+# Notes
+modify entitites in nlu.yml and domain.yml files
 
 # to test with held-out test set (recommended)
 rasa data split nlu
