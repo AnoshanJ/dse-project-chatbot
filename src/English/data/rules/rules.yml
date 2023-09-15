@@ -1,36 +1,6 @@
 version: "3.1"
 
 rules:
-- rule: Respond to BOC SmartGen description inquiry
-  steps:
-  - intent: boc_smartgen_description
-  - action: utter_boc_smartgen_description
-
-- rule: Respond to BOC SmartGen eligibility inquiry
-  steps:
-  - intent: boc_smartgen_eligibility
-  - action: utter_boc_smartgen_eligibility
-
-- rule: Respond to BOC SmartGen benefits inquiry
-  steps:
-  - intent: boc_smartgen_benefits
-  - action: utter_boc_smartgen_benefits
-
-- rule: Respond to BOC Smart Salary Saver description inquiry
-  steps:
-  - intent: boc_smart_salary_saver_description
-  - action: utter_boc_smart_salary_saver_description
-  
-- rule: Respond to BOC Smart Salary Saver eligibility inquiry
-  steps:
-  - intent: boc_smart_salary_saver_eligibility
-  - action: utter_boc_smart_salary_saver_eligibility
-
-- rule: Respond to BOC Smart Salary Saver benefits inquiry
-  steps:
-  - intent: boc_smart_salary_saver_benefits
-  - action: utter_boc_smart_salary_saver_benefits
-
 - rule: Confirm that the bot is not a human
   steps:
   - intent: check_human
