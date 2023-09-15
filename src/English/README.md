@@ -1,5 +1,11 @@
 # How to run
 
+Train:
+```bash
+conda activate rasa
+rasa train
+```
+
 Run:
 ```bash
 ngrok.exe http 5005 #starts forwarding server to telegram webhook #make sure forwarding url is same in credentials.yml
