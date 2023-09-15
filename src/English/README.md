@@ -9,7 +9,6 @@ rasa train
 Run:
 ```bash
 ngrok.exe http 5005 #starts forwarding server to telegram webhook #make sure forwarding url is same in credentials.yml
-conda activate rasa
 docker run -p 8000:8000 rasa/duckling #starts duckling entitity extractor
 conda activate rasa
 rasa run actions --port 5056 #starts action server
