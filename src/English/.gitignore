@@ -119,7 +119,10 @@ models/
 *.dot
 terms/
 results/
+.rasa
 
 # Secret & local files
 secret/
 run_rasa*
+
+
