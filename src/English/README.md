@@ -15,7 +15,9 @@ conda activate rasa
 rasa run actions --port 5056 #starts action server
 conda activate rasa
 rasa run #starts a server with trained model # use --debug flag for traceback
-chat with https://t.me/mora_bank_en_bot
+chat with https://t.me/mora_bank_en_bot - English
+chat with https://t.me/mora_bank_ta_bot - Tamil
+chat with https://t.me/mora_bank_si_bot - Sinhala
 ```
 rasa
 Testing:
