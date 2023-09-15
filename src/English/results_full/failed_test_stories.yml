@@ -1,0 +1,315 @@
+version: "3.1"
+stories:
+- story: pay credit card + switch to search transactions, deny (.\tests\test_stories.yml)
+  steps:
+  - intent: pay_cc
+    entities:
+    - account_type: credit
+  - slot_was_set:
+    - account_type: credit
+  - action: cc_payment_form
+  - active_loop: cc_payment_form
+  - intent: check_earnings  # predicted: nlu_fallback: check earnings
+  - action: action_switch_forms_ask
+  - slot_was_set:
+    - next_form_name: transaction_search_form
+  - intent: deny
+  - action: action_switch_forms_deny
+  - slot_was_set:
+    - next_form_name: null
+  - action: cc_payment_form
+  - active_loop: cc_payment_form
+- story: search transactions + switch to transfer money, deny (.\tests\test_stories.yml)
+  steps:
+  - intent: check_earnings  # predicted: nlu_fallback: check earnings
+  - action: transaction_search_form
+  - active_loop: transaction_search_form
+  - intent: transfer_money
+  - action: action_switch_forms_ask
+  - slot_was_set:
+    - next_form_name: transfer_money_form
+  - intent: deny
+  - action: action_switch_forms_deny
+  - slot_was_set:
+    - next_form_name: null
+  - action: transaction_search_form
+  - active_loop: transaction_search_form
+- story: search transactions + switch to pay credit card, deny (.\tests\test_stories.yml)
+  steps:
+  - intent: check_earnings  # predicted: nlu_fallback: check earnings
+  - action: transaction_search_form
+  - active_loop: transaction_search_form
+  - intent: pay_cc
+    entities:
+    - account_type: credit
+  - slot_was_set:
+    - account_type: credit
+  - action: action_switch_forms_ask
+  - slot_was_set:
+    - next_form_name: cc_payment_form
+  - intent: deny
+  - action: action_switch_forms_deny
+  - slot_was_set:
+    - next_form_name: null
+  - action: transaction_search_form
+  - active_loop: transaction_search_form
+- story: transfer money + switch to search transactions, deny (.\tests\test_stories.yml)
+  steps:
+  - intent: transfer_money
+  - action: transfer_money_form
+  - active_loop: transfer_money_form
+  - intent: check_earnings  # predicted: nlu_fallback: check earnings
+  - action: action_switch_forms_ask
+  - slot_was_set:
+    - next_form_name: transaction_search_form
+  - intent: deny
+  - action: action_switch_forms_deny
+  - slot_was_set:
+    - next_form_name: null
+  - action: transfer_money_form
+  - active_loop: transfer_money_form
+- story: pay credit card + switch to search transactions, affirm + switch back, deny (.\tests\test_stories.yml)
+  steps:
+  - intent: pay_cc
+    entities:
+    - account_type: credit
+  - slot_was_set:
+    - account_type: credit
+  - action: cc_payment_form
+  - active_loop: cc_payment_form
+  - intent: check_earnings  # predicted: nlu_fallback: check earnings
+  - action: action_switch_forms_ask
+  - slot_was_set:
+    - next_form_name: transaction_search_form
+  - intent: affirm
+  - action: action_switch_forms_affirm
+  - slot_was_set:
+    - next_form_name: null
+  - slot_was_set:
+    - previous_form_name: cc_payment_form
+  - action: transaction_search_form
+  - active_loop: transaction_search_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_transaction_search
+  - action: action_switch_back_ask
+  - slot_was_set:
+    - previous_form_name: null
+  - intent: deny
+  - action: utter_ask_whatelse
+- story: search transactions + switch to transfer money, affirm + switch back, deny (.\tests\test_stories.yml)
+  steps:
+  - intent: check_earnings  # predicted: nlu_fallback: check earnings
+  - action: transaction_search_form
+  - active_loop: transaction_search_form
+  - intent: transfer_money
+  - action: action_switch_forms_ask
+  - slot_was_set:
+    - next_form_name: transfer_money_form
+  - intent: affirm
+  - action: action_switch_forms_affirm
+  - slot_was_set:
+    - next_form_name: null
+  - slot_was_set:
+    - previous_form_name: transaction_search_form
+  - action: transfer_money_form
+  - active_loop: transfer_money_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_transfer_money
+  - action: action_switch_back_ask
+  - slot_was_set:
+    - previous_form_name: null
+  - intent: deny
+  - action: utter_ask_whatelse
+- story: search transactions + switch to pay credit card, affirm + switch back, deny (.\tests\test_stories.yml)
+  steps:
+  - intent: check_earnings  # predicted: nlu_fallback: check earnings
+  - action: transaction_search_form
+  - active_loop: transaction_search_form
+  - intent: pay_cc
+    entities:
+    - account_type: credit
+  - slot_was_set:
+    - account_type: credit
+  - action: action_switch_forms_ask
+  - slot_was_set:
+    - next_form_name: cc_payment_form
+  - intent: affirm
+  - action: action_switch_forms_affirm
+  - slot_was_set:
+    - next_form_name: null
+  - slot_was_set:
+    - previous_form_name: transaction_search_form
+  - action: cc_payment_form
+  - active_loop: cc_payment_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_pay_cc
+  - action: action_switch_back_ask
+  - slot_was_set:
+    - previous_form_name: null
+  - intent: deny
+  - action: utter_ask_whatelse
+- story: transfer money + switch to search transactions, affirm + switch back, deny (.\tests\test_stories.yml)
+  steps:
+  - intent: transfer_money
+  - action: transfer_money_form
+  - active_loop: transfer_money_form
+  - intent: check_earnings  # predicted: nlu_fallback: check earnings
+  - action: action_switch_forms_ask
+  - slot_was_set:
+    - next_form_name: transaction_search_form
+  - intent: affirm
+  - action: action_switch_forms_affirm
+  - slot_was_set:
+    - next_form_name: null
+  - slot_was_set:
+    - previous_form_name: transfer_money_form
+  - action: transaction_search_form
+  - active_loop: transaction_search_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_transaction_search
+  - action: action_switch_back_ask
+  - slot_was_set:
+    - previous_form_name: null
+  - intent: deny
+  - action: utter_ask_whatelse
+- story: pay credit card + switch to search transactions, affirm + switch back, affirm (.\tests\test_stories.yml)
+  steps:
+  - intent: pay_cc
+    entities:
+    - account_type: credit
+  - slot_was_set:
+    - account_type: credit
+  - action: cc_payment_form
+  - active_loop: cc_payment_form
+  - intent: check_earnings  # predicted: nlu_fallback: check earnings
+  - action: action_switch_forms_ask
+  - slot_was_set:
+    - next_form_name: transaction_search_form
+  - intent: affirm
+  - action: action_switch_forms_affirm
+  - slot_was_set:
+    - next_form_name: null
+  - slot_was_set:
+    - previous_form_name: cc_payment_form
+  - action: transaction_search_form
+  - active_loop: transaction_search_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_transaction_search
+  - action: action_switch_back_ask
+  - slot_was_set:
+    - previous_form_name: null
+  - intent: affirm
+  - action: cc_payment_form
+  - active_loop: cc_payment_form
+- story: search transactions + switch to transfer money, affirm + switch back, affirm (.\tests\test_stories.yml)
+  steps:
+  - intent: check_earnings  # predicted: nlu_fallback: check earnings
+  - action: transaction_search_form
+  - active_loop: transaction_search_form
+  - intent: transfer_money
+  - action: action_switch_forms_ask
+  - slot_was_set:
+    - next_form_name: transfer_money_form
+  - intent: affirm
+  - action: action_switch_forms_affirm
+  - slot_was_set:
+    - next_form_name: null
+  - slot_was_set:
+    - previous_form_name: transaction_search_form
+  - action: transfer_money_form
+  - active_loop: transfer_money_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_transfer_money
+  - action: action_switch_back_ask
+  - slot_was_set:
+    - previous_form_name: null
+  - intent: affirm
+  - action: transaction_search_form
+  - active_loop: transaction_search_form
+- story: search transactions + switch to pay credit card, affirm + switch back, affirm (.\tests\test_stories.yml)
+  steps:
+  - intent: check_earnings  # predicted: nlu_fallback: check earnings
+  - action: transaction_search_form
+  - active_loop: transaction_search_form
+  - intent: pay_cc
+    entities:
+    - account_type: credit
+  - slot_was_set:
+    - account_type: credit
+  - action: action_switch_forms_ask
+  - slot_was_set:
+    - next_form_name: cc_payment_form
+  - intent: affirm
+  - action: action_switch_forms_affirm
+  - slot_was_set:
+    - next_form_name: null
+  - slot_was_set:
+    - previous_form_name: transaction_search_form
+  - action: cc_payment_form
+  - active_loop: cc_payment_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_pay_cc
+  - action: action_switch_back_ask
+  - slot_was_set:
+    - previous_form_name: null
+  - intent: affirm
+  - action: transaction_search_form
+  - active_loop: transaction_search_form
+- story: transfer money+ switch to search transactions, affirm + switch back, affirm (.\tests\test_stories.yml)
+  steps:
+  - intent: transfer_money
+  - action: transfer_money_form
+  - active_loop: transfer_money_form
+  - intent: check_earnings  # predicted: nlu_fallback: check earnings
+  - action: action_switch_forms_ask
+  - slot_was_set:
+    - next_form_name: transaction_search_form
+  - intent: affirm
+  - action: action_switch_forms_affirm
+  - slot_was_set:
+    - next_form_name: null
+  - slot_was_set:
+    - previous_form_name: transfer_money_form
+  - action: transaction_search_form
+  - active_loop: transaction_search_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_transaction_search
+  - action: action_switch_back_ask
+  - slot_was_set:
+    - previous_form_name: null
+  - intent: affirm
+  - action: transfer_money_form
+  - active_loop: transfer_money_form
+- story: providing a name must be inform intent (.\tests\test_stories.yml)
+  steps:
+  - intent: transfer_money
+  - action: transfer_money_form
+  - active_loop: transfer_money_form
+  - slot_was_set:
+    - AA_CONTINUE_FORM: yes
+  - slot_was_set:
+    - requested_slot: PERSON
+  - intent: inform
+    entities:
+    - PERSON: lisa
+  - slot_was_set:
+    - PERSON: lisa
+  - slot_was_set:
+    - requested_slot: amount-of-money
+  - action: transfer_money_form
