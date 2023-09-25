@@ -1,7 +1,5 @@
-#env and activate txt have been removed for Inukas Chatbot
-
-/env
-/activate.txt
+env/
+/activate/txt
 /demos
 /demos/RasaFinanceBotDemo
 /demos/RasaMultilingualChatbot
