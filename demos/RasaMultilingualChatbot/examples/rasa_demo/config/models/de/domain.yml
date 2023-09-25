@@ -1,0 +1,173 @@
+%YAML 1.1
+---
+actions:
+  - action_cheer_up
+  - action_contribute
+  - action_default_fallback
+  - action_about_me
+  - action_subscribe
+  - utter_about_me
+  - utter_advice
+  - utter_ask_email
+  - utter_bye
+  - utter_contribute
+  - utter_cost
+  - utter_events
+  - utter_greet
+  - utter_happy
+  - utter_languages
+  - utter_my_age
+  - utter_negative_feedback_reaction
+  - utter_positive_feedback_reaction
+  - utter_restaurant
+  - utter_subscribe
+  - utter_tech
+  - utter_time
+  - utter_weather
+  - utter_welcome
+  - utter_who_you_are
+  - utter_confirmation_email
+  - utter_already_subscribed
+  - utter_no_email
+
+entities:
+  - email
+
+intents:
+  - acknowledge
+  - affirm
+  - ask_age
+  - ask_are_you_bot
+  - ask_cost
+  - ask_events
+  - ask_languages
+  - ask_faq
+  - ask_how_contribute
+  - ask_restaurant
+  - ask_tech
+  - ask_time
+  - ask_weather
+  - ask_what_can_you_do
+  - ask_whoami
+  - bot_welcome
+  - bye
+  - deny
+  - enter_email
+  - greet
+  - insult
+  - opinion+negative
+  - opinion+positive
+  - out_of_scope
+  - subscribe
+
+templates:
+  utter_about_me:
+    - text: >
+        Ich bin ein Prototyp eines mehrsprachigen Assistenten.
+        Probier gerne meine [Englisch](#) Sprachkenntnissen
+        und teil dein Feedback. Immer lernbegierig!
+  utter_advice:
+    - text: Ich vertraue darauf, dass es dir besser gehen wird. Gib niemals auf!
+  utter_ask_email:
+    - text: Wie ist deine E-Mail?
+  utter_bye:
+    - text: Tschüss
+    - text: Chat bald!
+    - text: Schön mit dir zu plaudern.
+    - text: Bis dann!
+  utter_cheer_up:
+    - image: https://i.imgur.com/nGF1K8f.jpg
+      text: 'Here is something to cheer you up:'
+  utter_confirmation_email:
+    - text: Ok, du bist dabei!
+  utter_already_subscribed:
+    - text: Du bist schon im Kumpel!
+  utter_contribute:
+    - text: >
+        Freut mich, dass du gefragt hast. Beiträge sind immer willkommen.
+        Du brauchst kein Programmierer sein, um zu helfen.
+  utter_cost:
+    - text: Ich bin kostenlos.
+    - text: Frei wie in Bier.
+    - text: Frei wie in der Rede.
+    - text: Kostenlos.
+  utter_default_fallback:
+    - buttons:
+        - payload: contribute
+          title: Ich möchte beitragen
+      text: >
+        Hoppla, um ehrlich zu sein, ich habe dich nicht ganz verstanden. Komm wieder.
+        Wenn Sie das Gefühl haben, dass ich nicht schlau genug bin, haben Sie wahrscheinlich Recht.
+        Ich muss noch viel lernen. Würden Sie in Betracht ziehen, einen Beitrag zu leisten?
+  utter_did_that_help:
+    - text: Hat dir das geholfen?
+  utter_events:
+    - text: Ich bin nicht dein Veranstalter.
+    - text: Keine Ahnung, warum überprüfst du nicht EventBrite und die Gleichen?
+    - text: Geh und frag [Sara](#).
+  utter_greet:
+    - text: Hi
+    - text: Hey
+    - text: Hey! Wie geht es Ihnen?
+    - text: Wie geht es dir?
+  utter_happy:
+    - text: Super, mach weiter!
+  utter_languages:
+    - text: >
+        Zur Zeit spreche ich zwei Sprachen.
+        Probier gerne meine [English] (#) Fähigkeiten auszuprobieren
+        und teil dein Feedback. Immer lernbegierig!
+  utter_my_age:
+    - text: Ich wurde gestern nicht geboren!
+    - text: Alt genug, um ein Bot zu sein!
+    - text: Für immer jung!
+  utter_negative_feedback_reaction:
+    - text: Traurig zu hören
+    - text: Oh, das kann ich besser!
+    - text: Hmm, es ist schwer für dich, nicht wahr?
+    - text: Okay
+  utter_positive_feedback_reaction:
+    - text: Gern geschehen
+    - text: Willkommen!
+    - text: Keine Sorge
+    - text: Sehr gerne
+    - text: Das ist in Ordnung
+  utter_restaurant:
+    - text: Ja, ich frage mich auch.
+    - text: Keine Ahnung, warum überprüfen Sie nicht TripAdvisor und die Gleichen?
+    - text: Geh und frag [Sara](#).
+  utter_subscribe:
+    - buttons:
+        - payload: subscribe
+          title: Bleib im Kontakt
+      text: Erhalte die neuesten Nachrichten!
+  utter_tech:
+    - text: >
+        Ich verwende Python 3 und den neuesten Stapel von [Rasa](#).
+        Überprüf gerne die [Readme] (#) für alle Detailer.
+  utter_time:
+    - text: Bin ich dein Zeitnehmer?
+    - text: Das ist lustig, ich wollte die gleiche Frage stellen!
+    - text: Geh und frag [Sara](#).
+  utter_try_again:
+    - text: Komm nochmal!
+    - text: Bitte versuchen Sie etwas anderes.
+  utter_weather:
+    - text: Ich glaube nur an Sonnenschein.
+    - text: Gute Fragen, willst du es googeln?
+    - text: Geh und frag [Sara](#).
+  utter_welcome:
+      - buttons:
+        - payload: faq
+          title: Über mich
+        - payload: subscribe
+          title: Komm in Kontakt
+        text: Hi, danke, dass du mich ausprobiert hast. Lass uns schreiben!
+  utter_who_you_are:
+      - text: Du musst eine wundervolle Seele sein.
+      - text: Ich weiß nicht, wir haben uns kaum getroffen!
+      - text: Geh und frag [Sara](#).
+  utter_slots_values:
+    - text: Danke fürs Abonnieren. Eine Bestätigung wurde an {email} gesendet
+  utter_no_email:
+    - text: Kann ich bitte deine E-Mail haben?

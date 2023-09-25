@@ -1,0 +1,35 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "வணக்கம்! உங்கள் நலமாக உள்ளீர்களா?"
+
+  utter_cheer_up:
+  - text: "இது உங்கள் மனதை மகிழ்ச்சியுடன் திரும்பக் கொண்டுகொள்கிறது:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "அது உங்கள் உத்தமம் அதிகரித்ததா?"
+
+  utter_happy:
+  - text: "அற்புதம், தொல்லைக்கிறீர்கள்!"
+
+  utter_goodbye:
+  - text: "வருக, வாருங்கள்"
+
+  utter_iamabot:
+  - text: "நான் ஒரு தானம், ராசா ஆதிகாரித்தது."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+

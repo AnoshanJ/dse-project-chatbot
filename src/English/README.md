@@ -1,39 +1,13 @@
 # How to run
 
-Train:
-```bash
-conda activate rasa
-rasa train
-```
-
 Run:
 ```bash
-create a credentials.yml file from the credentials.yml.example file
-ngrok.exe http 5005 #starts forwarding server to telegram webhook #make sure forwarding url is same in credentials.yml
-docker run -p 8000:8000 rasa/duckling #starts duckling entitity extractor
 conda activate rasa
-rasa run actions --port 5056 #starts action server
-conda activate rasa
-rasa run #starts a server with trained model # use --debug flag for traceback
-chat with https://t.me/mora_bank_en_bot - English
-chat with https://t.me/mora_bank_ta_bot - Tamil
-chat with https://t.me/mora_bank_si_bot - Sinhala
-```
-rasa
-Testing:
-```bash
-conda activate rasa
-docker run -p 8000:8000 rasa/duckling #starts duckling entitity extractor
-conda activate rasa
-rasa test
-
-# Notes
-modify entitites in nlu.yml and domain.yml files
-
-# to test with held-out test set (recommended)
-rasa data split nlu
-rasa test nlu --nlu train_test_split/test_data.yml
-```
+ngrok.exe http 5005
+rasa run
+rasa run actions --port 5056
+chat with https://t.me/mora_bank_en_bot
+docker run -p 8000:8000 rasa/duckling
 
 # Notes on Rasa `3.x/ 2.x / 1.x`
 

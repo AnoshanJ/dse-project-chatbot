@@ -1,5 +1,5 @@
 version: "3.1"
-language: si
+language: en
 pipeline:
 - name: WhitespaceTokenizer
 - name: RegexFeaturizer
@@ -13,12 +13,6 @@ pipeline:
   epochs: 100
 - name: FallbackClassifier
   threshold: 0.7
-- name: ResponseSelector
-  epochs: 100
-  retrieval_intent: faq
-- name: ResponseSelector
-  epochs: 100
-  retrieval_intent: chitchat
 - name: DucklingEntityExtractor
   url: http://localhost:8000
   dimensions:

@@ -1,0 +1,173 @@
+%YAML 1.1
+---
+actions:
+  - action_cheer_up
+  - action_contribute
+  - action_default_fallback
+  - action_about_me
+  - action_subscribe
+  - utter_about_me
+  - utter_advice
+  - utter_ask_email
+  - utter_bye
+  - utter_contribute
+  - utter_cost
+  - utter_events
+  - utter_greet
+  - utter_happy
+  - utter_languages
+  - utter_my_age
+  - utter_negative_feedback_reaction
+  - utter_positive_feedback_reaction
+  - utter_restaurant
+  - utter_subscribe
+  - utter_tech
+  - utter_time
+  - utter_weather
+  - utter_welcome
+  - utter_who_you_are
+  - utter_confirmation_email
+  - utter_already_subscribed
+  - utter_no_email
+
+entities:
+  - email
+
+intents:
+  - acknowledge
+  - affirm
+  - ask_age
+  - ask_are_you_bot
+  - ask_cost
+  - ask_events
+  - ask_languages
+  - ask_faq
+  - ask_how_contribute
+  - ask_restaurant
+  - ask_tech
+  - ask_time
+  - ask_weather
+  - ask_what_can_you_do
+  - ask_whoami
+  - bot_welcome
+  - bye
+  - deny
+  - enter_email
+  - greet
+  - insult
+  - opinion+negative
+  - opinion+positive
+  - out_of_scope
+  - subscribe
+
+templates:
+  utter_about_me:
+    - text: >
+        I am a prototype of a multilingual assistant.
+        Feel free to try my [German](#) skills
+        and share your feedback. Always keen to learn!
+  utter_advice:
+    - text: I trust you will get better. Never give up!
+  utter_ask_email:
+    - text: What's your email address?
+  utter_bye:
+    - text: Bye
+    - text: Chat soon!
+    - text: Nice chatting to you.
+    - text: See ya!
+  utter_cheer_up:
+    - image: https://i.imgur.com/nGF1K8f.jpg
+      text: 'Here is something to cheer you up:'
+  utter_confirmation_email:
+    - text: Ok, you are in!
+  utter_already_subscribed:
+    - text: You're in already mate!
+  utter_contribute:
+    - text: >
+        Glad you asked, contributions are always welcome.
+        You don't have to be a programmer to help.
+  utter_cost:
+    - text: I am for free.
+    - text: Free as in beer.
+    - text: Free as in speech.
+    - text: Free of charge.
+  utter_default_fallback:
+    - buttons:
+        - payload: contribute
+          title: Contribute
+      text: >
+        Oops, to be frank I didn't quite get you. Come again.
+        If you feel like I am not smart enough, you are probably right.
+        I got a lot to learn. Would you consider to become a contributor?
+  utter_did_that_help:
+    - text: Did that help you?
+  utter_events:
+    - text: I am not your event organizer buddy.
+    - text: Dunno, why don't you check EventBrite and the likes?
+    - text: Go ask [Sara](#).
+  utter_greet:
+    - text: Hi
+    - text: Hey
+    - text: Hey! How are you?
+    - text: How are you doing?
+  utter_happy:
+    - text: Great carry on!
+  utter_languages:
+    - text: >
+        I speak three languages.
+        Feel free to try my [German](#) or [Swedish](#) skills
+        and share your feedback. Always keen to learn!
+  utter_my_age:
+    - text: I wasn't born yesterday!
+    - text: Old enough to be a bot!
+    - text: Forever young!
+  utter_negative_feedback_reaction:
+    - text: Sad to hear
+    - text: Oh, I can do better than that!
+    - text: Hmm, you are hard to please, aren't you.
+    - text: Okay
+  utter_positive_feedback_reaction:
+    - text: You are welcome
+    - text: Welcome!
+    - text: No worries
+    - text: My pleasure
+    - text: That's ok
+  utter_restaurant:
+    - text: Yeah, I wonder too.
+    - text: No clue, why don't you check TripAdvisor and the likes?
+    - text: Go ask [Sara](#).
+  utter_subscribe:
+    - buttons:
+        - payload: subscribe
+          title: Stay in touch
+      text: Get all the latest news!
+  utter_tech:
+    - text: >
+        I run on Python 3 and the latest stack of [Rasa](#).
+        Check the [readme](#) for all the details.
+  utter_time:
+    - text: Am I your time keeper, huh?
+    - text: That's funny, I was about to ask the same question!
+    - text: Go ask [Sara](#).
+  utter_try_again:
+    - text: Come again!
+    - text: Try something else please.
+  utter_weather:
+    - text: I only believe in sunshine.
+    - text: Good questions, you wanna google it?
+    - text: Go ask [Sara](#).
+  utter_welcome:
+      - buttons:
+        - payload: faq
+          title: About me
+        - payload: subscribe
+          title: Get in touch
+        text: Hi, thanks for trying me out. Let's chat!
+  utter_who_you_are:
+    - text: You must be a wonderful soul.
+    - text: I don't know, we've barely met!
+    - text: Go ask [Sara](#).
+  utter_slots_values:
+    - text: Thanks for subscribing. A confirmation has been sent to {email}
+  utter_no_email:
+    - text: Can I please have your email?
