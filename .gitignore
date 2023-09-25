@@ -1,2 +1,7 @@
 env/
 /activate/txt
+/demos
+/demos/RasaFinanceBotDemo
+/demos/RasaMultilingualChatbot
+/demos/RasaTestEnglish
+/demos/RasaTestTamil

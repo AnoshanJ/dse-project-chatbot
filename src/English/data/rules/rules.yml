@@ -1,7 +1,6 @@
 version: "3.1"
 
 rules:
-
 - rule: Confirm that the bot is not a human
   steps:
   - intent: check_human

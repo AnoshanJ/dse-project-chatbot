@@ -15,18 +15,19 @@ utc = pytz.UTC
 
 GENERAL_ACCOUNTS = {
     "recipient": [
-        "katy parrow",
-        "evan oslo",
-        "william baker",
-        "karen lancaster",
-        "kyle gardner",
-        "john jacob",
-        "percy donald",
-        "lisa macintyre",
+        "Ranil Silva",
+        "Dilani Perera",
+        "Sanjeewa Fernando",
+        "Kamala Rajapakse",
+        "Nimal Bandara",
+        "Chamari Gunawardena",
+        "Samantha Perera",
+        "Niluka Wickramasinghe",
     ],
-    "vendor": ["target", "starbucks", "amazon"],
+    "vendor": ["keells super", "pizza hut", "daraz.lk"],
     "depositor": ["interest", "employer"],
 }
+
 
 ACCOUNT_NUMBER_LENGTH = 12
 CREDIT_CARD_NUMBER_LENGTH = 14
