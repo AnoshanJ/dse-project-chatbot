@@ -1,9 +1,20 @@
-FROM rasa/rasa-sdk:3.1.0
+FROM python:3.7-slim
 
-COPY actions /app/actions
+RUN python -m pip install rasa && \
+    python -m pip install rasa[spacy] && \
+    python -m spacy download en_core_web_md && \
+    python -m spacy link en_core_web_md en
 
-USER root
-RUN pip install --no-cache-dir -r /app/actions/requirements-actions.txt
+WORKDIR /app
+COPY . .
 
+# RUN rasa train
+
+# set the user to run, don't run as root
 USER 1001
-CMD ["start", "--actions", "actions"]
+
+ENTRYPOINT ["rasa"]
+
+CMD ["run", "--enable-api", "--port", "5005"]
+
+
