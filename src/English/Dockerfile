@@ -1,20 +1,22 @@
-FROM python:3.7-slim
+# Use the official Rasa SDK image
+FROM rasa/rasa:3.5.15-full
 
-RUN python -m pip install rasa && \
-    python -m pip install rasa[spacy] && \
-    python -m spacy download en_core_web_md && \
-    python -m spacy link en_core_web_md en
+# install spacy english language model
+RUN pip install spacy
+RUN python -m spacy download en_core_web_md
 
 WORKDIR /app
-COPY . .
 
+# Copy the necessary files from your host to the container
+COPY actions /app/actions
+COPY config.yml /app/config.yml
+COPY domain.yml /app/domain.yml
+COPY credentials.yml /app/credentials.yml
+COPY endpoints.yml /app/endpoints.yml
+
+WORKDIR /app
+
+# Expose the port the app runs on
+EXPOSE 5005
 # RUN rasa train
-
-# set the user to run, don't run as root
-USER 1001
-
-ENTRYPOINT ["rasa"]
-
-CMD ["run", "--enable-api", "--port", "5005"]
-
-
+# RUN pip install -r requirements.txt

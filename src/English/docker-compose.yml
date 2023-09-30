@@ -1,32 +1,37 @@
 version: '3.4'
 services:
   rasa:
-    image: rasa-bot:latest
+    image: anoshan265/rasa-chatbot:latest
     working_dir: /app
     build: "./"
-    restart: always
     volumes:
     - ./actions:/app/actions
     - ./models:/app/models
-    - ./data:/app/data
-    command: bash -c "rasa run actions & rasa run -m models --enable-api --cors '*' --debug"
+    - ./data:/app/data    
+    command: "run --enable-api --cors \"*\" --port 8443 --endpoints endpoints.yml"
     ports:
-    - 5005:5005
+    - 8443:8443
+    depends_on:
+    - action_server
+    - duckling
     networks:
     - all
-  rasa-actions:
-    image: rasa-bot:latest
+  action_server:
+    image: anoshan265/rasa-chatbot:latest
     working_dir: /app
     build: "./"
-    restart: always
     volumes:
     - ./actions:/app/actions
     ports:
-    - 5055:5055
+    - 5056:5056
+    command: "run actions --port 5056"
     networks:
     - all
+  duckling:
+    image: rasa/duckling
+    restart: always
+    ports:
+      - "8000:8000"
 networks:
   all:
     driver: bridge
-    driver_opts:
-      com.docker.network.enable_ipv6: "true"

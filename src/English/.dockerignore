@@ -1,10 +1,9 @@
-actions/*
 models/old/*
 venv
 **/*.md
 
 # Credentials
-credentials.yml
+# credentials.yml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
