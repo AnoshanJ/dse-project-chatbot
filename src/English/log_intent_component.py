@@ -35,16 +35,25 @@ class LogIntentsComponent(GraphComponent):
 
         return training_data
 
+
     def process(self, messages: List[Message]) -> List[Message]:
-        # TODO: This is the method which Rasa Open Source will call during inference.
-        ...
-        print("Process Test")
-        print(messages[0].get_full_intent())
-        # intent = messages[0].get_full_intent()
+        try:
+            # Your existing code here
+            print("Process Test")
+            print(messages[0].get_full_intent())
+            intent = messages[0].get_full_intent()
+            d = {}
+            d['name'] = intent['name']
+            d['confidence'] = intent['confidence']
+            if intent['name']=='faq':
+                d['name'] = messages[0].as_dict()['response_selector']['faq']['response']['intent_response_key']
+                d['confidence'] = messages[0].as_dict()['response_selector']['faq']['response']['confidence']
 
-        # if intent['name']=='faq':
-        #     intent['name'] = messages[0].as_dict()['response_selector']['faq']['response']['intent_response_key']
-        #     intent['confidence'] = messages[0].as_dict()['response_selector']['faq']['response']['confidence']
-
-        # print(intent)
-        return messages
+            print(d)
+            return messages
+        except Exception as e:
+            # Handle exceptions here, you can log the error message
+            # and return an appropriate response or handle it in any other way.
+            print(f"An error occurred: {str(e)}")
+            # Optionally, you can raise the exception again to propagate it.
+            raise e
