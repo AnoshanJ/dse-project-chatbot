@@ -8,7 +8,7 @@ services:
     - ./actions:/app/actions
     - ./models:/app/models
     - ./data:/app/data    
-    command: "run --enable-api --cors \"*\" --port 8443 --endpoints endpoints.yml"
+    command: "run --enable-api --cors \"*\" --port 8443 --endpoints endpoints.yml --debug"
     ports:
     - 8443:8443
     depends_on:
