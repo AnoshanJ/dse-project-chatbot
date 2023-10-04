@@ -55,6 +55,43 @@ FORM_DESCRIPTION = {
     "transaction_search_form": "transaction search",
 }
 
+import requests
+from bs4 import BeautifulSoup
+from datetime import datetime
+
+def get_interest_rate():
+    URL = 'https://www.boc.lk/rates-tariff#rupee-deposit-rates'
+    page = requests.get(URL)
+    soup = BeautifulSoup(page.content, 'html.parser')
+    
+    # Find the row containing '1 Year -Interest at maturity (LKR)'
+    target_row = None
+    rows = soup.select('section.rates-tariffs .tab-content table tbody tr')
+    for row in rows:
+        cells = row.find_all('td')
+        if cells and '1 Year -Interest at maturity (LKR)' in cells[0].text:
+            target_row = cells
+            break
+
+    # Extract the value next to '1 Year -Interest at maturity (LKR)'
+    if target_row and len(target_row) > 1:
+        return target_row[1].text.strip()
+    else:
+        return "Couldn't fetch the rate."
+
+
+class ActionFetchInterestRates(Action):
+    def name(self) -> str:
+        return "action_fetch_interest_rates"
+
+    async def run(self, dispatcher, tracker, domain):
+        rate = get_interest_rate()
+        current_date = datetime.now().strftime('%Y-%m-%d')  # Get the current date in 'YYYY-MM-DD' format
+        website_link = "https://www.boc.lk/rates-tariff#rupee-deposit-rates"
+
+        response = f"The interest rate for '1 Year -Interest at maturity (LKR)' as of {current_date} is: {rate}. For more details, visit {website_link}"
+        dispatcher.utter_message(text=response)
+        return []
 
 class ActionPayCC(Action):
     """Pay credit card."""

@@ -1,9 +1,14 @@
 # Use the official Rasa SDK image
 FROM rasa/rasa:3.5.15-full
 
-# install spacy english language model
-RUN pip install spacy
-RUN python -m spacy download en_core_web_md
+WORKDIR /app
+
+USER root
+
+# Update pip and install necessary packages
+RUN pip3 install --upgrade pip && \
+    pip3 install spacy bs4 && \
+    python -m spacy download en_core_web_md
 
 WORKDIR /app
 
