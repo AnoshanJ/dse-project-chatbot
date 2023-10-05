@@ -1,7 +1,8 @@
-version: "3.1"
+version: '3.1'
 
 rules:
   - rule: respond to FAQs
     steps:
-    - intent: faq
-    - action: utter_faq
+      - intent: faq
+      - action: utter_faq
+      - action: action_capture_user_input

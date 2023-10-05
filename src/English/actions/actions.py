@@ -4,7 +4,7 @@ from typing import Dict, Text, Any, List
 import logging
 from dateutil import parser
 import sqlalchemy as sa
-
+# from rasa_sdk.interfaces import ActionExecutionRejection, DefaultV1Recipe
 from rasa_sdk.interfaces import Action
 from rasa_sdk.events import (
     SlotSet,
@@ -54,7 +54,25 @@ FORM_DESCRIPTION = {
     "transfer_money_form": "money transfer",
     "transaction_search_form": "transaction search",
 }
+# Example custom action
+# @DefaultV1Recipe.register("action_capture_user_input")
+class CaptureUserInput(Action):
+    def name(self) -> Text:
+        return "action_capture_user_input"
 
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        user_input = tracker.latest_message.get("text")
+        detected_intent = tracker.latest_message.get("intent").get("name")
+        # dispatcher.utter_message('Hello custom')
+        # # Store user_input and detected_intent in your database here
+        # with open("output.txt", "w") as file:
+        #     file.write("Hello, World!\n")
+        print('Intent: ',detected_intent, '     Msg:',user_input)
+        # return []
+        print("Hi its working")
+        return []
 
 class ActionPayCC(Action):
     """Pay credit card."""
@@ -614,7 +632,7 @@ class ActionShowBalance(Action):
             events.append(SlotSet("AA_CONTINUE_FORM", None))
             # avoid that bot goes in listen mode after UserUtteranceReverted
             events.append(FollowupAction(active_form_name))
-
+        print('Showing Balance')
         return events
 
 
