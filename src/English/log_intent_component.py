@@ -7,7 +7,18 @@ from rasa.engine.storage.storage import ModelStorage
 from rasa.shared.nlu.training_data.message import Message
 from rasa.shared.nlu.training_data.training_data import TrainingData
 
-# TODO: Correctly register your component with its type
+from datetime import datetime
+from pymongo import MongoClient
+
+# Replace the following with your MongoDB connection details
+MONGODB_URI = "mongodb://localhost:27017/"
+DATABASE_NAME = "Log_Chat_Data"
+
+# Establish a connection to MongoDB
+client = MongoClient(MONGODB_URI)
+db = client[DATABASE_NAME]
+
+# TODO: Correctly register component with its type
 @DefaultV1Recipe.register(
     [DefaultV1Recipe.ComponentType.INTENT_CLASSIFIER], is_trainable=True
 )
@@ -49,7 +60,23 @@ class LogIntentsComponent(GraphComponent):
                 d['name'] = messages[0].as_dict()['response_selector']['faq']['response']['intent_response_key']
                 d['confidence'] = messages[0].as_dict()['response_selector']['faq']['response']['confidence']
 
+            
+
+            # Create a datetime object for the timestamp
+            timestamp = datetime.now()
+
+            # Add the timestamp as a Date field to the dictionary
+            d['timestamp'] = timestamp
+
+            #add language
+            d['language'] = 'Eng'
+
             print(d)
+
+            # Save the 'd' dictionary into a MongoDB collection
+            collection = db['Chats']
+            collection.insert_one(d)
+
             return messages
         except Exception as e:
             # Handle exceptions here, you can log the error message
