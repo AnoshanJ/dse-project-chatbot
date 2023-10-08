@@ -1,0 +1,36 @@
+version: "3.1"
+nlu:
+- intent: faq/boc_smart_salary_saver_description
+  examples: |
+    -  BOC Smart Salary Saver பற்றி கூறவும் 
+    - BOC Smart Salary Saver கணக்கு என்றால் என்ன?
+    - BOC Smart Salary Saver இல் உள்ள அம்சங்களை விளக்கவும்
+
+- intent: faq/boc_smart_salary_saver_eligibility
+  examples: |
+    - BOC Smart Salary Saver விண்ணப்பிக்க தகுதியானவர்கள் யார்?
+    - BOC Smart Salary Saver விண்ணப்பிப்பதற்கான தகுதிகள் என்ன?
+    - BOC Smart Salary Saver இற்கு யார் விண்ணப்பிக்க முடியும்?
+
+- intent: faq/boc_smart_salary_saver_benefits
+  examples: |
+    - BOC Smart Salary Saver இன்  நன்மைகள் என்ன?
+    - BOC Smart Salary Saver இல் உள்ள பயன்களை கூறவும் 
+    - BOC Smart Salary Saver இல் எவ்வாறான நன்மைகள் உண்டு?
+- intent: faq/boc_smartgen_description
+  examples: |
+    - BOC SmartGen பற்றி கூறவும் 
+    - BOC SmartGen கணக்கு என்றால் என்ன?
+    - BOC SmartGen இல் உள்ள அம்சங்களை விளக்கவும்
+
+- intent: faq/boc_smartgen_eligibility
+  examples: |
+    - BOC SmartGen விண்ணப்பிக்க தகுதியானவர்கள் யார்?
+    - BOC SmartGen விண்ணப்பிப்பதற்கான தகுதிகள் என்ன?
+    - BOC SmartGen இற்கு யார் விண்ணப்பிக்க முடியும்?
+
+- intent: faq/boc_smartgen_benefits
+  examples: |
+    - BOC SmartGen இன்  நன்மைகள் என்ன?
+    - BOC SmartGen இல் உள்ள பயன்களை கூறவும்.
+    - BOC SmartGen offer இல் எவ்வாறான நன்மைகள் உண்டு?
