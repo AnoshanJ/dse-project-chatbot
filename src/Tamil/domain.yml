@@ -1,351 +1,364 @@
-version: "3.1"
+version: '3.1'
 session_config:
   session_expiration_time: 0
   carry_over_slots_to_new_session: true
 intents:
-- check_human
-- transfer_money:
-    use_entities: []
-- inform
-- pay_cc:
-    use_entities: []
-- greet
-- goodbye
-- affirm
-- deny
-- thankyou
-- ask_transfer_charge
-- search_transactions:
-    use_entities: []
-- check_balance:
-    use_entities:
-    - credit_card
-    - account_type
-- check_earnings:
-    use_entities: []
-- check_recipients
-- out_of_scope
-- session_start
-- restart
-- trigger_handoff
-- handoff
-- human_handoff
-- help
-- nlu_fallback
+  - faq
+  - check_human
+  - transfer_money:
+      use_entities: []
+  - inform
+  - pay_cc:
+      use_entities: []
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - thankyou
+  - ask_transfer_charge
+  - search_transactions:
+      use_entities: []
+  - check_balance:
+      use_entities:
+        - credit_card
+        - account_type
+  - check_earnings:
+      use_entities: []
+  - check_recipients
+  - out_of_scope
+  - session_start
+  - restart
+  - trigger_handoff
+  - handoff
+  - human_handoff
+  - help
+  - nlu_fallback
 entities:
-- amount-of-money
-- credit_card
-- payment_date
-- vendor_name
-- time
-- PERSON
-- number
-- account_type
-- handoff_to
-- search_type
+  - amount-of-money
+  - credit_card
+  - payment_date
+  - vendor_name
+  - time
+  - PERSON
+  - number
+  - account_type
+  - handoff_to
+  - search_type
 slots:
   AA_CONTINUE_FORM:
     type: any
     influence_conversation: false
     mappings:
-    - intent: affirm
-      type: from_intent
-      value: yes
-      conditions:
-      - active_loop: cc_payment_form
-        requested_slot: AA_CONTINUE_FORM
-      - active_loop: transfer_money_form
-        requested_slot: AA_CONTINUE_FORM
-      - active_loop: transaction_search_form
-        requested_slot: AA_CONTINUE_FORM
-    - intent: deny
-      type: from_intent
-      value: no
-      conditions:
-      - active_loop: cc_payment_form
-        requested_slot: AA_CONTINUE_FORM
-      - active_loop: transfer_money_form
-        requested_slot: AA_CONTINUE_FORM
-      - active_loop: transaction_search_form
-        requested_slot: AA_CONTINUE_FORM
-    - intent:
-      - inform
-      - cc_payment_form
-      type: from_text
-      conditions:
-      - active_loop: cc_payment_form
-        requested_slot: AA_CONTINUE_FORM
-    - intent:
-      - inform
-      - transfer_money_form
-      type: from_text
-      conditions:
-      - active_loop: transfer_money_form
-        requested_slot: AA_CONTINUE_FORM
-    - intent:
-      - inform
-      - transaction_search_form
-      type: from_text
-      conditions:
-      - active_loop: transaction_search_form
-        requested_slot: AA_CONTINUE_FORM
+      - intent: affirm
+        type: from_intent
+        value: yes
+        conditions:
+          - active_loop: cc_payment_form
+            requested_slot: AA_CONTINUE_FORM
+          - active_loop: transfer_money_form
+            requested_slot: AA_CONTINUE_FORM
+          - active_loop: transaction_search_form
+            requested_slot: AA_CONTINUE_FORM
+      - intent: deny
+        type: from_intent
+        value: no
+        conditions:
+          - active_loop: cc_payment_form
+            requested_slot: AA_CONTINUE_FORM
+          - active_loop: transfer_money_form
+            requested_slot: AA_CONTINUE_FORM
+          - active_loop: transaction_search_form
+            requested_slot: AA_CONTINUE_FORM
+      - intent:
+          - inform
+          - cc_payment_form
+        type: from_text
+        conditions:
+          - active_loop: cc_payment_form
+            requested_slot: AA_CONTINUE_FORM
+      - intent:
+          - inform
+          - transfer_money_form
+        type: from_text
+        conditions:
+          - active_loop: transfer_money_form
+            requested_slot: AA_CONTINUE_FORM
+      - intent:
+          - inform
+          - transaction_search_form
+        type: from_text
+        conditions:
+          - active_loop: transaction_search_form
+            requested_slot: AA_CONTINUE_FORM
   PERSON:
     type: any
     influence_conversation: false
     mappings:
-    - entity: PERSON
-      type: from_entity
-      conditions:
-      - active_loop: transfer_money_form
-        requested_slot: PERSON
-    - intent:
-      - inform
-      - transfer_money_form
-      type: from_text
-      conditions:
-      - active_loop: transfer_money_form
-        requested_slot: PERSON
-    - type: from_entity
-      entity: PERSON
+      - entity: PERSON
+        type: from_entity
+        conditions:
+          - active_loop: transfer_money_form
+            requested_slot: PERSON
+      - intent:
+          - inform
+          - transfer_money_form
+        type: from_text
+        conditions:
+          - active_loop: transfer_money_form
+            requested_slot: PERSON
+      - type: from_entity
+        entity: PERSON
   account_type:
     type: any
     influence_conversation: false
     mappings:
-    - type: from_entity
-      entity: account_type
+      - type: from_entity
+        entity: account_type
   amount-of-money:
     type: any
     influence_conversation: false
     mappings:
-    - entity: amount-of-money
-      not_intent:
-      - check_balance
-      - check_earnings
-      type: from_entity
-      conditions:
-      - active_loop: cc_payment_form
-        requested_slot: amount-of-money
-      - active_loop: transfer_money_form
-        requested_slot: amount-of-money
-    - entity: number
-      not_intent:
-      - check_balance
-      - check_earnings
-      type: from_entity
-      conditions:
-      - active_loop: cc_payment_form
-        requested_slot: amount-of-money
-      - active_loop: transfer_money_form
-        requested_slot: amount-of-money
-    - intent:
-      - inform
-      - cc_payment_form
-      type: from_text
-      conditions:
-      - active_loop: cc_payment_form
-        requested_slot: amount-of-money
-    - intent:
-      - inform
-      - transfer_money_form
-      type: from_text
-      conditions:
-      - active_loop: transfer_money_form
-        requested_slot: amount-of-money
-    - type: from_entity
-      entity: amount-of-money
+      - entity: amount-of-money
+        not_intent:
+          - check_balance
+          - check_earnings
+        type: from_entity
+        conditions:
+          - active_loop: cc_payment_form
+            requested_slot: amount-of-money
+          - active_loop: transfer_money_form
+            requested_slot: amount-of-money
+      - entity: number
+        not_intent:
+          - check_balance
+          - check_earnings
+        type: from_entity
+        conditions:
+          - active_loop: cc_payment_form
+            requested_slot: amount-of-money
+          - active_loop: transfer_money_form
+            requested_slot: amount-of-money
+      - intent:
+          - inform
+          - cc_payment_form
+        type: from_text
+        conditions:
+          - active_loop: cc_payment_form
+            requested_slot: amount-of-money
+      - intent:
+          - inform
+          - transfer_money_form
+        type: from_text
+        conditions:
+          - active_loop: transfer_money_form
+            requested_slot: amount-of-money
+      - type: from_entity
+        entity: amount-of-money
   amount_transferred:
     type: any
     initial_value: 0
     influence_conversation: false
     mappings:
-    - type: custom
+      - type: custom
   credit_card:
     type: any
     influence_conversation: false
     mappings:
-    - entity: credit_card
-      type: from_entity
-      conditions:
-      - active_loop: cc_payment_form
-        requested_slot: credit_card
-    - intent:
-      - inform
-      - cc_payment_form
-      type: from_text
-      conditions:
-      - active_loop: cc_payment_form
-        requested_slot: credit_card
-    - type: from_entity
-      entity: credit_card
+      - entity: credit_card
+        type: from_entity
+        conditions:
+          - active_loop: cc_payment_form
+            requested_slot: credit_card
+      - intent:
+          - inform
+          - cc_payment_form
+        type: from_text
+        conditions:
+          - active_loop: cc_payment_form
+            requested_slot: credit_card
+      - type: from_entity
+        entity: credit_card
   currency:
     type: any
     influence_conversation: false
     initial_value: $
     mappings:
-    - type: custom
+      - type: custom
   end_time:
     type: any
     influence_conversation: false
     mappings:
-    - type: custom
+      - type: custom
   end_time_formatted:
     type: any
     influence_conversation: false
     mappings:
-    - type: custom
+      - type: custom
   grain:
     type: any
     influence_conversation: false
     mappings:
-    - type: custom
+      - type: custom
   handoff_to:
     type: any
     influence_conversation: false
     mappings:
-    - type: from_entity
-      entity: handoff_to
+      - type: from_entity
+        entity: handoff_to
   next_form_name:
     type: text
     influence_conversation: true
     mappings:
-    - type: custom
+      - type: custom
   number:
     type: any
     influence_conversation: false
     mappings:
-    - type: from_entity
-      entity: number
+      - type: from_entity
+        entity: number
   payment_amount_type:
     type: any
     initial_value: ''
     influence_conversation: false
     mappings:
-    - type: custom
+      - type: custom
   previous_form_name:
     type: text
     influence_conversation: true
     mappings:
-    - type: custom
+      - type: custom
   repeated_validation_failures:
     type: any
     influence_conversation: false
     mappings:
-    - type: custom
+      - type: custom
   requested_slot:
     type: any
     influence_conversation: false
     mappings:
-    - type: custom
+      - type: custom
   search_type:
     type: any
     influence_conversation: false
     mappings:
-    - intent: search_transactions
-      type: from_trigger_intent
-      value: spend
-    - intent: check_earnings
-      type: from_trigger_intent
-      value: deposit
-    - type: from_entity
-      entity: search_type
-      conditions:
-      - active_loop: transaction_search_form
-    - type: from_entity
-      entity: search_type
+      - intent: search_transactions
+        type: from_trigger_intent
+        value: spend
+      - intent: check_earnings
+        type: from_trigger_intent
+        value: deposit
+      - type: from_entity
+        entity: search_type
+        conditions:
+          - active_loop: transaction_search_form
+      - type: from_entity
+        entity: search_type
   start_time:
     type: any
     influence_conversation: false
     mappings:
-    - type: custom
+      - type: custom
   start_time_formatted:
     type: any
     influence_conversation: false
     mappings:
-    - type: custom
+      - type: custom
   time:
     type: any
     influence_conversation: false
     mappings:
-    - entity: time
-      type: from_entity
-      conditions:
-      - active_loop: cc_payment_form
-        requested_slot: time
-      - active_loop: transaction_search_form
-        requested_slot: time
-    - intent:
-      - inform
-      - cc_payment_form
-      type: from_text
-      conditions:
-      - active_loop: cc_payment_form
-        requested_slot: time
-    - intent:
-      - inform
-      - transaction_search_form
-      type: from_text
-      conditions:
-      - active_loop: transaction_search_form
-        requested_slot: time
-    - type: from_entity
-      entity: time
+      - entity: time
+        type: from_entity
+        conditions:
+          - active_loop: cc_payment_form
+            requested_slot: time
+          - active_loop: transaction_search_form
+            requested_slot: time
+      - intent:
+          - inform
+          - cc_payment_form
+        type: from_text
+        conditions:
+          - active_loop: cc_payment_form
+            requested_slot: time
+      - intent:
+          - inform
+          - transaction_search_form
+        type: from_text
+        conditions:
+          - active_loop: transaction_search_form
+            requested_slot: time
+      - type: from_entity
+        entity: time
   time_formatted:
     type: any
     influence_conversation: false
     mappings:
-    - type: custom
+      - type: custom
   vendor_name:
     type: any
     influence_conversation: false
     mappings:
-    - type: from_entity
-      entity: vendor_name
+      - type: from_entity
+        entity: vendor_name
   zz_confirm_form:
     type: any
     influence_conversation: false
     mappings:
-    - intent: affirm
-      type: from_intent
-      value: yes
-      conditions:
-      - active_loop: cc_payment_form
-        requested_slot: zz_confirm_form
-      - active_loop: transfer_money_form
-        requested_slot: zz_confirm_form
-      - active_loop: transaction_search_form
-        requested_slot: zz_confirm_form
-    - intent: deny
-      type: from_intent
-      value: no
-      conditions:
-      - active_loop: cc_payment_form
-        requested_slot: zz_confirm_form
-      - active_loop: transfer_money_form
-        requested_slot: zz_confirm_form
-      - active_loop: transaction_search_form
-        requested_slot: zz_confirm_form
-    - intent:
-      - inform
-      - cc_payment_form
-      type: from_text
-      conditions:
-      - active_loop: cc_payment_form
-        requested_slot: zz_confirm_form
-    - intent:
-      - inform
-      - transfer_money_form
-      type: from_text
-      conditions:
-      - active_loop: transfer_money_form
-        requested_slot: zz_confirm_form
-    - intent:
-      - inform
-      - transaction_search_form
-      type: from_text
-      conditions:
-      - active_loop: transaction_search_form
-        requested_slot: zz_confirm_form
+      - intent: affirm
+        type: from_intent
+        value: yes
+        conditions:
+          - active_loop: cc_payment_form
+            requested_slot: zz_confirm_form
+          - active_loop: transfer_money_form
+            requested_slot: zz_confirm_form
+          - active_loop: transaction_search_form
+            requested_slot: zz_confirm_form
+      - intent: deny
+        type: from_intent
+        value: no
+        conditions:
+          - active_loop: cc_payment_form
+            requested_slot: zz_confirm_form
+          - active_loop: transfer_money_form
+            requested_slot: zz_confirm_form
+          - active_loop: transaction_search_form
+            requested_slot: zz_confirm_form
+      - intent:
+          - inform
+          - cc_payment_form
+        type: from_text
+        conditions:
+          - active_loop: cc_payment_form
+            requested_slot: zz_confirm_form
+      - intent:
+          - inform
+          - transfer_money_form
+        type: from_text
+        conditions:
+          - active_loop: transfer_money_form
+            requested_slot: zz_confirm_form
+      - intent:
+          - inform
+          - transaction_search_form
+        type: from_text
+        conditions:
+          - active_loop: transaction_search_form
+            requested_slot: zz_confirm_form
 responses:
+  utter_faq/boc_smart_salary_saver_description:
+    - text: "BOC Smart Salary Saver கணக்கு என்பது சம்பளம் வாங்கும் தனிநபர்கள் தங்கள் கடின வருவாயை அதிக வங்கி வசதிகளுடன் நிர்வகிக்க அர்ப்பணிக்கப்பட்ட ஒரு சிறப்புத் தயாரிப்பு ஆகும்.  உடனடி சம்பள முன்பணத்தைப் பெறும்போது, அவசரத் தேவைகளின் போது   மேலதிக நிதிகளை சேமித்து வைப்பதை இந்தத் தயாரிப்பு உறுதி செய்கிறது.\n\nநீங்கள் 18 முதல் 55 வயது வரை மாதத்திற்கு  ரூ.25,000/- க்கு மேல் சம்பளம் வாங்கும் நபராக இருந்தால், நாடு முழுவதும் உள்ள எந்த இலங்கை வங்கிக் கிளையிலும் BOC Smart Salary Saver கணக்கைத் திறக்க முடியும்.\n\nB Smart Salary Saverன் முக்கிய அம்சங்கள்:\n- கூடுதல் நிதிகளின் தினசரி முதலீடு\n- தினசரி பணம் செலுத்துவதற்கான முதலீட்டு நிதிகளுக்கு எளிதான அணுகல்\n- உடனடி சம்பள முன்பணம்\n- E -வணிகம் செயல்படுத்தப்பட்ட Debit Card\n- Digital வங்கி சேவைகள்"
+  utter_faq/boc_smart_salary_saver_eligibility:
+    - text: "BOC Smart Salary Saver தகுதிபெற, நீங்கள் பின்வரும் நிபந்தனைகளைப் பூர்த்தி செய்ய வேண்டும்:\n- அரசு, அரை அரசு அல்லது தனியார் துறையின் நிரந்தரப் பணியாளராக இருத்தல்\n- EPF நிதி அல்லது ஓய்வூதியத் திட்டத்தில் உறுப்பினராக இருக்க வேண்டும்\n- ஒரு தகுதி வாய்ந்த நிபுணராக இருத்தல்\n\nமேலும், நீங்கள் BOC Smart Salary Saver கணக்கிற்கு மாதாந்திர சம்பளம்/வருவாயைத் தொடர்ந்து அனுப்ப வேண்டும். விதிமுறைகள் மற்றும் நிபந்தனைகளை நிறைவேற்றுவதற்கு அமைய வங்கி வசதிகள் வழங்கப்படுகின்றன."
+  utter_faq/boc_smart_salary_saver_benefits:
+    - text: "BOC Smart Salary Saver ன் நன்மைகள் பின்வருவனவற்றை உள்ளடக்குகின்றன:\n- வருமானத்துடன் கூடிய கூடுதல் நிதியின் தினசரி முதலீடு\n- தினசரி பணம் செலுத்துவதற்கான முதலீட்டு நிதிகளுக்கு எளிதான அணுகல்\n- நீங்கள் வீட்டிற்கு எடுத்துச் செல்லும் மொத்த சம்பளத்தில்  90% வரை உடனடி சம்பள முன்பணம் சம்பளம்\n- E-வணிகம் செயற்படுத்தப்பட்ட Debit Card\n- ஸ்மார்ட் ஆன்லைன் பேங்கிங், B-app, SmartPay மற்றும் பலவற்றை உள்ளடக்கிய Digital வங்கி சேவைகள்\n- Smart PassBook, E-கூற்றுகள் மற்றும் கணக்கு விவரங்களைப் பார்ப்பதற்கான SMS குறுஞ்செய்திகள்\n- மாதாந்த சேவைக் கட்டணங்கள் இல்லை\n- கணக்குகளில் குறைந்தபட்ச இருப்புத் தேவை இல்லை\n\nமேலும் தகவல்களுக்கு, உங்கள் அருகிலுள்ள BOC கிளையினை அல்லது 1975 என்ற எண்ணின்  மூலம்  அழைப்பு மையத்தை தொடர்பு கொள்ளலாம்."
+  utter_faq/boc_smartgen_description:
+    - text: "BOC SmartGen என்பது அடுத்த தலைமுறை சேமிப்புக் கணக்குகளாகும், இது வாடிக்கையாளர்களுக்கு இலங்கை வங்கியுடன் வங்கிச் சேவையின் வேகத்தையும் வசதியையும் அனுபவிப்பதற்கு பரந்த அளவிலான சேவைகளை வழங்குகிறது. இந்தக் கணக்கை உடனடியாகத் திறக்கலாம் மற்றும் activate செய்ய முழுமையாகச் செயல்படுத்தப்படும்.\n\nசாதாரண சேமிப்புக் கணக்கு, 14+ கணக்கு, 18+ கணக்கு, காந்த ரண் கிணும் கணக்கு மற்றும் மூத்த குடிமக்கள் கணக்கு ஆகியவற்றுக்கு BOC SmartGen கிடைக்கிறது.\n\nBOC SmartGen இன் முக்கிய அம்சங்கள்:\n- Passbook இல்லாத கணக்கு\n- இலவச BOC Smart ஆன்லைன் பேங்கிங்/Bapp உடனடி அணுகல்\n- பரிவர்த்தனைகளில் உடனடி SMS எச்சரிக்கைகள்\n- மாதாந்திர மின்-அறிக்கைகள்\n- உடனடி கணக்கு திறப்பு\n- செயல்படுத்தப்பட்ட Debit Card கணக்கு திறக்கும் போது வழங்கப்படும்"
+  utter_faq/boc_smartgen_eligibility:
+    - text: 'BOC SmartGen க்கு தகுதி பெற, வழங்கப்பட்ட தகவலில் குறிப்பிட்ட தகுதிகள் எதுவும் குறிப்பிடப்படவில்லை. இருப்பினும், சாதாரண சேமிப்புக் கணக்கு, 14+ கணக்கு, 18+ கணக்கு, காந்த ரண் கிணும் கணக்கு மற்றும் மூத்த குடிமக்கள் கணக்கு போன்ற பல்வேறு வகையான கணக்குகளுக்கு BOC SmartGen கிடைக்கிறது.'
+  utter_faq/boc_smartgen_benefits:
+    - text: "BOC SmartGen இன் நன்மைகள் பின்வருவனவற்றை உள்ளடக்குகின்றன:\n- Passbook இல்லாத கணக்கு\n- இலவச BOC Smart நிகழ்நிலை வங்கி/Bapp உடனடி அணுகல்\n- பரிவர்த்தனைகள் பற்றிய உடனடி SMS குறுஞ்செய்திகள்\n- மாதாந்த மின்-அறிக்கைகள்\n- Digital முறையில் எடுக்கப்பட்ட வாடிக்கையாளர் புகைப்படம் மற்றும் கையொப்பம்\n- உடனடி கணக்கு திறப்பு\n- கணக்கு திறக்கும் போது செயல்படுத்தப்பட்ட Debit Card வழங்கப்படுகிறது\n\nமேலும், பொருத்தமான தயாரிப்பு வகைகளின் SmartGen பதிப்பிற்கும் பொருந்தும் அதே வட்டி விகிதங்கள்.\n\nமேலும் தகவல்களுக்கு, உங்கள் அருகிலுள்ள BOC கிளையினை அல்லது 1975 என்ற எண்ணின்  மூலம்  அழைப்பு மையத்தை தொடர்பு கொள்ளலாம்."
   utter_out_of_scope:
   - text: மன்னிக்கவும், அதற்கு எப்படி பதிலளிப்பது என்று தெரியவில்லை. உதவிக்கு "உதவி" என தட்டச்சு செய்யவும்.
   utter_ask_transfer_money_form_amount-of-money:
@@ -478,47 +491,50 @@ responses:
   - text: நான் ராசா வால்  உருவாக்கப்பட்ட  மெய்நிகர் உதவியாளர்.
   utter_help:
   - text: "உங்கள் நிதிக் கணக்குகள் தொடர்பாக என்னால்  உங்களுக்கு உதவ முடியும். \n- நீங்கள் என்னிடம் கேட்கக்கூடிய விடயங்கள் : \n- எனது கணக்கு மீதி  என்ன? \n- எனது கிரெடிட் கார்ட் கணக்கை  செலுத்தவும்  \n- கடந்த மாதம் Daraz.lk இல் நான் என்ன செலவு செய்தேன்? \n- நான் பணத்தை மாற்ற வேண்டும்"
+
 actions:
-- action_session_start
-- action_restart
-- action_show_balance
-- action_show_recipients
-- action_show_transfer_charge
-- action_handoff
-- action_handoff_options
-- action_pay_cc
-- action_transfer_money
-- action_transaction_search
-- action_ask_transaction_search_form_zz_confirm_form
-- action_switch_forms_ask
-- action_switch_forms_deny
-- action_switch_forms_affirm
-- action_switch_back_ask
-- validate_cc_payment_form
-- validate_transfer_money_form
-- validate_transaction_search_form
+  - action_capture_user_input
+  - action_session_start
+  - action_restart
+  - action_show_balance
+  - action_show_recipients
+  - action_show_transfer_charge
+  - action_handoff
+  - action_handoff_options
+  - action_pay_cc
+  - action_transfer_money
+  - action_transaction_search
+  - action_ask_transaction_search_form_zz_confirm_form
+  - action_switch_forms_ask
+  - action_switch_forms_deny
+  - action_switch_forms_affirm
+  - action_switch_back_ask
+  - validate_cc_payment_form
+  - validate_transfer_money_form
+  - validate_transaction_search_form
 forms:
   cc_payment_form:
     ignored_intents: []
     required_slots:
-    - AA_CONTINUE_FORM
-    - credit_card
-    - amount-of-money
-    - time
-    - zz_confirm_form
+      - AA_CONTINUE_FORM
+      - credit_card
+      - amount-of-money
+      - time
+      - zz_confirm_form
   transfer_money_form:
     ignored_intents: []
     required_slots:
-    - AA_CONTINUE_FORM
-    - PERSON
-    - amount-of-money
-    - zz_confirm_form
+      - AA_CONTINUE_FORM
+      - PERSON
+      - amount-of-money
+      - zz_confirm_form
   transaction_search_form:
     ignored_intents: []
     required_slots:
-    - AA_CONTINUE_FORM
-    - search_type
-    - time
-    - zz_confirm_form
+      - AA_CONTINUE_FORM
+      - search_type
+      - time
+      - zz_confirm_form
+
 
 
