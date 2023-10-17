@@ -1,4 +1,4 @@
-version: "3.1"
+version: '3.1'
 language: en
 pipeline:
 - name: WhitespaceTokenizer
@@ -37,11 +37,11 @@ pipeline:
   dimensions: ["PERSON"]
 - name: EntitySynonymMapper
 policies:
-- name: AugmentedMemoizationPolicy
-- name: TEDPolicy
-  epochs: 40
-- name: RulePolicy
-  core_fallback_threshold: 0.4
-  core_fallback_action_name: "action_default_fallback"
-  enable_fallback_prediction: true
+  - name: AugmentedMemoizationPolicy
+  - name: TEDPolicy
+    epochs: 40
+  - name: RulePolicy
+    core_fallback_threshold: 0.4
+    core_fallback_action_name: 'action_default_fallback'
+    enable_fallback_prediction: true
 assistant_id: 20230813-003342-chamfered-reflection

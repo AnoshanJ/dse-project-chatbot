@@ -5,11 +5,17 @@ The Localised Chatbot for Bank Customer Care project aims to develop an intellig
 
 ## Screenshots and Features
 
-![Alt text](<Screenshot 5.jpg>) 
-![Alt text](<Screenshot 1.jpg>) 
-![Alt text](<Screenshot 2.jpg>) 
-![Alt text](<Screenshot 3.jpg>) 
-![Alt text](<Screenshot 4.jpg>)
+<div style="display: flex; justify-content: space-between;">
+    <img src="Screenshot 5.jpg" alt="Screenshot 5" width="45%"/>
+    <img src="Screenshot 1.jpg" alt="Screenshot 1" width="45%"/>
+</div>
+<div style="height: 20px;"></div> <!-- This adds some vertical space between the rows -->
+<div style="display: flex; justify-content: space-between;">
+    <img src="Screenshot 2.jpg" alt="Screenshot 2" width="45%"/>
+    <img src="Screenshot 3.jpg" alt="Screenshot 3" width="45%"/>
+</div>
+<div style="height: 20px;"></div> <!-- This adds some vertical space between the rows -->
+<img src="Screenshot 4.jpg" alt="Screenshot 4" width="45%"/>
 
 ## Objectives
 1. **Language Adaptability**: Build a chatbot that can seamlessly understand and respond in either Sinhala or Tamil language.
