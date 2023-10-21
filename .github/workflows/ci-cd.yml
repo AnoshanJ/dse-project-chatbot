@@ -10,14 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Rasa Train and Test for English
+    - name: Rasa Train and Test for English    
       uses: RasaHQ/rasa-train-test-gha@main
       with:
-        working-directory: ./src/English
-        requirements_file: requirements.txt
+        rasa_version: '3.5.15-full'
+        workspace: ./src/English
+        model: ./models
         data_validate: true
-        rasa_train: true
-        cross_validation: true
+        # rasa_train: true
+        # cross_validation: true
         rasa_test: true
         test_type: all
         publish_summary: true
@@ -30,76 +31,59 @@ jobs:
     - name: Rasa Train and Test for Tamil
       uses: RasaHQ/rasa-train-test-gha@main
       with:
-        working-directory: ./src/Tamil
-        requirements_file: requirements.txt
+        rasa_version: '3.5.15-full'
+        workspace: ./src/Tamil
+        model: ./models
         data_validate: true
-        rasa_train: true
-        cross_validation: true
+        # rasa_train: true
+        # cross_validation: true
         rasa_test: true
         test_type: all
         publish_summary: true
         github_token: ${{ secrets.GITHUB_TOKEN }}
   deploy_english:
+    name: Deploy English
     needs: training-testing-english
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-    - name: Set working directory to English
-      run: cd src/English
     - name: Login to Docker Hub
       uses: docker/login-action@v3
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --t anoshan265/rasa-chatbot 
+      run: cd ./src/English && docker build . --file Dockerfile -t anoshan265/rasa-chatbot 
     - name: Push the Docker image
-      run: docker push anoshan265/rasa-chatbot
-    - name: Set context to Okteto Cloud
-      uses: okteto/context@latest
-      with:
-        token: ${{ secrets.OKTETO_TOKEN }}
-    - name: Login to the namespace
-      uses: okteto/namespace@latest
-      with:
-        namespace: anoshanj
-    - name: Build and deploy English application image to Okteto Namespace
+      run: cd ./src/English && docker push anoshan265/rasa-chatbot
+    - name: Login to Okteto and deploy
       if: ${{ github.event_name == 'push' }}
-      uses: okteto/deploy-stack@latest
-      with:
-        file: docker-compose.yml
-        name: rasa-english-chatbot
-        build: true
+      run: |
+        cd ./src/English
+        curl https://get.okteto.com -sSfL | sh
+        okteto login --token ${{ secrets.OKTETO_TOKEN }}
+        okteto deploy --build -f .\docker-compose.yml
   deploy_tamil:
+    name: Deploy Tamil
     needs: training-testing-tamil
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-    - name: Set working directory to Tamil
-      run: cd src/Tamil
     - name: Login to Docker Hub
       uses: docker/login-action@v3
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --t anoshan265/rasa-chatbot-ta 
+      run: cd ./src/Tamil && docker build . --file Dockerfile -t anoshan265/rasa-chatbot-ta
     - name: Push the Docker image
-      run: docker push anoshan265/rasa-chatbot-ta
-    - name: Set context to Okteto Cloud
-      uses: okteto/context@latest
-      with:
-        token: ${{ secrets.OKTETO_TOKEN }}
-    - name: Login to the namespace
-      uses: okteto/namespace@latest
-      with:
-        namespace: anoshanj
-    - name: Build and deploy Tamil application image to Okteto Namespace
+      run: cd ./src/Tamil && docker push anoshan265/rasa-chatbot-ta
+    - name: Login to Okteto and deploy
       if: ${{ github.event_name == 'push' }}
-      uses: okteto/deploy-stack@latest
-      with:
-        file: docker-compose.yml
-        name: rasa-tamil-chatbot
-        build: true
+      run: |
+        cd ./src/Tamil
+        curl https://get.okteto.com -sSfL | sh
+        okteto login --token ${{ secrets.OKTETO_TOKEN }}
+        okteto deploy --build -f .\docker-compose.yml

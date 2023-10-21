@@ -1,6 +1,6 @@
 version: '3.4'
 services:
-  rasa:
+  rasa-en:
     image: anoshan265/rasa-chatbot:latest
     working_dir: /app
     build: "./"
@@ -12,11 +12,11 @@ services:
     ports:
     - 8443:8443
     depends_on:
-    - action_server
+    - action-server
     - duckling
     networks:
     - all
-  action_server:
+  action-server:
     image: anoshan265/rasa-chatbot:latest
     working_dir: /app
     build: "./"
@@ -31,7 +31,7 @@ services:
     image: rasa/duckling
     restart: always
     ports:
-      - "8000:8000"
+      - 8000:8000
 networks:
   all:
     driver: bridge

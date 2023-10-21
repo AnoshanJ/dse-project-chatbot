@@ -12,10 +12,10 @@ services:
     ports:
     - 8443:8443
     depends_on:
-    - action_server-ta
+    - action-server-ta
     networks:
     - all
-  action_server-ta:
+  action-server-ta:
     image: anoshan265/rasa-chatbot-ta:latest
     working_dir: /app
     build: "./"
