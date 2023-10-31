@@ -1,36 +1,243 @@
 version: "3.1"
 nlu:
-- intent: faq/boc_smart_salary_saver_description
-  examples: |
-    - Tell me about BOC Smart Salary Saver
-    - What is BOC Smart Salary Saver account?
-    - Explain the features of BOC Smart Salary Saver
+  - intent: faq/accounts_boc_smart_salary_saver_description
+    examples: |
+      - Tell me about BOC Smart Salary Saver
+      - What is BOC Smart Salary Saver account?
+      - Explain the features of BOC Smart Salary Saver
+      - Can you provide details about BOC Smart Salary Saver?
+      - I want to know more about BOC Smart Salary Saver account
 
-- intent: faq/boc_smart_salary_saver_eligibility
-  examples: |
-    - Who is eligible for BOC Smart Salary Saver?
-    - What are the eligibility criteria for BOC Smart Salary Saver?
-    - Who can apply for BOC Smart Salary Saver?
+  - intent: faq/accounts_boc_smart_salary_saver_eligibility
+    examples: |
+      - Who is eligible for BOC Smart Salary Saver?
+      - What are the eligibility criteria for BOC Smart Salary Saver account?
+      - Can anyone open a BOC Smart Salary Saver account?
+      - What do I need to qualify for the BOC Smart Salary Saver account?
+      - Tell me about the eligibility for BOC Smart Salary Saver
 
-- intent: faq/boc_smart_salary_saver_benefits
-  examples: |
-    - What are the benefits of BOC Smart Salary Saver?
-    - Tell me the advantages of BOC Smart Salary Saver.
-    - What benefits does BOC Smart Salary Saver offer?
-- intent: faq/boc_smartgen_description
-  examples: |
-    - Tell me about BOC SmartGen
-    - What is BOC SmartGen account?
-    - Explain the features of BOC SmartGen
+  - intent: faq/accounts_boc_smart_salary_saver_benefits
+    examples: |
+      - What are the benefits of BOC Smart Salary Saver?
+      - Can you list the advantages of BOC Smart Salary Saver account?
+      - Why should I open a BOC Smart Salary Saver account?
+      - What perks do I get with BOC Smart Salary Saver?
+      - Explain the benefits of BOC Smart Salary Saver
 
-- intent: faq/boc_smartgen_eligibility
-  examples: |
-    - Who is eligible for BOC SmartGen?
-    - What are the eligibility criteria for BOC SmartGen?
-    - Who can apply for BOC SmartGen?
+  - intent: faq/accounts_boc_smart_salary_saver_documents
+    examples: |
+      - What documents are needed to open a BOC Smart Salary Saver account?
+      - Can you list the required documents for BOC Smart Salary Saver?
+      - I want to open a BOC Smart Salary Saver account. What paperwork do I need?
+      - Tell me about the documentation for BOC Smart Salary Saver
+      - Which forms and proofs are needed for BOC Smart Salary Saver account?
+  # For BOC SMARTGEN
+  - intent: faq/accounts_boc_smartgen_description
+    examples: |
+      - Tell me about BOC SMARTGEN
+      - What is BOC SMARTGEN account?
+      - Explain the features of BOC SMARTGEN
 
-- intent: faq/boc_smartgen_benefits
-  examples: |
-    - What are the benefits of BOC SmartGen?
-    - Tell me the advantages of BOC SmartGen.
-    - What benefits does BOC SmartGen offer?
+  - intent: faq/accounts_boc_smartgen_benefits
+    examples: |
+      - What are the benefits of BOC SMARTGEN?
+      - Can you list the advantages of BOC SMARTGEN account?
+      - Why should I open a BOC SMARTGEN account?
+
+  - intent: faq/accounts_boc_smartgen_documents
+    examples: |
+      - What documents are needed to open a BOC SMARTGEN account?
+      - Can you list the required documents for BOC SMARTGEN?
+      - I want to open a BOC SMARTGEN account. What paperwork do I need?
+
+  # For 3G SAVINGS
+  - intent: faq/accounts_3g_savings_description
+    examples: |
+      - Tell me about 3G SAVINGS
+      - What is 3G SAVINGS account?
+      - Explain the features of 3G SAVINGS
+
+  # For RAN KEKULU SMART
+  - intent: faq/accounts_ran_kekulu_smart_description
+    examples: |
+      - Tell me about RAN KEKULU SMART
+      - What is RAN KEKULU SMART account?
+      - Explain the features of RAN KEKULU SMART
+
+  - intent: faq/accounts_ran_kekulu_smart_eligibility
+    examples: |
+      - Who is eligible for RAN KEKULU SMART?
+      - What are the eligibility criteria for RAN KEKULU SMART account?
+      - Can anyone open a RAN KEKULU SMART account?
+
+  - intent: faq/accounts_ran_kekulu_smart_benefits
+    examples: |
+      - What are the benefits of RAN KEKULU SMART?
+      - Can you list the advantages of RAN KEKULU SMART account?
+      - Why should I open a RAN KEKULU SMART account?
+
+  - intent: faq/accounts_ran_kekulu_smart_documents
+    examples: |
+      - What documents are needed to open a RAN KEKULU SMART account?
+      - Can you list the required documents for RAN KEKULU SMART?
+      - I want to open a RAN KEKULU SMART account. What paperwork do I need?
+  # For HARITHA KEKULU
+  - intent: faq/accounts_haritha_kekulu_description
+    examples: |
+      - Tell me about BOC Haritha Kekulu
+      - What is BOC Haritha Kekulu account?
+      - Explain the features of BOC Haritha Kekulu
+
+  - intent: faq/accounts_haritha_kekulu_eligibility
+    examples: |
+      - Who is eligible for BOC Haritha Kekulu?
+      - What are the eligibility criteria for BOC Haritha Kekulu account?
+      - Can anyone open a BOC Haritha Kekulu account?
+
+  - intent: faq/accounts_haritha_kekulu_benefits
+    examples: |
+      - What are the benefits of BOC Haritha Kekulu?
+      - Can you list the advantages of BOC Haritha Kekulu account?
+      - Why should I open a BOC Haritha Kekulu account?
+
+  - intent: faq/accounts_haritha_kekulu_documents
+    examples: |
+      - What documents are needed to open a BOC Haritha Kekulu account?
+      - Can you list the required documents for BOC Haritha Kekulu?
+      - I want to open a BOC Haritha Kekulu account. What paperwork do I need?
+
+  # For 14+ TEENAGERS SAVINGS ACCOUNT
+  - intent: faq/accounts_14plus_teenagers_description
+    examples: |
+      - Tell me about the 14+ Teenagers Savings Account
+      - What is the 14+ Teenagers Savings Account?
+      - Explain the features of the 14+ Teenagers Savings Account
+
+  - intent: faq/accounts_14plus_teenagers_documents
+    examples: |
+      - What documents are needed to open a 14+ Teenagers Savings Account?
+      - Can you list the required documents for the 14+ Teenagers Savings Account?
+      - I want to open a 14+ Teenagers Savings Account. What paperwork do I need?
+
+  # For 18+ YOUTH SAVINGS ACCOUNT
+  - intent: faq/accounts_18plus_youth_description
+    examples: |
+      - Tell me about the 18+ Youth Savings Account
+      - What is the 18+ Youth Savings Account?
+      - Explain the features of the 18+ Youth Savings Account
+
+  - intent: faq/accounts_18plus_youth_benefits
+    examples: |
+      - What are the benefits of the 18+ Youth Savings Account?
+      - Can you list the advantages of the 18+ Youth Savings Account?
+      - Why should I open an 18+ Youth Savings Account?
+
+  - intent: faq/accounts_18plus_youth_documents
+    examples: |
+      - What documents are needed to open an 18+ Youth Savings Account?
+      - Can you list the required documents for the 18+ Youth Savings Account?
+      - I want to open an 18+ Youth Savings Account. What paperwork do I need?
+  # For E-THURU
+  - intent: faq/accounts_e_thuru_description
+    examples: |
+      - Tell me about BOC e-Thuru
+      - What is BOC e-Thuru Green Savings Account?
+      - Explain the features of BOC e-Thuru
+
+  - intent: faq/accounts_e_thuru_eligibility
+    examples: |
+      - Who can open a BOC e-Thuru account?
+      - What are the eligibility criteria for BOC e-Thuru?
+      - Can institutions open a BOC e-Thuru account?
+
+  # For RAN ULPATHA
+  - intent: faq/accounts_ran_ulpatha_description
+    examples: |
+      - Tell me about Ran Ulpatha
+      - What is Ran Ulpatha account?
+      - Explain the features of Ran Ulpatha
+
+  - intent: faq/accounts_ran_ulpatha_documents
+    examples: |
+      - What documents are needed for Ran Ulpatha?
+      - How can I open a Ran Ulpatha account?
+      - What paperwork is required for Ran Ulpatha?
+
+  # For BOC SAVINGS
+  - intent: faq/accounts_boc_savings_description
+    examples: |
+      - Tell me about BOC Savings
+      - What is BOC Savings account?
+      - Explain the features of BOC Savings
+
+  - intent: faq/accounts_boc_savings_documents
+    examples: |
+      - What documents are needed for BOC Savings?
+      - How can I open a BOC Savings account?
+      - What paperwork is required for BOC Savings?
+
+  # For BOC SENIOR CITIZENS SAVINGS
+  - intent: faq/accounts_boc_senior_citizens_savings_description
+    examples: |
+      - Tell me about BOC Senior Citizens Savings
+      - What is BOC Senior Citizens Savings account?
+      - Explain the features of BOC Senior Citizens Savings
+
+  - intent: faq/accounts_boc_senior_citizens_savings_documents
+    examples: |
+      - What documents are needed for BOC Senior Citizens Savings?
+      - How can I open a BOC Senior Citizens Savings account?
+      - What paperwork is required for BOC Senior Citizens Savings?
+
+  # For KANTHA RAN GINUM
+  - intent: faq/accounts_kantha_ran_ginum_description
+    examples: |
+      - Tell me about Kantha Ran Ginum
+      - What is Kantha Ran Ginum account?
+      - Explain the features of Kantha Ran Ginum
+
+  - intent: faq/accounts_kantha_ran_ginum_documents
+    examples: |
+      - What documents are needed for Kantha Ran Ginum?
+      - How can I open a Kantha Ran Ginum account?
+      - What paperwork is required for Kantha Ran Ginum?
+  # For FIXED DEPOSITS
+  - intent: faq/deposits_fixed_deposits
+    examples: |
+      - Tell me about Fixed Deposits
+      - What is Fixed Deposits?
+      - Explain the features of Fixed Deposits
+
+  # For SENIOR CITIZENS FIXED DEPOSITS
+  - intent: faq/deposits_senior_citizens_fixed_deposits
+    examples: |
+      - Tell me about Senior Citizens Fixed Deposits
+      - What is Senior Citizens Fixed Deposits?
+      - Explain the features of Senior Citizens Fixed Deposits
+
+  # For SMART FD (SCRIPLESS FIXED DEPOSITS)
+  - intent: faq/deposits_smart_fd
+    examples: |
+      - Tell me about Smart FD
+      - What is Scripless Fixed Deposits?
+      - Explain the features of Smart FD
+
+  # For 100, 200, 400 DAYS INVESTMENTS
+  - intent: faq/deposits_days_investments
+    examples: |
+      - Tell me about 100, 200, 400 Days Investments
+      - What are the 100, 200, 400 Days Investments?
+      - Explain the features of 100, 200, 400 Days Investments
+  # For 7 DAY CALL DEPOSITS
+  - intent: faq/deposits_7_day_call_deposits
+    examples: |
+      - Tell me about 7 Day Call Deposits
+      - What is 7 Day Call Deposits?
+      - Explain the features of 7 Day Call Deposits
+
+  # For KANTHA RAN GINUM SAVINGS CERTIFICATES
+  - intent: faq/deposits_kantha_ran_ginum_savings_certificates
+    examples: |
+      - Tell me about Kantha Ran Ginum Savings Certificates
+      - What is Kantha Ran Ginum Savings Certificates?
+      - Explain the features of Kantha Ran Ginum Savings Certificates
