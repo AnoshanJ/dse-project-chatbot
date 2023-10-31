@@ -12,25 +12,230 @@ nlu:
       - What are the eligibility criteria for BOC Smart Salary Saver?
       - Who can apply for BOC Smart Salary Saver?
 
-  - intent: faq/boc_smart_salary_saver$benefits
-    examples: |
-      - What are the benefits of BOC Smart Salary Saver?
-      - Tell me the advantages of BOC Smart Salary Saver.
-      - What benefits does BOC Smart Salary Saver offer?
-  - intent: faq/boc_smartgen$description
-    examples: |
-      - Tell me about BOC SmartGen
-      - What is BOC SmartGen account?
-      - Explain the features of BOC SmartGen
+- intent: faq/boc_smart_salary_saver_benefits
+  examples: |
+    - What are the benefits of BOC Smart Salary Saver?
+    - Tell me the advantages of BOC Smart Salary Saver.
+    - What benefits does BOC Smart Salary Saver offer?
 
-  - intent: faq/boc_smartgen$eligibility
-    examples: |
-      - Who is eligible for BOC SmartGen?
-      - What are the eligibility criteria for BOC SmartGen?
-      - Who can apply for BOC SmartGen?
+- intent: faq/boc_smartgen_description
+  examples: |
+    - Tell me about BOC SmartGen
+    - What is BOC SmartGen account?
+    - Explain the features of BOC SmartGen
 
-  - intent: faq/boc_smartgen$benefits
-    examples: |
-      - What are the benefits of BOC SmartGen?
-      - Tell me the advantages of BOC SmartGen.
-      - What benefits does BOC SmartGen offer?
+- intent: faq/boc_ran_kekulu_description
+  examples: |
+    - Tell me about BOC Ran Kekulu
+    - What is BOC Ran Kekulu account?
+    - Explain the features of BOC Ran Kekulu
+
+- intent: faq/boc_savings_plus_description
+  examples: |
+    - Tell me about BOC Savings Plus
+    - What is BOC Savings Plus account?
+    - Explain the features of BOC Savings Plus
+
+- intent: faq/boc_senior_citizens_description
+  examples: |
+    - Tell me about BOC Senior Citizens
+    - What is BOC Senior Citizens account?
+    - Explain the features of BOC Senior Citizens
+
+- intent: faq/boc_2_in_1_description
+  examples: |
+    - Tell me about BOC 2 in 1
+    - What is BOC 2 in 1 account?
+    - Explain the features of BOC 2 in 1
+
+- intent: faq/boc_savings_description
+  examples: |
+    - Tell me about BOC Savings
+    - What is BOC Savings account?
+    - Explain the features of BOC Savings
+
+- intent: faq/boc_group_savings_description
+  examples: |
+    - Tell me about BOC Group Savings
+    - What is BOC Group Savings account?
+    - Explain the features of BOC Group Savings
+
+- intent: faq/boc_special_savings_description
+  examples: |
+    - Tell me about BOC Special Savings
+    - What is BOC Special Savings account?
+    - Explain the features of BOC Special Savings
+
+- intent: faq/boc_savings_for_foreign_currency_description
+  examples: |
+    - Tell me about BOC Savings for Foreign Currency
+    - What is BOC Savings for Foreign Currency account?
+    - Explain the features of BOC Savings for Foreign Currency
+
+- intent: faq/boc_savings_products
+  examples: |
+    - What BOC savings account products are available?
+    - List BOC savings account options.
+    - Tell me about BOC savings offerings
+
+- intent: faq/boc_smartgen_eligibility
+  examples: |
+    - Who is eligible for BOC SmartGen?
+    - What are the eligibility criteria for BOC SmartGen?
+    - Who can apply for BOC SmartGen?
+
+- intent: faq/boc_smartgen_benefits
+  examples: |
+    - What are the benefits of BOC SmartGen?
+    - Tell me about the advantages of BOC SmartGen account.
+    - Why should I choose BOC SmartGen?
+
+- intent: faq/boc_ran_kekulu_eligibility
+  examples: |
+    - Who is eligible for BOC Ran Kekulu?
+    - What are the eligibility criteria for BOC Ran Kekulu?
+    - Who can open a BOC Ran Kekulu account?
+
+- intent: faq/boc_ran_kekulu_benefits
+  examples: |
+    - What are the benefits of BOC Ran Kekulu?
+    - Tell me about the advantages of BOC Ran Kekulu account.
+    - Why should I choose BOC Ran Kekulu?
+
+- intent: faq/boc_savings_plus_eligibility
+  examples: |
+    - Who is eligible for BOC Savings Plus?
+    - What are the eligibility criteria for BOC Savings Plus?
+    - Who can apply for BOC Savings Plus?
+
+- intent: faq/boc_savings_plus_benefits
+  examples: |
+    - What are the benefits of BOC Savings Plus?
+    - Tell me about the advantages of BOC Savings Plus account.
+    - Why should I choose BOC Savings Plus?
+
+- intent: faq/boc_senior_citizens_eligibility
+  examples: |
+    - Who is eligible for BOC Senior Citizens?
+    - What are the eligibility criteria for BOC Senior Citizens?
+    - Who can open a BOC Senior Citizens account?
+
+- intent: faq/boc_senior_citizens_benefits
+  examples: |
+    - What are the benefits of BOC Senior Citizens?
+    - Tell me about the advantages of BOC Senior Citizens account.
+    - Why should senior citizens choose BOC Senior Citizens?
+
+- intent: faq/boc_2_in_1_eligibility
+  examples: |
+    - Who is eligible for BOC 2 in 1?
+    - What are the eligibility criteria for BOC 2 in 1?
+    - Who can apply for BOC 2 in 1?
+
+- intent: faq/boc_2_in_1_benefits
+  examples: |
+    - What are the benefits of BOC 2 in 1?
+    - Tell me about the advantages of BOC 2 in 1 account.
+    - Why should I choose BOC 2 in 1?
+
+- intent: faq/boc_savings_eligibility
+  examples: |
+    - Who is eligible for BOC Savings?
+    - What are the eligibility criteria for BOC Savings?
+    - Who can apply for BOC Savings?
+
+- intent: faq/boc_savings_benefits
+  examples: |
+    - What are the benefits of BOC Savings?
+    - Tell me about the advantages of BOC Savings account.
+    - Why should I choose BOC Savings?
+
+- intent: faq/boc_group_savings_eligibility
+  examples: |
+    - Who is eligible for BOC Group Savings?
+    - What are the eligibility criteria for BOC Group Savings?
+    - Who can open a BOC Group Savings account?
+
+- intent: faq/boc_group_savings_benefits
+  examples: |
+    - What are the benefits of BOC Group Savings?
+    - Tell me about the advantages of BOC Group Savings account.
+    - Why should groups choose BOC Group Savings?
+
+- intent: faq/boc_special_savings_eligibility
+  examples: |
+    - Who is eligible for BOC Special Savings?
+    - What are the eligibility criteria for BOC Special Savings?
+    - Who can apply for BOC Special Savings?
+
+- intent: faq/boc_special_savings_benefits
+  examples: |
+    - What are the benefits of BOC Special Savings?
+    - Tell me about the advantages of BOC Special Savings account.
+    - Why should I choose BOC Special Savings?
+
+- intent: faq/boc_savings_for_foreign_currency_eligibility
+  examples: |
+    - Who is eligible for BOC Savings for Foreign Currency?
+    - What are the eligibility criteria for BOC Savings for Foreign Currency?
+    - Who can open a BOC Savings for Foreign Currency account?
+
+- intent: faq/boc_savings_for_foreign_currency_benefits
+  examples: |
+    - What are the benefits of BOC Savings for Foreign Currency?
+    - Tell me about the advantages of BOC Savings for Foreign Currency account.
+    - Why should non-resident Sri Lankans and foreigners choose BOC Savings for Foreign Currency?
+
+- intent: faq/boc_term_deposits_description
+  examples: |
+    - What are BOC Term Deposits?
+    - Tell me about BOC Term Deposits.
+    - Explain the features of BOC Term Deposits.
+
+- intent: faq/boc_fixed_deposits_description
+  examples: |
+    - What are BOC Fixed Deposits?
+    - Tell me about BOC Fixed Deposits.
+    - Explain the features of BOC Fixed Deposits.
+
+- intent: faq/boc_senior_citizens_fixed_deposits_description
+  examples: |
+    - What are BOC Senior Citizens Fixed Deposits?
+    - Tell me about BOC Senior Citizens Fixed Deposits.
+    - Explain the features of BOC Senior Citizens Fixed Deposits.
+
+- intent: faq/boc_2_in_1_fixed_deposit_description
+  examples: |
+    - What is BOC 2 in 1 Fixed Deposit?
+    - Tell me about BOC 2 in 1 Fixed Deposit.
+    - Explain the features of BOC 2 in 1 Fixed Deposit.
+
+- intent: faq/boc_childrens_fixed_deposits_description
+  examples: |
+    - What are BOC Children's Fixed Deposits?
+    - Tell me about BOC Children's Fixed Deposits.
+    - Explain the features of BOC Children's Fixed Deposits.
+
+- intent: faq/boc_foreign_currency_fixed_deposits_description
+  examples: |
+    - What are BOC Foreign Currency Fixed Deposits?
+    - Tell me about BOC Foreign Currency Fixed Deposits.
+    - Explain the features of BOC Foreign Currency Fixed Deposits.
+
+- intent: faq/boc_ran_kekulu_fixed_deposit_description
+  examples: |
+    - What is BOC Ran Kekulu Fixed Deposit?
+    - Tell me about BOC Ran Kekulu Fixed Deposit.
+    - Explain the features of BOC Ran Kekulu Fixed Deposit.
+
+- intent: faq/boc_suwa_udana_fixed_deposit_description
+  examples: |
+    - What is BOC Suwa Udana Fixed Deposit?
+    - Tell me about BOC Suwa Udana Fixed Deposit.
+    - Explain the features of BOC Suwa Udana Fixed Deposit.
+
+- intent: faq/boc_term_deposits
+  examples: |
+    - What types of term deposits does BOC offer?
+    - List BOC term deposit options.
+    - Tell me about BOC term deposit offerings.
