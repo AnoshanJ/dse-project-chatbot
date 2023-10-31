@@ -3,36 +3,37 @@ session_config:
   session_expiration_time: 0
   carry_over_slots_to_new_session: true
 intents:
-  - faq
-  - check_human
-  - transfer_money:
-      use_entities: []
-  - inform
-  - pay_cc:
-      use_entities: []
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - thankyou
-  - ask_transfer_charge
-  - search_transactions:
-      use_entities: []
-  - check_balance:
-      use_entities:
-        - credit_card
-        - account_type
-  - check_earnings:
-      use_entities: []
-  - check_recipients
-  - out_of_scope
-  - session_start
-  - restart
-  - trigger_handoff
-  - handoff
-  - human_handoff
-  - help
-  - nlu_fallback
+- ask_interest_rate
+- faq
+- check_human
+- transfer_money:
+    use_entities: []
+- inform
+- pay_cc:
+    use_entities: []
+- greet
+- goodbye
+- affirm
+- deny
+- thankyou
+- ask_transfer_charge
+- search_transactions:
+    use_entities: []
+- check_balance:
+    use_entities:
+    - credit_card
+    - account_type
+- check_earnings:
+    use_entities: []
+- check_recipients
+- out_of_scope
+- session_start
+- restart
+- trigger_handoff
+- handoff
+- human_handoff
+- help
+- nlu_fallback
 entities:
   - amount-of-money
   - credit_card
@@ -606,6 +607,7 @@ responses:
   utter_help:
     - text: "I can help you with your financial accounts. \nYou can ask me things like: \n- What's my account balance? \n- Pay off my credit card \n- What did I spend at Keells Super last month? \n- I need to transfer money"
 actions:
+  - action_fetch_interest_rates
   - action_capture_user_input
   - action_session_start
   - action_restart
