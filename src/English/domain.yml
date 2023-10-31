@@ -346,141 +346,133 @@ slots:
         conditions:
           - active_loop: transaction_search_form
             requested_slot: zz_confirm_form
+
 responses:
-  utter_faq/boc_term_deposits_description:
-    - text: "BOC Term Deposits are a safe and secure way to invest your money for a fixed period of time to earn a higher rate of interest than a regular savings account. Bank of Ceylon offers a range of term deposits to suit your needs."
+  utter_faq/accounts_boc_smart_salary_saver_description:
+    - text: "BOC Smart Salary Saver account is a special product for salaried individuals to manage their earnings with various banking facilities. It offers a return for surplus funds and provides an instant salary advance for urgent needs. The account can be opened at any Bank of Ceylon branch for individuals aged 18 to 55 with a take-home salary above Rs. 25,000/- per month. It offers daily investment of additional funds, easy access to invested funds, an e-commerce enabled debit card, and digital banking services."
 
-  utter_faq/boc_fixed_deposits_description:
-    - text: "BOC Fixed Deposits are a type of term deposit where you invest your money for a fixed period, which can range from one month to five years. The interest rate is fixed at the time of deposit and remains unchanged until maturity."
+  utter_faq/accounts_boc_smart_salary_saver_eligibility:
+    - text: "To be eligible for the BOC Smart Salary Saver account, you should be a permanent employee of the Government, Semi-Government, or Private Sector. You should also be a member of the EPF Fund or Pension Scheme and be a qualified professional."
 
-  utter_faq/boc_senior_citizens_fixed_deposits_description:
-    - text: "BOC Senior Citizens Fixed Deposits are a special fixed deposit scheme designed for senior citizens. It offers them a higher rate of interest, making it a favorable choice for seniors looking to grow their savings securely."
+  utter_faq/accounts_boc_smart_salary_saver_benefits:
+    - text: "The benefits of the BOC Smart Salary Saver account include daily investment of excess funds with a return, easy access to invested funds for payments, instant salary advance up to 90% of your take-home salary (if criteria are met), e-commerce enabled debit card, digital banking services like Smart Online Banking, B-App, SmartPay, Smart Passbook, e-statements, and SMS alerts. The account can be opened with an initial deposit of Rs. 2,000/-, has no monthly service charges, and no minimum balance requirement."
 
-  utter_faq/boc_2_in_1_fixed_deposit_description:
-    - text: "BOC 2 in 1 Fixed Deposit is a unique product that combines the features of both a savings account and a fixed deposit. It allows you to enjoy the benefits of a higher interest rate of a fixed deposit while having the flexibility of a savings account."
+  utter_faq/accounts_boc_smart_salary_saver_documents:
+    - text: "To open a BOC Smart Salary Saver account, you'll need the BOC Smart Salary Saver Account Opening Application, Fund Management Account Opening Application, salary slips of the last three months certified by the employer, evidence of employment status, Employer Confirmation Form, National Identity Card, a letter or membership card from a professional institution, proof of income, and the last three months' income statements or tax receipts. For the salary advance facility, you'll need the Salary Advance Application and Agreement forms. Conditions apply."
 
-  utter_faq/boc_childrens_fixed_deposits_description:
-    - text: "BOC Children's Fixed Deposits are a special fixed deposit scheme designed for children below the age of 18 years. It's a great way to inculcate the habit of saving from a young age and offers attractive interest rates."
+  # For BOC SMARTGEN
+  utter_faq/accounts_boc_smartgen_description:
+    - text: "BOC SMARTGEN is the next generation of savings accounts that offers a wide array of services for speed and convenience with Bank of Ceylon. The account can be opened instantly and is fully activated. It's available for various account types like Ordinary Savings, 14+ Account, 18+ Account, Kantha Ran Ginum Account, and Senior Citizen Account. Universal banking at any BOC branch island-wide offers seamless transactions as the customer’s photograph and signature are captured digitally at the time of opening."
 
-  utter_faq/boc_foreign_currency_fixed_deposits_description:
-    - text: "BOC Foreign Currency Fixed Deposits are available in major foreign currencies and offer attractive interest rates. They are an ideal investment option for those who want to save in foreign currency and earn higher returns."
+  utter_faq/accounts_boc_smartgen_benefits:
+    - text: "BOC SMARTGEN offers instant activation of BOC Smart Online Banking (except for 14+ accounts), free BOC Smart Online Banking/Bapp facilities, instant SMS alerts on transactions (free of charge), monthly e-statements, and instant issue and activation of a Debit Card."
 
-  utter_faq/boc_ran_kekulu_fixed_deposit_description:
-    - text: "BOC Ran Kekulu Fixed Deposit is a special fixed deposit scheme designed for children below the age of 5 years. It offers attractive interest rates and provides gifts on maturity, making it a rewarding choice for young savers."
+  utter_faq/accounts_boc_smartgen_documents:
+    - text: "To open a BOC SMARTGEN account, you'll need a National Identity Card, proof of address (if not residing in the place mentioned in NIC), and a mobile number and email address for SMS alerts and e-statements. For more details, contact the nearest Bank of Ceylon Branch or Call Centre 1975."
 
-  utter_faq/boc_suwa_udana_fixed_deposit_description:
-    - text: "BOC Suwa Udana Fixed Deposit is designed to provide financial support for medical treatments. It offers a higher rate of interest and the flexibility to withdraw funds without any penalty in case of medical emergencies."
+  # For 3G SAVINGS
+  utter_faq/accounts_3g_savings_description:
+    - text: "'3G Savings' is a unique saving method, allowing you to link three generations of your family to save when you shop and spend. With your BOC Debit Card, you can choose to deposit money from your expenses, rounded up to the closest Rs. 100/- to Rs. 1000/-. Any customer with a savings or current account and a BOC Debit Card can avail this. The minimum rounded-up transfer amount is Rs. 10/- or a fixed amount."
 
-  utter_faq/boc_term_deposits:
-    - text: |
-        Bank of Ceylon offers a range of term deposits to cater to different needs. Here are the available options:
-        1. BOC Fixed Deposits
-        2. BOC Senior Citizens Fixed Deposits
-        3. BOC 2 in 1 Fixed Deposit
-        4. BOC Children's Fixed Deposits
-        5. BOC Foreign Currency Fixed Deposits
-        6. BOC Ran Kekulu Fixed Deposit
-        7. BOC Suwa Udana Fixed Deposit. You can ask about any specific product for more details.
+  # For RAN KEKULU SMART
+  utter_faq/accounts_ran_kekulu_smart_description:
+    - text: "RAN KEKULU SMART offers a higher interest rate than normal savings accounts. It provides medical insurance cover for the account holder and life insurance cover for the account opening parent/guardian. The account also offers scholarships for Grade 5 Scholarship high achievers, a specially designed electronic card, a smart passbook facility, and free SMS alerts."
 
-  utter_faq/boc_smartgen_eligibility:
-    - text: "To be eligible for a BOC SmartGen account, you should be a young individual who falls within the age criteria specified by the bank. Typically, this account is designed for the younger generation. You can apply if you meet the age and other requirements set by the bank. Please contact your nearest Bank of Ceylon branch for specific eligibility details."
+  utter_faq/accounts_ran_kekulu_smart_eligibility:
+    - text: "A parent or guardian can open an account for any child resident in Sri Lanka below 18 years of age. Any minor between 16 and 18 years of age may open an account for themselves."
 
-  utter_faq/boc_smartgen_benefits:
-    - text: "The benefits of a BOC SmartGen account include attractive interest rates, no minimum balance requirement, free internet banking, special discounts at partner merchants, and access to a BOC SmartGen debit card. It's tailored to meet the needs of the youth and offers a range of features to make banking convenient and rewarding for young account holders."
+  utter_faq/accounts_ran_kekulu_smart_benefits:
+    - text: "RAN KEKULU SMART offers a higher rate of interest, 1.5% more than the normal savings account rate. It provides surgical & hospitalization cover for the account holder, cover for hospitalization due to accidents and critical illnesses, and death and disability cover for the account opening parent/guardian. There's also a Grade 5 Scholarship Scheme offering scholarships for top achievers. Terms and conditions apply."
 
-  utter_faq/boc_ran_kekulu_eligibility:
-    - text: "BOC Ran Kekulu is designed for children. Eligibility typically depends on the child's age, but for specific eligibility criteria, it's best to contact your nearest Bank of Ceylon branch. This account aims to encourage the habit of saving from a young age."
+  utter_faq/accounts_ran_kekulu_smart_documents:
+    - text: "To open a RAN KEKULU SMART account, you'll need the original birth certificate of the child and a photocopy, National Identity Card of the parent/guardian or the minor (between 16 and 18 years of age), proof of residence of the guardian, and a duly filled application. For more details, contact the nearest BOC branch or call 1975."
 
-  utter_faq/boc_ran_kekulu_benefits:
-    - text: "The benefits of a BOC Ran Kekulu account include attractive interest rates, special gifts for new account openings, scholarships for top performers in Grade 5 scholarship examination, and free accident cover for the child and the guardian. It's a great way to start teaching children about financial responsibility."
+  # For HARITHA KEKULU
+  utter_faq/accounts_haritha_kekulu_description:
+    - text: "BOC Haritha Kekulu is a savings scheme for children aged 6-18 years, aiming to encourage eco-friendly thinking. The deposits are exclusively invested in sustainable development projects. Features include a higher interest rate of 1.5% above the normal savings rate, medical and life insurance covers, scholarships for Grade 5 Scholarship Examination, e-statement/Smart Passbook facilities, and free SMS alerts."
 
-  utter_faq/boc_savings_plus_eligibility:
-    - text: "BOC Savings Plus is available for individuals looking to earn higher interest rates based on their account balance. Eligibility criteria may vary, so please contact your nearest Bank of Ceylon branch for specific requirements. This account offers flexibility and higher interest rates."
+  utter_faq/accounts_haritha_kekulu_eligibility:
+    - text: "Parents or guardians can open BOC Haritha Kekulu accounts for children resident in Sri Lanka, aged between 6-18 years. When the child reaches 18 years, the account will be automatically transferred to a sustainable general savings product. The account holder needs to visit the branch with a National Identity Card to convert the account to a preferred savings scheme."
 
-  utter_faq/boc_savings_plus_benefits:
-    - text: "The benefits of a BOC Savings Plus account include tiered interest rates, meaning the higher your account balance, the more interest you can earn. There are no restrictions on withdrawals, free monthly e-statements, and access to internet and mobile banking for convenience."
+  utter_faq/accounts_haritha_kekulu_benefits:
+    - text: "BOC Haritha Kekulu offers a higher interest rate, insurance schemes covering surgical & hospitalization for the account holder, and death and disability cover for the account opening parent/guardian. It also provides scholarships for Grade 5 Scholarship Examination high achievers. Terms and conditions apply."
 
-  utter_faq/boc_senior_citizens_eligibility:
-    - text: "BOC Senior Citizens is tailored for senior citizens. To be eligible, you typically need to meet the age criteria set by the bank. Senior citizens can enjoy higher interest rates and special benefits with this account. For specific eligibility details, please contact your nearest Bank of Ceylon branch."
+  utter_faq/accounts_haritha_kekulu_documents:
+    - text: "To open a BOC Haritha Kekulu account, you'll need the original birth certificate of the child and a photocopy, National Identity Card of the parent/guardian, proof of residence of the guardian, and a duly filled application form."
 
-  utter_faq/boc_senior_citizens_benefits:
-    - text: "The benefits of a BOC Senior Citizens account include higher interest rates for senior citizens, special medical and insurance benefits, access to a Senior Citizens debit card, and free monthly e-statements. It's designed to cater to the specific needs of senior account holders."
+  # For 14+ TEENAGERS SAVINGS ACCOUNT
+  utter_faq/accounts_14plus_teenagers_description:
+    - text: "The 14+ Teenagers Savings Account offers a higher interest rate than a normal savings account rate (+ 0.5%). It provides a debit card, BOC Smart Online Banking facility, B App, and a Smart Passbook. The account will automatically be transferred to a Youth Savings Account when the account holder reaches 18 years of age."
 
-  utter_faq/boc_2_in_1_eligibility:
-    - text: "BOC 2 in 1 is a combined savings and fixed deposit account. Eligibility criteria may vary, but typically, it's available for individuals looking for flexibility and attractive interest rates. To find out if you are eligible for BOC 2 in 1, please contact your nearest Bank of Ceylon branch."
+  utter_faq/accounts_14plus_teenagers_documents:
+    - text: "To open a 14+ Teenagers Savings Account, you'll need the original birth certificate of the child and a photocopy, National Identity Card of the parent/guardian or the minor (between 16 and 18 years of age), proof of residence of the guardian, and a duly filled application form."
 
-  utter_faq/boc_2_in_1_benefits:
-    - text: "The benefits of a BOC 2 in 1 account include attractive interest rates, the flexibility to withdraw funds without breaking the fixed deposit, automatic transfer of funds above a certain limit to a fixed deposit, and free monthly e-statements. It's a convenient choice for those who want the best of both worlds."
+  # For 18+ YOUTH SAVINGS ACCOUNT
+  utter_faq/accounts_18plus_youth_description:
+    - text: "The 18+ Youth Savings Account is designed specifically for youth. It can be opened by any Sri Lankan citizen between 18 and 25 years of age at any Bank of Ceylon branch. The benefits of the account can be enjoyed up to the age of 35 years. Existing Ran Kekulu and 14+ accounts will automatically be converted to 18+ Youth Savings Accounts at the age of 18 years."
 
-  utter_faq/boc_savings_eligibility:
-    - text: "BOC Savings is a regular savings account suitable for all individuals. There are typically no specific eligibility criteria, and it's open to a wide range of customers. This account offers competitive interest rates, internet and mobile banking access, and free monthly e-statements."
+  utter_faq/accounts_18plus_youth_benefits:
+    - text: "The 18+ Youth Savings Account offers a higher interest rate, medical insurance cover for the account holder, life insurance cover, NanaJaya Scholarships for GCE (A/L) Highflyers, valuable wedding gifts, free Ran Kekulu Account for your first baby, loan facilities, debit and credit card facilities, and BOC Smart Online Banking and B app facilities. Terms and conditions apply."
 
-  utter_faq/boc_savings_benefits:
-    - text: "The benefits of a BOC Savings account include competitive interest rates, access to internet and mobile banking, free monthly e-statements, and access to a wide network of ATMs. It's a versatile savings option for a broad range of customers."
+  utter_faq/accounts_18plus_youth_documents:
+    - text: "To open an 18+ Youth Savings Account, you'll need a National Identity Card, proof of address, and a duly completed application."
 
-  utter_faq/boc_group_savings_eligibility:
-    - text: "BOC Group Savings is designed for groups or societies to manage their collective funds. Eligibility criteria may vary depending on the group's nature and requirements. For specific eligibility details, please contact your nearest Bank of Ceylon branch."
+  # For E-THURU
+  utter_faq/accounts_e_thuru_description:
+    - text: "BOC e-Thuru Green Savings Account is a Sustainable Deposit Scheme by Bank of Ceylon. It's designed with environment-friendly features, and the deposits are used to finance sustainable development initiatives. Features include an interest rate of 2% p.a., E-statement Facility, Free SMS Alert, and B App/ Smart Online Banking Facility."
 
-  utter_faq/boc_group_savings_benefits:
-    - text: "The benefits of a BOC Group Savings account include attractive interest rates, special facilities for group activities, free monthly e-statements, and access to internet and mobile banking. It's an excellent choice for groups or societies looking to manage their funds efficiently."
+  utter_faq/accounts_e_thuru_eligibility:
+    - text: "For personal accounts, Sri Lankan resident individuals above 18 years of age can open either individual or joint accounts. For non-personal accounts, institutions duly registered in Sri Lanka, such as associations and corporate bodies, can open an account."
 
-  utter_faq/boc_special_savings_eligibility:
-    - text: "BOC Special Savings is a savings account with unique features and benefits. Eligibility criteria may vary, so please contact your nearest Bank of Ceylon branch for specific requirements."
+  # For RAN ULPATHA
+  utter_faq/accounts_ran_ulpatha_description:
+    - text: "Ran Ulpatha offers quarterly bonus interest on interest earned for accounts with regular deposits and no withdrawals. It also provides a life insurance cover of 10 times the account balance up to a maximum of Rs. 500,000/- on the death (natural/accidental) of the account holder. Conditions apply."
 
-  utter_faq/boc_special_savings_benefits:
-    - text: "The benefits of a BOC Special Savings account include attractive interest rates, special discounts at partner merchants, free accident cover, and access to internet and mobile banking. It's a special account designed to offer extra perks to its account holders."
+  utter_faq/accounts_ran_ulpatha_documents:
+    - text: "To open a Ran Ulpatha account, you'll need a duly filled application form, National Identity Card, and proof of residence if different from NIC."
 
-  utter_faq/boc_savings_for_foreign_currency_eligibility:
-   - text: "BOC Savings for Foreign Currency is designed for foreign currency transactions. Eligibility typically depends on your foreign currency transaction needs. This account is suitable for non-resident Sri Lankans and foreigners. For specific eligibility details, please contact your nearest Bank of Ceylon branch."
+  # For BOC SAVINGS
+  utter_faq/accounts_boc_savings_description:
+    - text: "BOC Savings account offers the ability to open a joint account, provides an ATM/Debit Card, BOC Smart Online Banking facility & BApp, instant loans up to a maximum of 90% of your account balance, SMS alerts, and 24x7 banking at the Head Office branch."
 
-  utter_faq/boc_savings_for_foreign_currency_benefits:
-    - text: "The benefits of a BOC Savings for Foreign Currency account include competitive interest rates in foreign currency, access to internet and mobile banking, and free monthly e-statements. It's an ideal choice for non-resident Sri Lankans and foreigners looking for foreign currency savings options."
+  utter_faq/accounts_boc_savings_documents:
+    - text: "To open a BOC Savings account, you'll need a duly filled application, National Identity Card, and proof of address if it's different from the NIC."
 
-  utter_faq/boc_smartgen_description:
-   - text: "BOC SmartGen account is a savings account designed for the younger generation. It offers a host of benefits tailored to meet the needs of the youth. Key features include attractive interest rates, no minimum balance requirement, free internet banking, special discounts at partner merchants, and access to a BOC SmartGen debit card."
+  # For BOC SENIOR CITIZENS SAVINGS
+  utter_faq/accounts_boc_senior_citizens_savings_description:
+    - text: "BOC Senior Citizens Savings offers a higher rate of interest than the normal savings account rate, 1% higher interest rate, an internationally acceptable debit card that's e-commerce active, and BOC Smart Online Banking facility & BApp."
 
-  utter_faq/boc_ran_kekulu_description:
-    - text: "BOC Ran Kekulu is a children's savings account that aims to inculcate the habit of saving from a young age. It offers attractive interest rates, special gifts for new account openings, scholarships for top performers in Grade 5 scholarship examination, and free accident cover for the child and the guardian."
+  utter_faq/accounts_boc_senior_citizens_savings_documents:
+    - text: "To open a BOC Senior Citizens Savings account, you'll need a duly filled application, National Identity Card, and proof of address if it's different from the NIC."
 
-  utter_faq/boc_savings_plus_description:
-    - text: "BOC Savings Plus is a unique savings account that offers higher interest rates based on the balance maintained in the account. It features tiered interest rates, no restrictions on withdrawals, free monthly e-statements, and access to internet and mobile banking."
+  # For KANTHA RAN GINUM
+  utter_faq/accounts_kantha_ran_ginum_description:
+    - text: "Kantha Ran Ginum offers a higher rate of interest than the normal savings account rate, 0.5% higher interest rate, life insurance cover for the account holder, debit card that's internationally acceptable and e-commerce active, low-interest loans, instant loans up to 90% of the account balance, leasing at reduced interest rate, Ran Surekum Pawning facility at reduced interest rate, standing order facility, and BOC Smart Online Banking facility & BApp. Some offers are valid until 07.03.2025. Conditions apply."
 
-  utter_faq/boc_senior_citizens_description:
-    - text: "BOC Senior Citizens is tailored for senior citizens and offers higher interest rates for them. It also provides special medical and insurance benefits, access to a Senior Citizens debit card, and free monthly e-statements."
+  utter_faq/accounts_kantha_ran_ginum_documents:
+    - text: "To open a Kantha Ran Ginum account, you'll need a duly filled application, National Identity Card, and proof of address if it's different from the NIC."
+  # For FIXED DEPOSITS
+  utter_faq/deposits_fixed_deposits:
+    - text: "Our Fixed Deposit allows you to securely deposit your money for a set period to earn higher returns. Sri Lankans over 18 can open an account with a minimum deposit of Rs. 10,000/-. The period ranges from one month to five years. Benefits include interest payment options, acceptance as security for loans, and nomination. For more details, contact the nearest Bank of Ceylon Branch or Call Centre on 1975 or +94 11 220 4444."
 
-  utter_faq/boc_2_in_1_description:
-    - text: "BOC 2 in 1 is a combined savings and fixed deposit account that offers attractive interest rates and the flexibility to withdraw funds without breaking the fixed deposit. It also includes automatic fund transfers above a certain limit to a fixed deposit and free monthly e-statements."
+  # For SENIOR CITIZENS FIXED DEPOSITS
+  utter_faq/deposits_senior_citizens_fixed_deposits:
+    - text: "Senior Citizens Fixed Deposits is dedicated to Sri Lankan citizens over 60 years, offering high security and maximum returns. Minimum deposit is Rs. 10,000/- for a period of 1 year. It offers a higher interest rate, with payment of interest at maturity or monthly. A nominee can be appointed for disbursement upon the account holder's death. For more details, contact the nearest Bank of Ceylon Branch or Call Centre on 1975."
 
-  utter_faq/boc_savings_description:
-    - text: "BOC Savings is a regular savings account suitable for all individuals. It offers competitive interest rates, access to internet and mobile banking, free monthly e-statements, and access to a wide network of ATMs."
+  # For SMART FD (SCRIPLESS FIXED DEPOSITS)
+  utter_faq/deposits_smart_fd:
+    - text: "Smart FD or Scripless Fixed Deposits offers features like opening, renewal, and closing confirmations via email, e-certificate, and instant SMS confirmation. Minimum Deposit is Rs. 10,000/- with periods ranging from one month to five years. Applications can be sent by post, email, or fax, and the account can be closed without visiting the branch. Eligibility includes Sri Lankan residents over 18 years with a current or savings account. For more details, contact the nearest Bank of Ceylon Branch or Call Centre on 1975."
 
-  utter_faq/boc_group_savings_description:
-    - text: "BOC Group Savings is designed for groups or societies to manage their collective funds. It offers attractive interest rates, special facilities for group activities, free monthly e-statements, and access to internet and mobile banking."
+  # For 100, 200, 400 DAYS INVESTMENTS
+  utter_faq/deposits_days_investments:
+    - text: "100, 200, and 400 Days Investments offer an attractive rate of interest starting from Rs. 500,000/- upwards. They provide a higher short-term return, highest interest in the market, an instant loan of up to 90% of your deposit, and guaranteed security. Eligibility includes individual residents in Sri Lanka above 18 years, registered institutions in Sri Lanka, and Sri Lankan nationals above 18 years resident outside Sri Lanka under an employment visa. For more details, contact the nearest Bank of Ceylon Branch or Call Centre on 1975 or +94 11 220 4444."
+  # For 7 DAY CALL DEPOSITS
+  utter_faq/deposits_7_day_call_deposits:
+    - text: "The 7-day call deposit is ideal for businesses with surplus money, offering a higher interest rate than ordinary savings accounts. It requires a minimum deposit of Rs 100,000.00 and has a minimum period of 7 days with no maximum period. While it offers attractive interest rates, there's no need to be an existing account holder. Withdrawals require a 7-day notice. Instant loans or overdrafts can be obtained against the deposit. For more details, contact the nearest Bank of Ceylon Branch or Call Centre on 1975."
 
-  utter_faq/boc_special_savings_description:
-    - text: "BOC Special Savings is a savings account with special features and benefits. It offers attractive interest rates, special discounts at partner merchants, free accident cover, and access to internet and mobile banking."
-
-  utter_faq/boc_savings_for_foreign_currency_description:
-    - text: "BOC Savings for Foreign Currency is a savings account designed for foreign currency transactions. It offers competitive interest rates in foreign currency, access to internet and mobile banking, and free monthly e-statements. It's suitable for non-resident Sri Lankans and foreigners."
-
-  utter_faq/boc_savings_products:
-    - text: |
-        Bank of Ceylon offers a range of savings account products to meet different needs. Here are the available products:
-        1. BOC SmartGen
-        2. BOC Ran Kekulu
-        3. BOC Savings Plus
-        4. BOC Senior Citizens
-        5. BOC 2 in 1
-        6. BOC Savings
-        7. BOC Group Savings
-        8. BOC Special Savings
-        9. BOC Savings for Foreign Currency. You can ask about any specific product for more details.
-  utter_faq/boc_smart_salary_saver_description:
-    - text: "BOC Smart Salary Saver account is a special product dedicated for salaried individuals to manage their hard earnings with a multitude of convenient banking facilities. This product assures a return for surplus funds while availing an instant salary advance to meet urgent needs.\n\nBOC Smart Salary Saver Account can be opened at any Bank of Ceylon branch island-wide if you are a salaried individual between 18 to 55 years of age, earning a take-home salary above Rs. 25,000/- per month.\n\nKey features of BOC Smart Salary Saver:\n- Daily investment of additional funds\n- Easy access for invested funds for day-to-day payments\n- Instant Salary Advance\n- E-Commerce enabled Debit Card\n- Digital Banking Services"
-  utter_faq/boc_smart_salary_saver_eligibility:
-    - text: "To be eligible for BOC Smart Salary Saver, you need to meet the following criteria:\n- Be a Permanent Employee of Government, Semi-Government, or Private Sector\n- Should be a member of EPF Fund or Pension Scheme\n- Be a Qualified Professional\n\nAdditionally, you are required to continuously remit monthly salaries/earnings to BOC Smart Salary Saver Account. Facilities are provided subject to fulfillment of terms and conditions imposed by the Bank."
-  utter_faq/boc_smart_salary_saver_benefits:
-    - text: "The benefits of BOC Smart Salary Saver include:\n- Daily investment of additional funds with a return\n- Easy access for invested funds for day-to-day payments\n- Instant Salary Advance up to 90% of your take-home salary\n- E-Commerce enabled Debit Card\n- Digital Banking Services including Smart Online Banking, B-App, SmartPay, and more\n- Smart Passbook, e-statements, and SMS alerts for viewing account details\n- No monthly service charges\n- No minimum balance requirement to be maintained in accounts\n\nFor more information, you can contact your nearest BOC branch or the Call Centre at 1975."
+  # For KANTHA RAN GINUM SAVINGS CERTIFICATES
+  utter_faq/deposits_kantha_ran_ginum_savings_certificates:
+    - text: "BOC Kantha Ran Ginum Savings Certificate is a lump sum investment designed for ladies, offering a higher return of 7% p.a. It's available in various denominations and has a maturity period of 15 months. Eligibility includes Sri Lankan resident women above 18 years and non-resident women holding an employment VISA. The certificate is non-transferrable, doesn't allow partial withdrawals, and matures on the first working day after 15 months from the deposit date. For more details, contact the nearest Bank of Ceylon Branch or Call Centre on 1975."
   utter_out_of_scope:
     - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.
   utter_ask_transfer_money_form_amount-of-money:
