@@ -1,0 +1,672 @@
+[
+  {
+    "text": "எனது கணக்குbalance எவ்வளவு",
+    "entities": [
+      {
+        "start": 11,
+        "end": 18,
+        "value": "balance",
+        "entity": "amount-of-money"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "எனது credit cardஇல்  எவ்வளவு பணம் செலுத்த வேண்டும்",
+    "entities": [
+      {
+        "start": 5,
+        "end": 16,
+        "value": "credit card",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "எனது credit balanceஐ காட்டவும்",
+    "entities": [
+      {
+        "start": 5,
+        "end": 11,
+        "value": "credit",
+        "entity": "account_type"
+      },
+      {
+        "start": 12,
+        "end": 19,
+        "value": "balance",
+        "entity": "amount-of-money"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_type",
+        "start": 5,
+        "end": 11,
+        "confidence_entity": 0.998124897480011,
+        "value": "credit",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "எனது creditகணக்குகளைக் காட்டவும்",
+    "entities": [
+      {
+        "start": 5,
+        "end": 11,
+        "value": "credit",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "எனது emblm cardகணக்கு balance என்ன?",
+    "entities": [
+      {
+        "start": 5,
+        "end": 10,
+        "value": "emblm",
+        "entity": "credit_card"
+      },
+      {
+        "start": 11,
+        "end": 15,
+        "value": "card",
+        "entity": "account_type"
+      },
+      {
+        "start": 22,
+        "end": 29,
+        "value": "balance",
+        "entity": "amount-of-money"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "credit_card",
+        "start": 5,
+        "end": 10,
+        "confidence_entity": 0.9994584321975708,
+        "value": "emblem",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "amount-of-money",
+        "start": 22,
+        "end": 29,
+        "confidence_entity": 0.9994670152664185,
+        "value": "current balance",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "என்னுடைய கணக்கு balanceசொல்ல முடியுமா?",
+    "entities": [
+      {
+        "start": 16,
+        "end": 23,
+        "value": "balance",
+        "entity": "amount-of-money"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "எனது [balance",
+    "entities": [
+      {
+        "start": 5,
+        "end": 13,
+        "value": "[balance",
+        "entity": "amount-of-money"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "என்னுடையbrother இற்கு",
+    "entities": [
+      {
+        "start": 8,
+        "end": 15,
+        "value": "brother",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "எனது credit cardஇல் current balance செலுத்த எனக்கு உதவ முடியுமா?",
+    "entities": [
+      {
+        "start": 5,
+        "end": 16,
+        "value": "credit card",
+        "entity": "account_type"
+      },
+      {
+        "start": 20,
+        "end": 35,
+        "value": "current balance",
+        "entity": "amount-of-money"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "amount-of-money",
+        "start": 20,
+        "end": 35,
+        "confidence_entity": 0.9972180128097534,
+        "value": "current balance",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "நான் எனது emblemஇல் credit card செலுத்த விரும்புகிறேன்",
+    "entities": [
+      {
+        "start": 10,
+        "end": 16,
+        "value": "emblem",
+        "entity": "credit_card"
+      },
+      {
+        "start": 20,
+        "end": 31,
+        "value": "credit card",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_type",
+        "start": 20,
+        "end": 31,
+        "confidence_entity": 0.9990549683570862,
+        "value": "credit",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "எனது embelmஇல் credit card எனதுcurrent balance செலுத்த விரும்புகிறேன்.",
+    "entities": [
+      {
+        "start": 5,
+        "end": 11,
+        "value": "embelm",
+        "entity": "credit_card"
+      },
+      {
+        "start": 15,
+        "end": 26,
+        "value": "credit card",
+        "entity": "account_type"
+      },
+      {
+        "start": 31,
+        "end": 46,
+        "value": "current balance",
+        "entity": "amount-of-money"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_type",
+        "start": 15,
+        "end": 26,
+        "confidence_entity": 0.9990887641906738,
+        "value": "credit",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "எனது emblemஇல் credit card",
+    "entities": [
+      {
+        "start": 5,
+        "end": 11,
+        "value": "emblem",
+        "entity": "credit_card"
+      },
+      {
+        "start": 15,
+        "end": 26,
+        "value": "credit card",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_type",
+        "start": 15,
+        "end": 26,
+        "confidence_entity": 0.9991326928138733,
+        "value": "credit",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "எனதுcurrent balance செலுத்த விரும்புகிறேன்",
+    "entities": [
+      {
+        "start": 4,
+        "end": 19,
+        "value": "current balance",
+        "entity": "amount-of-money"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "ஞாயிற்றுக்கிழமை எனது emblemஇல் $500 செலுத்த விரும்புகிறேன்",
+    "entities": [
+      {
+        "start": 21,
+        "end": 27,
+        "value": "emblem",
+        "entity": "credit_card"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "இன்று நான் எனது emblem credit cardஇல் current balance செலுத்த விரும்புகிறேன்",
+    "entities": [
+      {
+        "start": 16,
+        "end": 22,
+        "value": "emblem",
+        "entity": "credit_card"
+      },
+      {
+        "start": 23,
+        "end": 34,
+        "value": "credit card",
+        "entity": "account_type"
+      },
+      {
+        "start": 38,
+        "end": 53,
+        "value": "current balance",
+        "entity": "amount-of-money"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "credit_card",
+        "start": 16,
+        "end": 22,
+        "confidence_entity": 0.9997038841247559,
+        "value": "emblem",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "amount-of-money",
+        "start": 38,
+        "end": 53,
+        "confidence_entity": 0.9970921277999878,
+        "value": "current balance",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "ஏப்ரல் 12 ஆம் தேதிக்கு எனது credit cardக்கு பணம் செலுத்த திட்டமிடவும்",
+    "entities": [
+      {
+        "start": 28,
+        "end": 39,
+        "value": "credit card",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "நாளை எனது credit cardக்கு பணம் செலுத்த திட்டமிட முடியுமா?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 21,
+        "value": "credit card",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "எனது credit cardக்கு $1200 செலுத்த விரும்புகிறேன்",
+    "entities": [
+      {
+        "start": 5,
+        "end": 16,
+        "value": "credit",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "அப்படிதான் நான் நினைக்கிறேன். இது மிகவும் அதிகமாக இருப்பதால், எனது  creditக்கு பணம் செலுத்தவும்",
+    "entities": [
+      {
+        "start": 68,
+        "end": 74,
+        "value": "credit",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "எனது credit cardஐ செலுத்த முடியுமா?",
+    "entities": [
+      {
+        "start": 5,
+        "end": 16,
+        "value": "credit",
+        "entity": "account_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "எனது momக்கு பணத்தை அனுப்ப முடியுமா?",
+    "entities": [
+      {
+        "start": 5,
+        "end": 8,
+        "value": "mom",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "நான் Bertக்கு பணம் அனுப்ப வேண்டும்",
+    "entities": [
+      {
+        "start": 5,
+        "end": 9,
+        "value": "Bert",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "நான் $100ஐ  Tommyக்கு மாற்ற விரும்புகிறேன்",
+    "entities": [
+      {
+        "start": 12,
+        "end": 17,
+        "value": "Tommy",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "நான் $400  Akelaக்கு மாற்ற விரும்புகிறேன்",
+    "entities": [
+      {
+        "start": 11,
+        "end": 16,
+        "value": "Akela",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "நான் Paula Handyக்கு பணம்  செலுத்த வேண்டும்",
+    "entities": [
+      {
+        "start": 5,
+        "end": 16,
+        "value": "Paula Handy",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "நான் Kyle Gardnerக்கு பணம்  செலுத்த முடியுமா ?",
+    "entities": [
+      {
+        "start": 5,
+        "end": 17,
+        "value": "Kyle Gardner",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "$60 ஐ Sallyக்கு செலுத்தவும்",
+    "entities": [
+      {
+        "start": 6,
+        "end": 11,
+        "value": "Sally",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "நா Kellyக்கு பணம்  செலுத்த வேண்டும்",
+    "entities": [
+      {
+        "start": 3,
+        "end": 8,
+        "value": "Kelly",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Percyக்கு $50 செலுத்தவும்",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "Percy",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "$50ஐ Patக்கு செலுத்தவும்",
+    "entities": [
+      {
+        "start": 5,
+        "end": 8,
+        "value": "Pat",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "சரி, Emmaகு பணம்  செலுத்தவும்",
+    "entities": [
+      {
+        "start": 5,
+        "end": 9,
+        "value": "Emma",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Emanualகு பணம்  செலுத்தவும்",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Emanual",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "saraக்கு பணத்தை மாற்றவும்",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "sara",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "நான் என் பாட்டி Judithக்கு பணத்தை மாற்ற வேண்டும்.",
+    "entities": [
+      {
+        "start": 16,
+        "end": 22,
+        "value": "Judith",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "நான் Latishaக்கு பணத்தை மாற்ற விரும்புகிறேன்",
+    "entities": [
+      {
+        "start": 5,
+        "end": 12,
+        "value": "Latisha",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "நான்Bobக்கு அவசரமாக பணமாற்றம் செய்ய வேண்டும், உங்களால் முடியுமா?",
+    "entities": [
+      {
+        "start": 4,
+        "end": 7,
+        "value": "Bob",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "ஆ, சரி, நான் Bobக்கு பணமாற்றம் செய்ய விரும்புகிறேன்.",
+    "entities": [
+      {
+        "start": 13,
+        "end": 16,
+        "value": "Bob",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "send $50 john jacobக்கு",
+    "entities": [
+      {
+        "start": 9,
+        "end": 19,
+        "value": "john jacob",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "நான் Johnக்கு 50$ அனுப்ப விரும்புகிறேன்",
+    "entities": [
+      {
+        "start": 5,
+        "end": 9,
+        "value": "John",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "ஹாய் நான் Johnக்கு பணம் அனுப்ப விரும்புகிறேன்",
+    "entities": [
+      {
+        "start": 10,
+        "end": 14,
+        "value": "John",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "நான் Philippக்கு பணத்தை மாற்ற விரும்புகிறேன்",
+    "entities": [
+      {
+        "start": 5,
+        "end": 12,
+        "value": "Philipp",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "நான் 50$ஐ Joschkaக்கு மாற்ற விரும்புகிறேன்",
+    "entities": [
+      {
+        "start": 10,
+        "end": 17,
+        "value": "Joschka",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

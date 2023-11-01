@@ -2,6 +2,8 @@ version: "3.1"
 language: ta
 pipeline:
 - name: WhitespaceTokenizer
+  intent_tokenization_flag: True
+  intent_split_symbol: "+"
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
@@ -10,6 +12,7 @@ pipeline:
   min_ngram: 1
   max_ngram: 4
 - name: DIETClassifier
+  batch_strategy: sequence
   epochs: 100
 - name: FallbackClassifier
   threshold: 0.7

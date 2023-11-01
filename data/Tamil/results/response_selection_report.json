@@ -1,0 +1,75 @@
+{
+  "faq/boc_smart_salary_saver_description": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3.0,
+    "confused_with": {
+      "": 3
+    }
+  },
+  "faq/boc_smartgen_eligibility": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3.0,
+    "confused_with": {
+      "": 3
+    }
+  },
+  "faq/boc_smartgen_benefits": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3.0,
+    "confused_with": {
+      "": 3
+    }
+  },
+  "faq/boc_smart_salary_saver_eligibility": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3.0,
+    "confused_with": {
+      "": 3
+    }
+  },
+  "faq/boc_smartgen_description": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3.0,
+    "confused_with": {
+      "": 3
+    }
+  },
+  "faq/boc_smart_salary_saver_benefits": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3.0,
+    "confused_with": {
+      "": 3
+    }
+  },
+  "micro avg": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 18.0
+  },
+  "macro avg": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 18.0
+  },
+  "weighted avg": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 18.0
+  },
+  "accuracy": 0.0
+}

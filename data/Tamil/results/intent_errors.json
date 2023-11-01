@@ -1,0 +1,18 @@
+[
+  {
+    "text": "நான் எந்த இடங்களில் பணம் செலவழித்தேன்?",
+    "intent": "search_transactions",
+    "intent_prediction": {
+      "name": "check_balance",
+      "confidence": 0.5462361574172974
+    }
+  },
+  {
+    "text": "நான் யாருக்காவது பணம் அனுப்பலாமா?",
+    "intent": "transfer_money",
+    "intent_prediction": {
+      "name": "check_recipients",
+      "confidence": 0.8184881210327148
+    }
+  }
+]

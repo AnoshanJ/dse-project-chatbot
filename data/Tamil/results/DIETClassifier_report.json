@@ -1,0 +1,56 @@
+{
+  "amount-of-money": {
+    "precision": 1.0,
+    "recall": 0.875,
+    "f1-score": 0.9333333333333333,
+    "support": 64,
+    "confused_with": {}
+  },
+  "vendor_name": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 17,
+    "confused_with": {}
+  },
+  "account_type": {
+    "precision": 1.0,
+    "recall": 0.8210526315789474,
+    "f1-score": 0.9017341040462429,
+    "support": 95,
+    "confused_with": {}
+  },
+  "credit_card": {
+    "precision": 1.0,
+    "recall": 0.9466666666666667,
+    "f1-score": 0.9726027397260273,
+    "support": 75,
+    "confused_with": {}
+  },
+  "PERSON": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 52,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 1.0,
+    "recall": 0.8184818481848185,
+    "f1-score": 0.9001814882032667,
+    "support": 303
+  },
+  "macro avg": {
+    "precision": 1.0,
+    "recall": 0.8285438596491229,
+    "f1-score": 0.8948673687544539,
+    "support": 303
+  },
+  "weighted avg": {
+    "precision": 1.0,
+    "recall": 0.8184818481848185,
+    "f1-score": 0.8911219318938783,
+    "support": 303
+  },
+  "accuracy": 0.9739459971577451
+}
