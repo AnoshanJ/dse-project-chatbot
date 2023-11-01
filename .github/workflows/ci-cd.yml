@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Install pymysql
-      run: pip install pymysql
     - name: Rasa Train and Test for English    
       uses: RasaHQ/rasa-train-test-gha@main
       with:
@@ -63,7 +61,6 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
   deploy-english:
     name: Deploy English
-    needs: training-testing-english
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
