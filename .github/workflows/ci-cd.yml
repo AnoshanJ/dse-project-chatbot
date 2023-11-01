@@ -3,7 +3,7 @@ name: Rasa CI/CD Pipeline
 on:
   push:
     branches:
-      - main  # or whatever your primary branch is
+      - fix-response-time  # or whatever your primary branch is
 jobs:
   training-testing-english:
     name: Training and Testing English

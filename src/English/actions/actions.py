@@ -112,7 +112,7 @@ class ActionFetchInterestRates(Action):
         dispatcher.utter_message(text=response)
         return []
     
-def ask_llm(query):
+async def ask_llm(query):
     url = 'http://20.235.163.124:8000/ask'  # Replace with the URL you want to send a POST request to
     data = {'query': query}  # Replace with the data you want to send
     try:
@@ -135,7 +135,7 @@ class ActionSendToLlm(Action):
         """Unique identifier of the action"""
         return "action_send_to_llm"
 
-    async def run(self, dispatcher, tracker, domain):
+    async def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain):
         print("CAME IN TO THE FUNCTION")
         user_input = tracker.latest_message.get("text")
         response = ask_llm(user_input)
