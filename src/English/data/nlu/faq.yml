@@ -1,4 +1,4 @@
-version: "3.1"
+version: '3.1'
 nlu:
   - intent: faq/accounts_boc_smart_salary_saver_description
     examples: |

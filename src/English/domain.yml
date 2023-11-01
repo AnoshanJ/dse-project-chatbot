@@ -3,37 +3,37 @@ session_config:
   session_expiration_time: 0
   carry_over_slots_to_new_session: true
 intents:
-- ask_interest_rate
-- faq
-- check_human
-- transfer_money:
-    use_entities: []
-- inform
-- pay_cc:
-    use_entities: []
-- greet
-- goodbye
-- affirm
-- deny
-- thankyou
-- ask_transfer_charge
-- search_transactions:
-    use_entities: []
-- check_balance:
-    use_entities:
-    - credit_card
-    - account_type
-- check_earnings:
-    use_entities: []
-- check_recipients
-- out_of_scope
-- session_start
-- restart
-- trigger_handoff
-- handoff
-- human_handoff
-- help
-- nlu_fallback
+  - ask_interest_rate
+  - faq
+  - check_human
+  - transfer_money:
+      use_entities: []
+  - inform
+  - pay_cc:
+      use_entities: []
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - thankyou
+  - ask_transfer_charge
+  - search_transactions:
+      use_entities: []
+  - check_balance:
+      use_entities:
+        - credit_card
+        - account_type
+  - check_earnings:
+      use_entities: []
+  - check_recipients
+  - out_of_scope
+  - session_start
+  - restart
+  - trigger_handoff
+  - handoff
+  - human_handoff
+  - help
+  - nlu_fallback
 entities:
   - amount-of-money
   - credit_card
@@ -350,13 +350,13 @@ slots:
 
 responses:
   utter_faq/accounts_boc_smart_salary_saver_description:
-    - text: "BOC Smart Salary Saver account is a special product for salaried individuals to manage their earnings with various banking facilities. It offers a return for surplus funds and provides an instant salary advance for urgent needs. The account can be opened at any Bank of Ceylon branch for individuals aged 18 to 55 with a take-home salary above Rs. 25,000/- per month. It offers daily investment of additional funds, easy access to invested funds, an e-commerce enabled debit card, and digital banking services."
+    - text: 'BOC Smart Salary Saver account is a special product for salaried individuals to manage their earnings with various banking facilities. It offers a return for surplus funds and provides an instant salary advance for urgent needs. The account can be opened at any Bank of Ceylon branch for individuals aged 18 to 55 with a take-home salary above Rs. 25,000/- per month. It offers daily investment of additional funds, easy access to invested funds, an e-commerce enabled debit card, and digital banking services.'
 
   utter_faq/accounts_boc_smart_salary_saver_eligibility:
-    - text: "To be eligible for the BOC Smart Salary Saver account, you should be a permanent employee of the Government, Semi-Government, or Private Sector. You should also be a member of the EPF Fund or Pension Scheme and be a qualified professional."
+    - text: 'To be eligible for the BOC Smart Salary Saver account, you should be a permanent employee of the Government, Semi-Government, or Private Sector. You should also be a member of the EPF Fund or Pension Scheme and be a qualified professional.'
 
   utter_faq/accounts_boc_smart_salary_saver_benefits:
-    - text: "The benefits of the BOC Smart Salary Saver account include daily investment of excess funds with a return, easy access to invested funds for payments, instant salary advance up to 90% of your take-home salary (if criteria are met), e-commerce enabled debit card, digital banking services like Smart Online Banking, B-App, SmartPay, Smart Passbook, e-statements, and SMS alerts. The account can be opened with an initial deposit of Rs. 2,000/-, has no monthly service charges, and no minimum balance requirement."
+    - text: 'The benefits of the BOC Smart Salary Saver account include daily investment of excess funds with a return, easy access to invested funds for payments, instant salary advance up to 90% of your take-home salary (if criteria are met), e-commerce enabled debit card, digital banking services like Smart Online Banking, B-App, SmartPay, Smart Passbook, e-statements, and SMS alerts. The account can be opened with an initial deposit of Rs. 2,000/-, has no monthly service charges, and no minimum balance requirement.'
 
   utter_faq/accounts_boc_smart_salary_saver_documents:
     - text: "To open a BOC Smart Salary Saver account, you'll need the BOC Smart Salary Saver Account Opening Application, Fund Management Account Opening Application, salary slips of the last three months certified by the employer, evidence of employment status, Employer Confirmation Form, National Identity Card, a letter or membership card from a professional institution, proof of income, and the last three months' income statements or tax receipts. For the salary advance facility, you'll need the Salary Advance Application and Agreement forms. Conditions apply."
@@ -366,7 +366,7 @@ responses:
     - text: "BOC SMARTGEN is the next generation of savings accounts that offers a wide array of services for speed and convenience with Bank of Ceylon. The account can be opened instantly and is fully activated. It's available for various account types like Ordinary Savings, 14+ Account, 18+ Account, Kantha Ran Ginum Account, and Senior Citizen Account. Universal banking at any BOC branch island-wide offers seamless transactions as the customer’s photograph and signature are captured digitally at the time of opening."
 
   utter_faq/accounts_boc_smartgen_benefits:
-    - text: "BOC SMARTGEN offers instant activation of BOC Smart Online Banking (except for 14+ accounts), free BOC Smart Online Banking/Bapp facilities, instant SMS alerts on transactions (free of charge), monthly e-statements, and instant issue and activation of a Debit Card."
+    - text: 'BOC SMARTGEN offers instant activation of BOC Smart Online Banking (except for 14+ accounts), free BOC Smart Online Banking/Bapp facilities, instant SMS alerts on transactions (free of charge), monthly e-statements, and instant issue and activation of a Debit Card.'
 
   utter_faq/accounts_boc_smartgen_documents:
     - text: "To open a BOC SMARTGEN account, you'll need a National Identity Card, proof of address (if not residing in the place mentioned in NIC), and a mobile number and email address for SMS alerts and e-statements. For more details, contact the nearest Bank of Ceylon Branch or Call Centre 1975."
@@ -377,10 +377,10 @@ responses:
 
   # For RAN KEKULU SMART
   utter_faq/accounts_ran_kekulu_smart_description:
-    - text: "RAN KEKULU SMART offers a higher interest rate than normal savings accounts. It provides medical insurance cover for the account holder and life insurance cover for the account opening parent/guardian. The account also offers scholarships for Grade 5 Scholarship high achievers, a specially designed electronic card, a smart passbook facility, and free SMS alerts."
+    - text: 'RAN KEKULU SMART offers a higher interest rate than normal savings accounts. It provides medical insurance cover for the account holder and life insurance cover for the account opening parent/guardian. The account also offers scholarships for Grade 5 Scholarship high achievers, a specially designed electronic card, a smart passbook facility, and free SMS alerts.'
 
   utter_faq/accounts_ran_kekulu_smart_eligibility:
-    - text: "A parent or guardian can open an account for any child resident in Sri Lanka below 18 years of age. Any minor between 16 and 18 years of age may open an account for themselves."
+    - text: 'A parent or guardian can open an account for any child resident in Sri Lanka below 18 years of age. Any minor between 16 and 18 years of age may open an account for themselves.'
 
   utter_faq/accounts_ran_kekulu_smart_benefits:
     - text: "RAN KEKULU SMART offers a higher rate of interest, 1.5% more than the normal savings account rate. It provides surgical & hospitalization cover for the account holder, cover for hospitalization due to accidents and critical illnesses, and death and disability cover for the account opening parent/guardian. There's also a Grade 5 Scholarship Scheme offering scholarships for top achievers. Terms and conditions apply."
@@ -390,30 +390,30 @@ responses:
 
   # For HARITHA KEKULU
   utter_faq/accounts_haritha_kekulu_description:
-    - text: "BOC Haritha Kekulu is a savings scheme for children aged 6-18 years, aiming to encourage eco-friendly thinking. The deposits are exclusively invested in sustainable development projects. Features include a higher interest rate of 1.5% above the normal savings rate, medical and life insurance covers, scholarships for Grade 5 Scholarship Examination, e-statement/Smart Passbook facilities, and free SMS alerts."
+    - text: 'BOC Haritha Kekulu is a savings scheme for children aged 6-18 years, aiming to encourage eco-friendly thinking. The deposits are exclusively invested in sustainable development projects. Features include a higher interest rate of 1.5% above the normal savings rate, medical and life insurance covers, scholarships for Grade 5 Scholarship Examination, e-statement/Smart Passbook facilities, and free SMS alerts.'
 
   utter_faq/accounts_haritha_kekulu_eligibility:
-    - text: "Parents or guardians can open BOC Haritha Kekulu accounts for children resident in Sri Lanka, aged between 6-18 years. When the child reaches 18 years, the account will be automatically transferred to a sustainable general savings product. The account holder needs to visit the branch with a National Identity Card to convert the account to a preferred savings scheme."
+    - text: 'Parents or guardians can open BOC Haritha Kekulu accounts for children resident in Sri Lanka, aged between 6-18 years. When the child reaches 18 years, the account will be automatically transferred to a sustainable general savings product. The account holder needs to visit the branch with a National Identity Card to convert the account to a preferred savings scheme.'
 
   utter_faq/accounts_haritha_kekulu_benefits:
-    - text: "BOC Haritha Kekulu offers a higher interest rate, insurance schemes covering surgical & hospitalization for the account holder, and death and disability cover for the account opening parent/guardian. It also provides scholarships for Grade 5 Scholarship Examination high achievers. Terms and conditions apply."
+    - text: 'BOC Haritha Kekulu offers a higher interest rate, insurance schemes covering surgical & hospitalization for the account holder, and death and disability cover for the account opening parent/guardian. It also provides scholarships for Grade 5 Scholarship Examination high achievers. Terms and conditions apply.'
 
   utter_faq/accounts_haritha_kekulu_documents:
     - text: "To open a BOC Haritha Kekulu account, you'll need the original birth certificate of the child and a photocopy, National Identity Card of the parent/guardian, proof of residence of the guardian, and a duly filled application form."
 
   # For 14+ TEENAGERS SAVINGS ACCOUNT
   utter_faq/accounts_14plus_teenagers_description:
-    - text: "The 14+ Teenagers Savings Account offers a higher interest rate than a normal savings account rate (+ 0.5%). It provides a debit card, BOC Smart Online Banking facility, B App, and a Smart Passbook. The account will automatically be transferred to a Youth Savings Account when the account holder reaches 18 years of age."
+    - text: 'The 14+ Teenagers Savings Account offers a higher interest rate than a normal savings account rate (+ 0.5%). It provides a debit card, BOC Smart Online Banking facility, B App, and a Smart Passbook. The account will automatically be transferred to a Youth Savings Account when the account holder reaches 18 years of age.'
 
   utter_faq/accounts_14plus_teenagers_documents:
     - text: "To open a 14+ Teenagers Savings Account, you'll need the original birth certificate of the child and a photocopy, National Identity Card of the parent/guardian or the minor (between 16 and 18 years of age), proof of residence of the guardian, and a duly filled application form."
 
   # For 18+ YOUTH SAVINGS ACCOUNT
   utter_faq/accounts_18plus_youth_description:
-    - text: "The 18+ Youth Savings Account is designed specifically for youth. It can be opened by any Sri Lankan citizen between 18 and 25 years of age at any Bank of Ceylon branch. The benefits of the account can be enjoyed up to the age of 35 years. Existing Ran Kekulu and 14+ accounts will automatically be converted to 18+ Youth Savings Accounts at the age of 18 years."
+    - text: 'The 18+ Youth Savings Account is designed specifically for youth. It can be opened by any Sri Lankan citizen between 18 and 25 years of age at any Bank of Ceylon branch. The benefits of the account can be enjoyed up to the age of 35 years. Existing Ran Kekulu and 14+ accounts will automatically be converted to 18+ Youth Savings Accounts at the age of 18 years.'
 
   utter_faq/accounts_18plus_youth_benefits:
-    - text: "The 18+ Youth Savings Account offers a higher interest rate, medical insurance cover for the account holder, life insurance cover, NanaJaya Scholarships for GCE (A/L) Highflyers, valuable wedding gifts, free Ran Kekulu Account for your first baby, loan facilities, debit and credit card facilities, and BOC Smart Online Banking and B app facilities. Terms and conditions apply."
+    - text: 'The 18+ Youth Savings Account offers a higher interest rate, medical insurance cover for the account holder, life insurance cover, NanaJaya Scholarships for GCE (A/L) Highflyers, valuable wedding gifts, free Ran Kekulu Account for your first baby, loan facilities, debit and credit card facilities, and BOC Smart Online Banking and B app facilities. Terms and conditions apply.'
 
   utter_faq/accounts_18plus_youth_documents:
     - text: "To open an 18+ Youth Savings Account, you'll need a National Identity Card, proof of address, and a duly completed application."
@@ -423,18 +423,18 @@ responses:
     - text: "BOC e-Thuru Green Savings Account is a Sustainable Deposit Scheme by Bank of Ceylon. It's designed with environment-friendly features, and the deposits are used to finance sustainable development initiatives. Features include an interest rate of 2% p.a., E-statement Facility, Free SMS Alert, and B App/ Smart Online Banking Facility."
 
   utter_faq/accounts_e_thuru_eligibility:
-    - text: "For personal accounts, Sri Lankan resident individuals above 18 years of age can open either individual or joint accounts. For non-personal accounts, institutions duly registered in Sri Lanka, such as associations and corporate bodies, can open an account."
+    - text: 'For personal accounts, Sri Lankan resident individuals above 18 years of age can open either individual or joint accounts. For non-personal accounts, institutions duly registered in Sri Lanka, such as associations and corporate bodies, can open an account.'
 
   # For RAN ULPATHA
   utter_faq/accounts_ran_ulpatha_description:
-    - text: "Ran Ulpatha offers quarterly bonus interest on interest earned for accounts with regular deposits and no withdrawals. It also provides a life insurance cover of 10 times the account balance up to a maximum of Rs. 500,000/- on the death (natural/accidental) of the account holder. Conditions apply."
+    - text: 'Ran Ulpatha offers quarterly bonus interest on interest earned for accounts with regular deposits and no withdrawals. It also provides a life insurance cover of 10 times the account balance up to a maximum of Rs. 500,000/- on the death (natural/accidental) of the account holder. Conditions apply.'
 
   utter_faq/accounts_ran_ulpatha_documents:
     - text: "To open a Ran Ulpatha account, you'll need a duly filled application form, National Identity Card, and proof of residence if different from NIC."
 
   # For BOC SAVINGS
   utter_faq/accounts_boc_savings_description:
-    - text: "BOC Savings account offers the ability to open a joint account, provides an ATM/Debit Card, BOC Smart Online Banking facility & BApp, instant loans up to a maximum of 90% of your account balance, SMS alerts, and 24x7 banking at the Head Office branch."
+    - text: 'BOC Savings account offers the ability to open a joint account, provides an ATM/Debit Card, BOC Smart Online Banking facility & BApp, instant loans up to a maximum of 90% of your account balance, SMS alerts, and 24x7 banking at the Head Office branch.'
 
   utter_faq/accounts_boc_savings_documents:
     - text: "To open a BOC Savings account, you'll need a duly filled application, National Identity Card, and proof of address if it's different from the NIC."
@@ -454,7 +454,7 @@ responses:
     - text: "To open a Kantha Ran Ginum account, you'll need a duly filled application, National Identity Card, and proof of address if it's different from the NIC."
   # For FIXED DEPOSITS
   utter_faq/deposits_fixed_deposits:
-    - text: "Our Fixed Deposit allows you to securely deposit your money for a set period to earn higher returns. Sri Lankans over 18 can open an account with a minimum deposit of Rs. 10,000/-. The period ranges from one month to five years. Benefits include interest payment options, acceptance as security for loans, and nomination. For more details, contact the nearest Bank of Ceylon Branch or Call Centre on 1975 or +94 11 220 4444."
+    - text: 'Our Fixed Deposit allows you to securely deposit your money for a set period to earn higher returns. Sri Lankans over 18 can open an account with a minimum deposit of Rs. 10,000/-. The period ranges from one month to five years. Benefits include interest payment options, acceptance as security for loans, and nomination. For more details, contact the nearest Bank of Ceylon Branch or Call Centre on 1975 or +94 11 220 4444.'
 
   # For SENIOR CITIZENS FIXED DEPOSITS
   utter_faq/deposits_senior_citizens_fixed_deposits:
@@ -462,11 +462,11 @@ responses:
 
   # For SMART FD (SCRIPLESS FIXED DEPOSITS)
   utter_faq/deposits_smart_fd:
-    - text: "Smart FD or Scripless Fixed Deposits offers features like opening, renewal, and closing confirmations via email, e-certificate, and instant SMS confirmation. Minimum Deposit is Rs. 10,000/- with periods ranging from one month to five years. Applications can be sent by post, email, or fax, and the account can be closed without visiting the branch. Eligibility includes Sri Lankan residents over 18 years with a current or savings account. For more details, contact the nearest Bank of Ceylon Branch or Call Centre on 1975."
+    - text: 'Smart FD or Scripless Fixed Deposits offers features like opening, renewal, and closing confirmations via email, e-certificate, and instant SMS confirmation. Minimum Deposit is Rs. 10,000/- with periods ranging from one month to five years. Applications can be sent by post, email, or fax, and the account can be closed without visiting the branch. Eligibility includes Sri Lankan residents over 18 years with a current or savings account. For more details, contact the nearest Bank of Ceylon Branch or Call Centre on 1975.'
 
   # For 100, 200, 400 DAYS INVESTMENTS
   utter_faq/deposits_days_investments:
-    - text: "100, 200, and 400 Days Investments offer an attractive rate of interest starting from Rs. 500,000/- upwards. They provide a higher short-term return, highest interest in the market, an instant loan of up to 90% of your deposit, and guaranteed security. Eligibility includes individual residents in Sri Lanka above 18 years, registered institutions in Sri Lanka, and Sri Lankan nationals above 18 years resident outside Sri Lanka under an employment visa. For more details, contact the nearest Bank of Ceylon Branch or Call Centre on 1975 or +94 11 220 4444."
+    - text: '100, 200, and 400 Days Investments offer an attractive rate of interest starting from Rs. 500,000/- upwards. They provide a higher short-term return, highest interest in the market, an instant loan of up to 90% of your deposit, and guaranteed security. Eligibility includes individual residents in Sri Lanka above 18 years, registered institutions in Sri Lanka, and Sri Lankan nationals above 18 years resident outside Sri Lanka under an employment visa. For more details, contact the nearest Bank of Ceylon Branch or Call Centre on 1975 or +94 11 220 4444.'
   # For 7 DAY CALL DEPOSITS
   utter_faq/deposits_7_day_call_deposits:
     - text: "The 7-day call deposit is ideal for businesses with surplus money, offering a higher interest rate than ordinary savings accounts. It requires a minimum deposit of Rs 100,000.00 and has a minimum period of 7 days with no maximum period. While it offers attractive interest rates, there's no need to be an existing account holder. Withdrawals require a 7-day notice. Instant loans or overdrafts can be obtained against the deposit. For more details, contact the nearest Bank of Ceylon Branch or Call Centre on 1975."
