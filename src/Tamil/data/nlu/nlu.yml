@@ -364,7 +364,7 @@ nlu:
     - ஒரு கட்டணம் செலுத்தவும்    
 - intent: search_transactions
   examples: |
-    -இந்த வாரம் [Daraz.lk](vendor_name) இல் எவ்வளவு செலவு செய்தேன்?
+    - இந்த வாரம் [Daraz.lk](vendor_name) இல் எவ்வளவு செலவு செய்தேன்?
     - [Keells Super] (vendor_name) இல் எனது வழக்கமான செலவு என்ன?
     - எனது செலவு வரலாற்றைச் சரிபார்க்க விரும்புகிறேன்
     - கடந்த வாரம் [Pizza Hut] (vendor_name) இல் நான் எவ்வளவு செலவு செய்தேன்?

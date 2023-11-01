@@ -1,0 +1,206 @@
+version: "3.1"
+stories:
+- story: check list of known recipients (./tests/test_stories.yml)
+  steps:
+  - intent: check_recipients  # predicted: check_recipients: [எனது பெறுநர்களின்](PERSON) பட்டியலைக் காட்டு
+  - action: action_show_recipients
+- story: from Rasa X 56efe3eaf7c0456db86a6669421f885c (if intent were right) (./tests/test_stories.yml)
+  steps:
+  - intent: help
+  - action: utter_help
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: affirm  # predicted: affirm: [அது கேட்க](PERSON) நன்றாக இருக்கிறது
+  - action: utter_ok
+- story: check earnings happy path (./tests/test_stories.yml)
+  steps:
+  - intent: check_earnings  # predicted: check_earnings: நான் in January 2019 எவ்வளவு சம்பாதித்தேன்?
+    entities: []
+  - slot_was_set:
+    - time: '2019-01-01T00:00:00.000-08:00'
+  - action: transaction_search_form
+  - active_loop: transaction_search_form
+  - active_loop: null
+  - action: action_transaction_search
+- story: Show bank account balance + transfer money (./tests/test_stories.yml)
+  steps:
+  - intent: check_balance  # predicted: check_balance: எனது கணக்கில் எவ்வளவு [பணம்](PERSON) உள்ளது?
+  - action: action_show_balance
+  - intent: transfer_money
+  - action: transfer_money_form
+  - active_loop: transfer_money_form
+  - active_loop: null
+  - action: action_transfer_money
+- story: greet/bye path (./tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: goodbye  # predicted: goodbye: [மீண்டும் சந்திக்கலாம்](PERSON)
+  - action: utter_goodbye
+- story: Show bank account balance + thankyou + transfer money (./tests/test_stories.yml)
+  steps:
+  - intent: check_balance  # predicted: check_balance: எனது கணக்கில் எவ்வளவு [பணம்](PERSON) உள்ளது?
+  - action: action_show_balance
+  - intent: thankyou
+  - action: utter_noworries
+  - intent: transfer_money
+  - action: transfer_money_form
+  - active_loop: transfer_money_form
+  - active_loop: null
+  - action: action_transfer_money
+- story: Show bank account balance + ok + transfer money (./tests/test_stories.yml)
+  steps:
+  - intent: check_balance  # predicted: check_balance: எனது கணக்கில் எவ்வளவு [பணம்](PERSON) உள்ளது?
+  - action: action_show_balance
+  - intent: affirm
+  - action: utter_ok
+  - intent: transfer_money
+  - action: transfer_money_form
+  - active_loop: transfer_money_form
+  - active_loop: null
+  - action: action_transfer_money
+- story: Show bank account balance + ok + show recipients + ok + show transfer charge + ok + transfer money (./tests/test_stories.yml)
+  steps:
+  - intent: check_balance  # predicted: check_balance: எனது கணக்கில் எவ்வளவு [பணம்](PERSON) உள்ளது?
+  - action: action_show_balance
+  - intent: affirm
+  - action: utter_ok
+  - intent: check_recipients  # predicted: check_recipients: நான் யாருக்கு [பணம்](PERSON) அனுப்ப முடியும்?
+  - action: action_show_recipients
+  - intent: affirm
+  - action: utter_ok
+  - intent: ask_transfer_charge
+  - action: action_show_transfer_charge
+  - intent: affirm
+  - action: utter_ok
+  - intent: transfer_money
+  - action: transfer_money_form
+  - active_loop: transfer_money_form
+  - active_loop: null
+  - action: action_transfer_money
+- story: Show bank account balance + ok + pay credit card (./tests/test_stories.yml)
+  steps:
+  - intent: check_balance  # predicted: check_balance: எனது கணக்கில் எவ்வளவு [பணம்](PERSON) உள்ளது?
+  - action: action_show_balance
+  - intent: affirm
+  - action: utter_ok
+  - intent: pay_cc
+    entities:
+    - credit_card: emblem
+  - slot_was_set:
+    - credit_card: emblem
+  - action: cc_payment_form
+  - active_loop: cc_payment_form
+  - active_loop: null
+  - action: action_pay_cc
+- story: pay credit card and afterwards check account balance (./tests/test_stories.yml)
+  steps:
+  - intent: pay_cc
+    entities:
+    - credit_card: emblem
+  - slot_was_set:
+    - credit_card: emblem
+  - action: cc_payment_form
+  - active_loop: cc_payment_form
+  - active_loop: null
+  - action: action_pay_cc
+  - intent: check_balance  # predicted: check_balance: எனது கணக்கில் எவ்வளவு [பணம்](PERSON) உள்ளது?
+  - action: action_show_balance
+- story: Pay CC, while in form ask account balance (./tests/test_stories.yml)
+  steps:
+  - intent: pay_cc
+    entities:
+    - account_type: credit
+  - slot_was_set:
+    - account_type: credit
+  - action: cc_payment_form
+  - active_loop: cc_payment_form
+  - slot_was_set:
+    - AA_CONTINUE_FORM: yes
+  - slot_was_set:
+    - requested_slot: credit_card
+  - intent: check_balance
+    entities:
+    - account_type: bank
+  - slot_was_set:
+    - account_type: bank
+  - slot_was_set:
+    - account_type: bank
+  - action: action_show_balance
+  - action: cc_payment_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_pay_cc
+- story: transfer money, while in form ask known recipients (./tests/test_stories.yml)
+  steps:
+  - intent: transfer_money
+  - action: transfer_money_form
+  - active_loop: transfer_money_form
+  - intent: check_recipients  # predicted: check_recipients: நான் யாருக்கு [பணம்](PERSON) அனுப்ப முடியும்?
+  - action: action_show_recipients
+  - action: transfer_money_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_transfer_money
+- story: transfer money, while in form ask known recipients and transfer charge (./tests/test_stories.yml)
+  steps:
+  - intent: transfer_money
+  - action: transfer_money_form
+  - active_loop: transfer_money_form
+  - intent: check_recipients  # predicted: check_recipients: நான் யாருக்கு [பணம்](PERSON) அனுப்ப முடியும்?
+  - action: action_show_recipients
+  - action: transfer_money_form
+  - intent: ask_transfer_charge
+  - action: action_show_transfer_charge
+  - action: transfer_money_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_transfer_money
+- story: providing a name must be inform intent (./tests/test_stories.yml)
+  steps:
+  - intent: transfer_money
+  - action: transfer_money_form
+  - active_loop: transfer_money_form
+  - slot_was_set:
+    - AA_CONTINUE_FORM: yes
+  - slot_was_set:
+    - requested_slot: PERSON
+  - intent: inform
+    entities:
+    - PERSON: lisa
+  - slot_was_set:
+    - PERSON: lisa
+  - slot_was_set:
+    - requested_slot: amount-of-money
+  - action: transfer_money_form
+- story: out of scope (./tests/test_stories.yml)
+  steps:
+  - intent: out_of_scope  # predicted: out_of_scope: நான் [பீட்சா ஆர்டர் செய்ய](PERSON) வேண்டும்
+  - action: utter_out_of_scope
+- story: Show list of known recipients (./tests/test_stories.yml)
+  steps:
+  - intent: check_recipients  # predicted: check_recipients: நான் யாருக்கு [பணம்](PERSON) அனுப்ப முடியும்?
+  - action: action_show_recipients
+- story: Show bank account balance (./tests/test_stories.yml)
+  steps:
+  - intent: check_balance  # predicted: check_balance: எனது கணக்கில் எவ்வளவு [பணம்](PERSON) உள்ளது?
+  - action: action_show_balance
+- story: Show specific credit card account balance (./tests/test_stories.yml)
+  steps:
+  - intent: check_balance
+    entities:
+    - credit_card: emblem
+    - account_type: credit
+    - amount-of-money: current balance
+  - slot_was_set:
+    - account_type: credit
+  - slot_was_set:
+    - amount-of-money: current balance
+  - slot_was_set:
+    - credit_card: emblem
+  - action: action_show_balance

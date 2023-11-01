@@ -830,7 +830,7 @@ stories:
       [credit card]{"entity": "account_type", "value": "credit"} செலுத்தவும்
   - action: action_switch_forms_ask
   - slot_was_set:
-  - next_form_name: cc_payment_form
+    - next_form_name: cc_payment_form
   - intent: affirm
   - action: action_switch_forms_affirm
   - slot_was_set:

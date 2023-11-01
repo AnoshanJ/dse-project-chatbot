@@ -1,0 +1,146 @@
+[
+  {
+    "text": "BOC Smart Salary Saver பற்றி கூறவும்",
+    "intent_response_key_target": "faq/boc_smart_salary_saver_description",
+    "intent_response_key_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "BOC Smart Salary Saver கணக்கு என்றால் என்ன?",
+    "intent_response_key_target": "faq/boc_smart_salary_saver_description",
+    "intent_response_key_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "BOC Smart Salary Saver இல் உள்ள அம்சங்களை விளக்கவும்",
+    "intent_response_key_target": "faq/boc_smart_salary_saver_description",
+    "intent_response_key_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "BOC Smart Salary Saver விண்ணப்பிக்க தகுதியானவர்கள் யார்?",
+    "intent_response_key_target": "faq/boc_smart_salary_saver_eligibility",
+    "intent_response_key_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "BOC Smart Salary Saver விண்ணப்பிப்பதற்கான தகுதிகள் என்ன?",
+    "intent_response_key_target": "faq/boc_smart_salary_saver_eligibility",
+    "intent_response_key_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "BOC Smart Salary Saver இற்கு யார் விண்ணப்பிக்க முடியும்?",
+    "intent_response_key_target": "faq/boc_smart_salary_saver_eligibility",
+    "intent_response_key_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "BOC Smart Salary Saver இன்  நன்மைகள் என்ன?",
+    "intent_response_key_target": "faq/boc_smart_salary_saver_benefits",
+    "intent_response_key_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "BOC Smart Salary Saver இல் உள்ள பயன்களை கூறவும்",
+    "intent_response_key_target": "faq/boc_smart_salary_saver_benefits",
+    "intent_response_key_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "BOC Smart Salary Saver இல் எவ்வாறான நன்மைகள் உண்டு?",
+    "intent_response_key_target": "faq/boc_smart_salary_saver_benefits",
+    "intent_response_key_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "BOC SmartGen பற்றி கூறவும்",
+    "intent_response_key_target": "faq/boc_smartgen_description",
+    "intent_response_key_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "BOC SmartGen கணக்கு என்றால் என்ன?",
+    "intent_response_key_target": "faq/boc_smartgen_description",
+    "intent_response_key_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "BOC SmartGen இல் உள்ள அம்சங்களை விளக்கவும்",
+    "intent_response_key_target": "faq/boc_smartgen_description",
+    "intent_response_key_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "BOC SmartGen விண்ணப்பிக்க தகுதியானவர்கள் யார்?",
+    "intent_response_key_target": "faq/boc_smartgen_eligibility",
+    "intent_response_key_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "BOC SmartGen விண்ணப்பிப்பதற்கான தகுதிகள் என்ன?",
+    "intent_response_key_target": "faq/boc_smartgen_eligibility",
+    "intent_response_key_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "BOC SmartGen இற்கு யார் விண்ணப்பிக்க முடியும்?",
+    "intent_response_key_target": "faq/boc_smartgen_eligibility",
+    "intent_response_key_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "BOC SmartGen இன்  நன்மைகள் என்ன?",
+    "intent_response_key_target": "faq/boc_smartgen_benefits",
+    "intent_response_key_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "BOC SmartGen இல் உள்ள பயன்களை கூறவும்.",
+    "intent_response_key_target": "faq/boc_smartgen_benefits",
+    "intent_response_key_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "BOC SmartGen offer இல் எவ்வாறான நன்மைகள் உண்டு?",
+    "intent_response_key_target": "faq/boc_smartgen_benefits",
+    "intent_response_key_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  }
+]
