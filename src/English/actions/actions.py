@@ -121,7 +121,7 @@ def ask_llm(query):
         if response.status_code == 200:
             response_data = response.json()  # or response.text for raw response content
             print(response_data)
-            return response_data
+            return response_data['response']['result']
         else:
             print(f"Failed to post data. Status code: {response.status_code}")
             return "There was an error. Please rephrase the question and try again"
@@ -140,7 +140,7 @@ class ActionSendToLlm(Action):
         user_input = tracker.latest_message.get("text")
         response = ask_llm(user_input)
         print(response)
-        dispatcher.utter_message(text=response['response']['result'])
+        dispatcher.utter_message(text=response)
         return []
 
 
