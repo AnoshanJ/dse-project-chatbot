@@ -19,13 +19,22 @@ chat with https://t.me/mora_bank_en_bot - English
 chat with https://t.me/mora_bank_ta_bot - Tamil
 chat with https://t.me/mora_bank_si_bot - Sinhala
 ```
-rasa
+
 Testing:
 ```bash
 conda activate rasa
 docker run -p 8000:8000 rasa/duckling #starts duckling entitity extractor
 conda activate rasa
 rasa test
+```
+
+Test http:
+```bash
+rasa run --enable-pi
+check with postman localhost:5005/model/parse
+body json {text:"hi"}
+```
+
 
 # Notes
 modify entitites in nlu.yml and domain.yml files
@@ -34,6 +43,8 @@ modify entitites in nlu.yml and domain.yml files
 rasa data split nlu
 rasa test nlu --nlu train_test_split/test_data.yml
 ```
+
+
 
 # Notes on Rasa `3.x/ 2.x / 1.x`
 

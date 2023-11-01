@@ -1,0 +1,37 @@
+version: '3.4'
+services:
+  rasa-en:
+    image: anoshan265/rasa-chatbot:latest
+    working_dir: /app
+    build: "./"
+    volumes:
+    - ./actions:/app/actions
+    - ./models:/app/models
+    - ./data:/app/data    
+    command: "run --enable-api --cors \"*\" --port 8443 --endpoints endpoints.yml --debug"
+    ports:
+    - 8443:8443
+    depends_on:
+    - action-server
+    - duckling
+    networks:
+    - all
+  action-server:
+    image: anoshan265/rasa-chatbot:latest
+    working_dir: /app
+    build: "./"
+    volumes:
+    - ./actions:/app/actions
+    ports:
+    - 5056:5056
+    command: "run actions --port 5056"
+    networks:
+    - all
+  duckling:
+    image: rasa/duckling
+    restart: always
+    ports:
+      - 8000:8000
+networks:
+  all:
+    driver: bridge

@@ -1,0 +1,31 @@
+version: '3.4'
+services:
+  rasa-ta:
+    image: anoshan265/rasa-chatbot-ta:latest
+    working_dir: /app
+    build: "./"
+    volumes:
+    - ./actions:/app/actions
+    - ./models:/app/models
+    - ./data:/app/data    
+    command: "run --enable-api --cors \"*\" --port 8443 --endpoints endpoints.yml --debug"
+    ports:
+    - 8443:8443
+    depends_on:
+    - action-server-ta
+    networks:
+    - all
+  action-server-ta:
+    image: anoshan265/rasa-chatbot-ta:latest
+    working_dir: /app
+    build: "./"
+    volumes:
+    - ./actions:/app/actions
+    ports:
+    - 5056:5056
+    command: "run actions --port 5056"
+    networks:
+    - all
+networks:
+  all:
+    driver: bridge

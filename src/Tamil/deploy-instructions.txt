@@ -1,0 +1,4 @@
+docker build -t anoshan265/rasa-chatbot-ta .
+docker push anoshan265/rasa-chatbot-ta
+okteto deploy --build -f .\docker-compose.yml
+//port 8443 supported by telegram - very imp
