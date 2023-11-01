@@ -111,6 +111,38 @@ class ActionFetchInterestRates(Action):
         response = f"The interest rate for '1 Year -Interest at maturity (LKR)' as of {current_date} is: {rate}. For more details, visit {website_link}"
         dispatcher.utter_message(text=response)
         return []
+    
+def ask_llm(query):
+    url = 'http://20.235.163.124:8000/ask'  # Replace with the URL you want to send a POST request to
+    data = {'query': query}  # Replace with the data you want to send
+    try:
+        response = requests.post(url, json=data)  # Use `json=data` for sending JSON data
+
+        if response.status_code == 200:
+            response_data = response.json()  # or response.text for raw response content
+            print(response_data)
+            return response_data
+        else:
+            print(f"Failed to post data. Status code: {response.status_code}")
+            return "There was an error. Please rephrase the question and try again"
+    except:
+        return "There was an error. Please rephrase the question and try again"
+    
+
+class ActionSendToLlm(Action):
+    """Send Query to llm"""
+    def name(self) -> str:
+        """Unique identifier of the action"""
+        return "action_send_to_llm"
+
+    async def run(self, dispatcher, tracker, domain):
+        print("CAME IN TO THE FUNCTION")
+        user_input = tracker.latest_message.get("text")
+        response = ask_llm(user_input)
+        print(response)
+        dispatcher.utter_message(text=response['response']['result'])
+        return []
+
 
 class ActionPayCC(Action):
     """Pay credit card."""
