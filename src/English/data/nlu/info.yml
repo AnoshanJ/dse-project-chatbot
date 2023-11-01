@@ -1,0 +1,8 @@
+version: "3.1"
+nlu:
+- intent: ask_interest_rate
+  examples: |
+    - What's the current interest rate?
+    - Can you tell me the interest rate?
+    - I'd like to know the interest rate.
+    - How much is the interest rate right now?

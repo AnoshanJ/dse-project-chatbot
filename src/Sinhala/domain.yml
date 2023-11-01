@@ -492,6 +492,7 @@ responses:
       - text: " මට ඔබේ මූල්‍ය ගිණුම් සම්බන්ධයෙන් ඔබට උදව් කළ හැක. \nඔබට මගෙන් මෙවැනි දේවල් ඇසිය හැක: \n- මගේ ගිණුමේ ශේෂය කීයද? \n- මගේ ක්‍රෙඩිට් කාඩ්පත ගෙවන්න \n- මම පසුගිය මාසයේ Keells Super හි වියදම් කළේ මොනවාද? \n- මට මුදල් මාරු කිරීමට අවශ්‍යයි"
 
 actions:
+- action_capture_user_input
 - action_session_start
 - action_restart
 - action_show_balance

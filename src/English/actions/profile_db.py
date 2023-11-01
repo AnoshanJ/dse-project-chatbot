@@ -15,14 +15,14 @@ utc = pytz.UTC
 
 GENERAL_ACCOUNTS = {
     "recipient": [
-        "Ranil Silva",
-        "Dilani Perera",
-        "Sanjeewa Fernando",
-        "Kamala Rajapakse",
-        "Nimal Bandara",
-        "Chamari Gunawardena",
-        "Samantha Perera",
-        "Niluka Wickramasinghe",
+    "ranil silva",
+    "dilani perera",
+    "sanjeewa fernando",
+    "kamala rajapakse",
+    "nimal bandara",
+    "chamari gunawardena",
+    "samantha perera",
+    "niluka wickramasinghe",
     ],
     "vendor": ["keells super", "pizza hut", "daraz.lk"],
     "depositor": ["interest", "employer"],
@@ -330,7 +330,7 @@ class ProfileDB:
 
     def add_credit_cards(self, session_id: Text):
         """Populate the creditcard table for a given session_id"""
-        credit_card_names = ["iron bank", "credit all", "emblem", "justice bank"]
+        credit_card_names = ["boc silver mastercard", "boc platinum visa card"]
         credit_cards = [
             CreditCard(
                 credit_card_name=cardname,

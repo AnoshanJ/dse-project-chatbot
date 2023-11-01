@@ -23,7 +23,7 @@ pipeline:
   epochs: 100
   retrieval_intent: chitchat
 - name: DucklingEntityExtractor
-  url: http://localhost:8000
+  url: https://duckling-anoshanj.cloud.okteto.net/
   dimensions:
   - amount-of-money
   - time
