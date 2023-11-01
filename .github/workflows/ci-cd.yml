@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Install pymysql
+      run: pip install pymysql
     - name: Rasa Train and Test for English    
       uses: RasaHQ/rasa-train-test-gha@main
       with:
