@@ -34,6 +34,7 @@ intents:
   - human_handoff
   - help
   - nlu_fallback
+  - compare
 entities:
   - amount-of-money
   - credit_card
@@ -608,6 +609,7 @@ responses:
     - text: "I can help you with your financial accounts. \nYou can ask me things like: \n- What's my account balance? \n- Pay off my credit card \n- What did I spend at Keells Super last month? \n- I need to transfer money"
 actions:
   - action_fetch_interest_rates
+  - action_send_to_llm
   - action_capture_user_input
   - action_session_start
   - action_restart

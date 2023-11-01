@@ -1,4 +1,4 @@
-version: "3.1"
+version: '3.1'
 # This file contains the different endpoints your bot can use.
 
 # Server where the models are pulled from.
@@ -12,9 +12,9 @@ version: "3.1"
 # https://rasa.com/docs/rasa/core/actions/#custom-actions/
 
 action_endpoint:
-  # url: "http://localhost:5056/webhook"
- url: "https://action-server-anoshanj.cloud.okteto.net/webhook"
-  #  url: "https://rasa-anoshanj.cloud.okteto.net/webhook"
+  # url: 'http://localhost:5056/webhook'
+  url: 'https://action-server-anoshanj.cloud.okteto.net/webhook'
+#  url: "https://rasa-anoshanj.cloud.okteto.net/webhook"
 
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
