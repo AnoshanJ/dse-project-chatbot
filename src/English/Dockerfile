@@ -7,7 +7,7 @@ USER root
 
 # Update pip and install necessary packages
 RUN pip3 install --upgrade pip && \
-    pip3 install spacy bs4 && \
+    pip3 install spacy bs4 pymysql && \
     python -m spacy download en_core_web_md
 
 WORKDIR /app
