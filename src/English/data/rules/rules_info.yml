@@ -1,7 +1,17 @@
-version: "3.1"
+version: '3.1'
 
 rules:
-- rule: Provide the interest rate
-  steps:
-  - intent: ask_interest_rate
-  - action: action_fetch_interest_rates
+  - rule: Provide the interest rate
+    steps:
+      - intent: ask_interest_rate
+      - action: action_fetch_interest_rates
+
+  - rule: Check LLM and Give Reply
+    steps:
+      - intent: nlu_fallback
+      - action: action_send_to_llm
+
+  - rule: Compare two types of options
+    steps:
+      - intent: compare
+      - action: action_send_to_llm

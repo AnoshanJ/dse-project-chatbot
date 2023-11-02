@@ -102,10 +102,23 @@ class LogIntentsComponent(GraphComponent):
             if intent['name']=='faq':
                 name = messages[0].as_dict()['response_selector']['faq']['response']['intent_response_key']
 
+                first_split = name.split('/')
+                t = first_split[0]
+                q = first_split[-1]
+
+                second_split = q.split('_')
+                # print(t)
+                d['intent'] = second_split[-1]
+                # print(detail)
+                product_type = second_split[0]
+                if product_type=='accounts':
+                    d['product_type']='savings'
+                if product_type == 'deposits':
+                    d['product_type']='fixed_deposits'
+                # print(product_type)
+                d['product'] = "_".join(second_split[1:-1])
+                # print(product)
                 
-                specific = name.split('/')[1]
-                d['product'],d['intent'] = specific.split('$')
-                d['product_type']='savings'
                 # Insert data into Product_Chats table
                 table_name = "Product_Chats"
                 data = (d['timestamp'], d['language'], d['product_type'], d['product'], d['intent'])
