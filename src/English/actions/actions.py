@@ -77,6 +77,7 @@ class CaptureUserInput(Action):
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
+import aiohttp
 
 def get_interest_rate():
     URL = 'https://www.boc.lk/rates-tariff#rupee-deposit-rates'
@@ -112,38 +113,40 @@ class ActionFetchInterestRates(Action):
         dispatcher.utter_message(text=response)
         return []
     
-def ask_llm(query):
-    url = 'http://20.235.163.124:8000/ask'  # Replace with the URL you want to send a POST request to
-    data = {'query': query}  # Replace with the data you want to send
+async def ask_llm(query):
+    url = 'http://20.235.163.124:8000/ask'
+    data = {'query': query}
     try:
-        response = requests.post(url, json=data)  # Use `json=data` for sending JSON data
-
-        if response.status_code == 200:
-            response_data = response.json()  # or response.text for raw response content
-            print(response_data)
-            return response_data['response']['result']
-        else:
-            print(f"Failed to post data. Status code: {response.status_code}")
-            return "There was an error. Please rephrase the question and try again"
-    except:
+        async with aiohttp.ClientSession() as session:
+            async with session.post(url, json=data) as response:
+                if response.status == 200:
+                    response_data = await response.json()
+                    print(response_data)
+                    return response_data
+                else:
+                    print(f"Failed to post data. Status code: {response.status}")
+                    return "There was an error. Please rephrase the question and try again"
+    except aiohttp.ClientError as e:
+        print(f"An error occurred: {e}")
         return "There was an error. Please rephrase the question and try again"
-    
 
 class ActionSendToLlm(Action):
-    """Send Query to llm"""
     def name(self) -> str:
-        """Unique identifier of the action"""
         return "action_send_to_llm"
 
-    async def run(self, dispatcher, tracker, domain):
+    async def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain):
         print("CAME IN TO THE FUNCTION")
         user_input = tracker.latest_message.get("text")
-        response = ask_llm(user_input)
+        response = await ask_llm(user_input)
         print(response)
-        dispatcher.utter_message(text=response)
+        
+        # Check if the response is in the expected format
+        if isinstance(response, dict) and 'response' in response and 'result' in response['response']:
+            dispatcher.utter_message(text=response['response']['result'])
+        else:
+            dispatcher.utter_message(text="I'm sorry, I couldn't process that.")
         return []
-
-
+    
 class ActionPayCC(Action):
     """Pay credit card."""
 
