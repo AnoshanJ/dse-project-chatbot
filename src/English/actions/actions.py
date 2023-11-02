@@ -116,8 +116,11 @@ class ActionFetchInterestRates(Action):
 async def ask_llm(query):
     url = 'http://20.235.163.124:8000/ask'
     data = {'query': query}
+    print('--------------------------------------------------------------------------------')
+    print(url,data)
     try:
-        async with aiohttp.ClientSession() as session:
+        timeout = aiohttp.ClientTimeout(total=300)
+        async with aiohttp.ClientSession(timeout=timeout) as session:
             async with session.post(url, json=data) as response:
                 if response.status == 200:
                     response_data = await response.json()
@@ -129,6 +132,8 @@ async def ask_llm(query):
     except aiohttp.ClientError as e:
         print(f"An error occurred: {e}")
         return "There was an error. Please rephrase the question and try again"
+    finally:
+        return "There was an error. Please rephrase the question and try again"
 
 class ActionSendToLlm(Action):
     def name(self) -> str:
@@ -137,6 +142,7 @@ class ActionSendToLlm(Action):
     async def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain):
         print("CAME IN TO THE FUNCTION")
         user_input = tracker.latest_message.get("text")
+        print('USER INPUT OBTAINED:',user_input)
         response = await ask_llm(user_input)
         print(response)
         
