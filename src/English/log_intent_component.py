@@ -24,7 +24,7 @@ db = pymysql.connect(
     database=MYSQL_DATABASE
 )
 
-cursor = db.cursor()
+# cursor = db.cursor()
 
 def insert_data(table_name, d):
         insert_query = ""
@@ -35,8 +35,9 @@ def insert_data(table_name, d):
         elif table_name == "General_Chats":
             insert_query = "INSERT INTO General_Chats (MsgTime, Lang, Intent) VALUES (%s, %s, %s)"
             
-
-        cursor.execute(insert_query, d)
+        db.ping() #reconnecting mysql
+        with db.cursor() as cursor:
+            cursor.execute(insert_query, d)
         db.commit()
         print("Added data: ",d)
 
@@ -138,4 +139,5 @@ class LogIntentsComponent(GraphComponent):
             # and return an appropriate response or handle it in any other way.
             print(f"An error occurred: {str(e)}")
             # Optionally, you can raise the exception again to propagate it.
-            raise e
+            # raise e
+            return messages
