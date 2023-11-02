@@ -112,6 +112,7 @@ class ActionFetchInterestRates(Action):
         response = f"The interest rate for '1 Year -Interest at maturity (LKR)' as of {current_date} is: {rate}. For more details, visit {website_link}"
         dispatcher.utter_message(text=response)
         return []
+<<<<<<< HEAD
     
 async def ask_llm(query):
     url = 'http://20.235.163.124:8000/ask'
@@ -153,6 +154,9 @@ class ActionSendToLlm(Action):
             dispatcher.utter_message(text="I'm sorry, I couldn't process that.")
         return []
     
+=======
+
+>>>>>>> parent of 53c4ce06 (Added LLM connection to RASA)
 class ActionPayCC(Action):
     """Pay credit card."""
 

@@ -5,4 +5,4 @@ rules:
     steps:
       - intent: faq
       - action: utter_faq
-      # - action: action_capture_user_input
+      - action: action_capture_user_input
