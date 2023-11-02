@@ -1,0 +1,1879 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20233.23.1027.1345                               -->
+<workbook locale='en_US' original-version='18.1' source-build='2023.3.0 (20233.23.1027.1345)' version='18.1' xml:base='http://localhost:9100' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <ISO8601PeriodTypes />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.PatternedLineMarks.true...PatternedLineMarks />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location derived-from='http://localhost:9100/t/newsite/workbooks/ChatbotDashboard?rev=1.8' id='ChatbotDashboard' path='/t/newsite/workbooks' revision='3.0' site='newsite' />
+  <preferences />
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='tracktec_inuka1' inline='true' name='federated.0uhgnk103r0idc143jqui0nm0w69' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='tracktechlk.com' name='mysql.07euzas1vxucwq11yw8y70t25w9k'>
+            <connection authentication='' class='mysql' dbname='tracktec_inuka1' odbc-native-protocol='' one-time-sql='' port='3306' server=' tracktechlk.com' source-charset='' username='tracktec_inuka' workgroup-auth-mode='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='mysql.07euzas1vxucwq11yw8y70t25w9k' name='General_Chats' table='[General_Chats]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='mysql.07euzas1vxucwq11yw8y70t25w9k' name='General_Chats' table='[General_Chats]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ID]</local-name>
+            <parent-name>[General_Chats]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MsgTime</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[MsgTime]</local-name>
+            <parent-name>[General_Chats]</parent-name>
+            <remote-alias>MsgTime</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Intent</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Intent]</local-name>
+            <parent-name>[General_Chats]</parent-name>
+            <remote-alias>Intent</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>false</contains-null>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lang</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Lang]</local-name>
+            <parent-name>[General_Chats]</parent-name>
+            <remote-alias>Lang</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Calculation2' datatype='integer' name='[Calculation_1055548890132529]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([Calculation_14214503633993743])' />
+      </column>
+      <column caption='No. of Days' datatype='integer' name='[Calculation_14214503633993743]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{FIXED (MONTH([MsgTime])) : COUNTD([ID])}' />
+      </column>
+      <column caption='Calculation1' datatype='integer' name='[Calculation_15973722054787155]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([Lang])' />
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[Intent]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Lang]' role='dimension' type='nominal' />
+      <column caption='Msg Time' datatype='datetime' name='[MsgTime]' role='dimension' type='ordinal' />
+      <_.fcp.ObjectModelTableType.true...column caption='General_Chats' datatype='table' name='[__tableau_internal_object_id__].[General_Chats_55806F907BF242DBB980A367C83FB0DA]' role='measure' type='quantitative' />
+      <column-instance column='[Intent]' derivation='None' name='[none:Intent:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Lang]' derivation='None' name='[none:Lang:nk]' pivot='key' type='nominal' />
+      <column-instance column='[MsgTime]' derivation='Day-Trunc' name='[tdy:MsgTime:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[MsgTime]' derivation='Week-Trunc' name='[twk:MsgTime:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (DAY(Msg Time))' hidden='true' name='[Action (DAY(Msg Time))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[tdy:MsgTime:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (WEEK(Msg Time))' hidden='true' name='[Action (WEEK(Msg Time))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[twk:MsgTime:ok]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Intent:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;check_balance&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;thank_you&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;nlu_fallback&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;greet&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;transfer_money&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;check_recipients&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Lang:nk]' palette='blue_10_0' type='palette'>
+            <map to='#2a5783'>
+              <bucket>&quot;Tam&quot;</bucket>
+            </map>
+            <map to='#6697c0'>
+              <bucket>&quot;Sin&quot;</bucket>
+            </map>
+            <map to='#b9ddf1'>
+              <bucket>&quot;Eng&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='ID' />
+        <field-sort-custom-order field='MsgTime' />
+        <field-sort-custom-order field='Intent' />
+        <field-sort-custom-order field='Lang' />
+        <field-sort-custom-order field='Calculation_15973722054787155' />
+        <field-sort-custom-order field='Calculation_14214503633993743' />
+        <field-sort-custom-order field='Calculation_1055548890132529' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='General_Chats' id='General_Chats_55806F907BF242DBB980A367C83FB0DA'>
+            <properties context=''>
+              <relation connection='mysql.07euzas1vxucwq11yw8y70t25w9k' name='General_Chats' table='[General_Chats]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='Product_Chats (information_schema)' inline='true' name='federated.1x8ciu8019nvox166i8p60d24rvk' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='tracktechlk.com' name='mysql.1wvw0wy0q5lqfg1bln9bg0ogcgsg'>
+            <connection authentication='' class='mysql' dbname='tracktec_inuka1' odbc-native-protocol='' one-time-sql='' port='3306' server='tracktechlk.com' source-charset='' username='tracktec_inuka' workgroup-auth-mode='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='mysql.1wvw0wy0q5lqfg1bln9bg0ogcgsg' name='Product_Chats' table='[Product_Chats]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='mysql.1wvw0wy0q5lqfg1bln9bg0ogcgsg' name='Product_Chats' table='[Product_Chats]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ID]</local-name>
+            <parent-name>[Product_Chats]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MsgTime</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[MsgTime]</local-name>
+            <parent-name>[Product_Chats]</parent-name>
+            <remote-alias>MsgTime</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lang</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Lang]</local-name>
+            <parent-name>[Product_Chats]</parent-name>
+            <remote-alias>Lang</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product_Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Product_Type]</local-name>
+            <parent-name>[Product_Chats]</parent-name>
+            <remote-alias>Product_Type</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>false</contains-null>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Product]</local-name>
+            <parent-name>[Product_Chats]</parent-name>
+            <remote-alias>Product</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>false</contains-null>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Intent</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Intent]</local-name>
+            <parent-name>[Product_Chats]</parent-name>
+            <remote-alias>Intent</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>30</width>
+            <contains-null>false</contains-null>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='COUNT([Product Type] == &quot;fixed_deposits&quot;)' datatype='integer' name='[Calculation_1055548953337875]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([Product_Type] == &quot;fixed_deposits&quot;)' />
+      </column>
+      <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+      <column caption='Msg Time' datatype='datetime' name='[MsgTime]' role='dimension' type='ordinal' />
+      <column aggregation='CountD' caption='Product Type' datatype='string' name='[Product_Type]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Product_Chats' datatype='table' name='[__tableau_internal_object_id__].[Product_Chats_B0E9A8E87752431498A2A4B04385C44A]' role='measure' type='quantitative' />
+      <column-instance column='[Product_Type]' derivation='None' name='[none:Product_Type:nk]' pivot='key' type='nominal' />
+      <column-instance column='[MsgTime]' derivation='Day-Trunc' name='[tdy:MsgTime:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[MsgTime]' derivation='Week-Trunc' name='[twk:MsgTime:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (DAY(Msg Time))' hidden='true' name='[Action (DAY(Msg Time))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[tdy:MsgTime:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (DAY(Msg Time),Product Type)' hidden='true' name='[Action (DAY(Msg Time),Product Type)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[tdy:MsgTime:ok]' />
+          <groupfilter function='level-members' level='[Product_Type]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (WEEK(Msg Time),Product Type)' hidden='true' name='[Action (WEEK(Msg Time),Product Type)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[twk:MsgTime:ok]' />
+          <groupfilter function='level-members' level='[Product_Type]' />
+        </groupfilter>
+      </group>
+      <group caption='Product Type Set' name='[Product Type Set]' name-style='unqualified' user:ui-builder='lasso-group'>
+        <groupfilter function='except'>
+          <groupfilter function='level-members' level='[Product_Type]' />
+          <groupfilter function='member' level='[Product_Type]' member='%null%' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Product_Type:nk]' palette='blue_teal_10_0' type='palette'>
+            <map to='#2c5985'>
+              <bucket>&quot;fixed_deposits&quot;</bucket>
+            </map>
+            <map to='#89c8cc'>
+              <bucket>&quot;savings&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Product_Chats' id='Product_Chats_B0E9A8E87752431498A2A4B04385C44A'>
+            <properties context=''>
+              <relation connection='mysql.1wvw0wy0q5lqfg1bln9bg0ogcgsg' name='Product_Chats' table='[Product_Chats]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 2 (generated)' name='[Action2_D4567E21A8D44774A7CDFCC819466ABA]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Banking Chatbot Dashboard' type='sheet' worksheet='Sheet 7' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Banking Chatbot Dashboard' />
+      </command>
+    </action>
+    <action caption='Highlight 1 (generated)' name='[Action3_597FC14C56FC4AF99875B0E4181FA87E]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Sheet 8' />
+      <command command='tsc:brush'>
+        <param name='special-fields' value='date-time' />
+        <param name='target' value='Sheet 8' />
+      </command>
+    </action>
+    <action caption='Filter 1 (generated)' name='[Action3_93CFBC5D6A33480385EB5657B9D9D643]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Banking Chatbot Dashboard' type='sheet' worksheet='Sheet 8' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Banking Chatbot Dashboard' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options export-orientation='portrait'>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Product </run>
+            <run bold='true' fontalignment='1'>Intent Analysis</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/t/newsite/workbooks/ChatbotDashboard/Sheet1?rev=' id='Sheet1' path='/t/newsite/workbooks/ChatbotDashboard' revision='' site='newsite' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Product_Chats (information_schema)' name='federated.1x8ciu8019nvox166i8p60d24rvk' />
+            <datasource caption='tracktec_inuka1' name='federated.0uhgnk103r0idc143jqui0nm0w69' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0uhgnk103r0idc143jqui0nm0w69'>
+            <column datatype='string' name='[Intent]' role='dimension' type='nominal' />
+            <column-instance column='[Intent]' derivation='Count' name='[cnt:Intent:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Intent]' derivation='None' name='[none:Intent:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1x8ciu8019nvox166i8p60d24rvk'>
+            <column datatype='string' name='[Intent]' role='dimension' type='nominal' />
+            <column-instance column='[Intent]' derivation='Count' name='[cnt:Intent:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Intent]' derivation='None' name='[none:Intent:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Intent:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Intent:nk]' />
+              <groupfilter function='member' level='[none:Intent:nk]' member='&quot;documents&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Intent:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1x8ciu8019nvox166i8p60d24rvk].[cnt:Intent:qk]' palette='blue_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <size column='[federated.1x8ciu8019nvox166i8p60d24rvk].[cnt:Intent:qk]' />
+              <text column='[federated.1x8ciu8019nvox166i8p60d24rvk].[cnt:Intent:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-color' value='#a0cbe8' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0uhgnk103r0idc143jqui0nm0w69].[cnt:Intent:qk]</rows>
+        <cols>([federated.1x8ciu8019nvox166i8p60d24rvk].[none:Intent:nk] / [federated.0uhgnk103r0idc143jqui0nm0w69].[none:Intent:nk])</cols>
+      </table>
+      <simple-id uuid='{3861E6A8-EDD0-4E07-83C2-BC7C4AA726CD}' />
+    </worksheet>
+    <worksheet name='Sheet 10'>
+      <layout-options export-orientation='portrait'>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Total Interactions</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/t/newsite/workbooks/ChatbotDashboard/Sheet10?rev=' id='Sheet10' path='/t/newsite/workbooks/ChatbotDashboard' revision='' site='newsite' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tracktec_inuka1' name='federated.0uhgnk103r0idc143jqui0nm0w69' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0uhgnk103r0idc143jqui0nm0w69'>
+            <column aggregation='Sum' datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+            <column caption='Msg Time' datatype='datetime' name='[MsgTime]' role='dimension' type='ordinal' />
+            <column-instance column='[ID]' derivation='Count' name='[cnt:ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MsgTime]' derivation='Week-Trunc' name='[twk:MsgTime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0uhgnk103r0idc143jqui0nm0w69].[Action (WEEK(Msg Time))]'>
+            <groupfilter function='level-members' level='[twk:MsgTime:ok]' user:ui-action-filter='[Action3_93CFBC5D6A33480385EB5657B9D9D643]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0uhgnk103r0idc143jqui0nm0w69].[Action (WEEK(Msg Time))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='title'>
+            <format attr='background-color' value='#dfedeb' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='color' value='#333333' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='color' value='#333333' />
+          </style-rule>
+          <style-rule element='parameter-ctrl'>
+            <format attr='color' value='#333333' />
+          </style-rule>
+          <style-rule element='data-highlighter'>
+            <format attr='color' value='#333333' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0uhgnk103r0idc143jqui0nm0w69].[cnt:ID:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='20'><![CDATA[<[federated.0uhgnk103r0idc143jqui0nm0w69].[cnt:ID:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{369C5B0B-9ED3-40C2-88B2-E45B73158B0E}' />
+    </worksheet>
+    <worksheet name='Sheet 12'>
+      <layout-options export-orientation='portrait'>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Intent and Product Association</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/t/newsite/workbooks/ChatbotDashboard/Sheet12?rev=' id='Sheet12' path='/t/newsite/workbooks/ChatbotDashboard' revision='' site='newsite' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Product_Chats (information_schema)' name='federated.1x8ciu8019nvox166i8p60d24rvk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1x8ciu8019nvox166i8p60d24rvk'>
+            <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Intent]' role='dimension' type='nominal' />
+            <column caption='Msg Time' datatype='datetime' name='[MsgTime]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Product]' role='dimension' type='nominal' />
+            <column aggregation='CountD' caption='Product Type' datatype='string' name='[Product_Type]' role='dimension' type='nominal' />
+            <column-instance column='[ID]' derivation='Count' name='[cnt:ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Intent]' derivation='None' name='[none:Intent:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Product]' derivation='None' name='[none:Product:nk]' pivot='key' type='nominal' />
+            <column-instance column='[MsgTime]' derivation='Week-Trunc' name='[twk:MsgTime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1x8ciu8019nvox166i8p60d24rvk].[Action (WEEK(Msg Time),Product Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_93CFBC5D6A33480385EB5657B9D9D643]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[twk:MsgTime:ok]' />
+              <groupfilter function='level-members' level='[Product_Type]' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Product:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1x8ciu8019nvox166i8p60d24rvk].[cnt:ID:qk]' shelf='rows'>
+              <sort-filter-info>
+                <sort-filter level-name='[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Intent:nk]' member-value='&quot;eligibility&quot;' />
+              </sort-filter-info>
+            </shelf-sort-v2>
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1x8ciu8019nvox166i8p60d24rvk].[Action (WEEK(Msg Time),Product Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='cell-w' value='20' />
+            <format attr='cell-h' value='20' />
+            <format attr='cell' value='20' />
+            <format attr='cell-q' value='100' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1x8ciu8019nvox166i8p60d24rvk].[cnt:ID:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.1x8ciu8019nvox166i8p60d24rvk].[cnt:ID:qk]' palette='blue_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#e6ecf0' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='size' field='[federated.1x8ciu8019nvox166i8p60d24rvk].[cnt:ID:qk]' value='Count'>
+              <formatted-text>
+                <run>Count</run>
+              </formatted-text>
+            </format>
+            <format attr='color' field='[federated.1x8ciu8019nvox166i8p60d24rvk].[cnt:ID:qk]' value='Count&#10;'>
+              <formatted-text>
+                <run>Count</run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1x8ciu8019nvox166i8p60d24rvk].[cnt:ID:qk]' />
+              <size column='[federated.1x8ciu8019nvox166i8p60d24rvk].[cnt:ID:qk]' />
+              <text column='[federated.1x8ciu8019nvox166i8p60d24rvk].[cnt:ID:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.7999999523162842' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Product:nk]</rows>
+        <cols>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Intent:nk]</cols>
+      </table>
+      <simple-id uuid='{89DFBF05-8C41-4CF9-86D9-FCD24E1CB22C}' />
+    </worksheet>
+    <worksheet name='Sheet 13'>
+      <layout-options export-orientation='portrait'>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>No of Interactions Today</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/t/newsite/workbooks/ChatbotDashboard/Sheet13?rev=' id='Sheet13' path='/t/newsite/workbooks/ChatbotDashboard' revision='' site='newsite' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Product_Chats (information_schema)' name='federated.1x8ciu8019nvox166i8p60d24rvk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1x8ciu8019nvox166i8p60d24rvk'>
+            <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+            <column caption='Msg Time' datatype='datetime' name='[MsgTime]' role='dimension' type='ordinal' />
+            <column aggregation='CountD' caption='Product Type' datatype='string' name='[Product_Type]' role='dimension' type='nominal' />
+            <column-instance column='[ID]' derivation='Count' name='[cnt:ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MsgTime]' derivation='Day-Trunc' name='[tdy:MsgTime:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[MsgTime]' derivation='Day-Trunc' name='[tdy:MsgTime:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MsgTime]' derivation='Week-Trunc' name='[twk:MsgTime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1x8ciu8019nvox166i8p60d24rvk].[Action (WEEK(Msg Time),Product Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_93CFBC5D6A33480385EB5657B9D9D643]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[twk:MsgTime:ok]' />
+              <groupfilter function='level-members' level='[Product_Type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1x8ciu8019nvox166i8p60d24rvk].[tdy:MsgTime:ok]'>
+            <groupfilter function='member' level='[tdy:MsgTime:ok]' member='#2023-11-02 00:00:00#' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='relative-date' column='[federated.1x8ciu8019nvox166i8p60d24rvk].[tdy:MsgTime:qk]' first-period='0' include-future='true' include-null='false' last-period='0' period-type-v2='day' />
+          <slices>
+            <column>[federated.1x8ciu8019nvox166i8p60d24rvk].[tdy:MsgTime:qk]</column>
+            <column>[federated.1x8ciu8019nvox166i8p60d24rvk].[tdy:MsgTime:ok]</column>
+            <column>[federated.1x8ciu8019nvox166i8p60d24rvk].[Action (WEEK(Msg Time),Product Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='title'>
+            <format attr='background-color' value='#dfedeb' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1x8ciu8019nvox166i8p60d24rvk].[cnt:ID:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='20'><![CDATA[<[federated.1x8ciu8019nvox166i8p60d24rvk].[cnt:ID:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{74504BB6-C60D-4231-9686-AA3CF3673DDF}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options export-orientation='portrait'>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Interactions with Time</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/t/newsite/workbooks/ChatbotDashboard/Sheet2?rev=' id='Sheet2' path='/t/newsite/workbooks/ChatbotDashboard' revision='' site='newsite' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Product_Chats (information_schema)' name='federated.1x8ciu8019nvox166i8p60d24rvk' />
+            <datasource caption='tracktec_inuka1' name='federated.0uhgnk103r0idc143jqui0nm0w69' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0uhgnk103r0idc143jqui0nm0w69'>
+            <_.fcp.ObjectModelTableType.true...column caption='General_Chats' datatype='table' name='[__tableau_internal_object_id__].[General_Chats_55806F907BF242DBB980A367C83FB0DA]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[General_Chats_55806F907BF242DBB980A367C83FB0DA]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:General_Chats_55806F907BF242DBB980A367C83FB0DA:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.false...column caption='General_Chats' datatype='integer' name='[__tableau_internal_object_id__].[General_Chats_55806F907BF242DBB980A367C83FB0DA]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1x8ciu8019nvox166i8p60d24rvk'>
+            <column caption='Msg Time' datatype='datetime' name='[MsgTime]' role='dimension' type='ordinal' />
+            <_.fcp.ObjectModelTableType.false...column caption='Product_Chats' datatype='integer' name='[__tableau_internal_object_id__].[Product_Chats_B0E9A8E87752431498A2A4B04385C44A]' role='measure' type='quantitative' />
+            <column aggregation='CountD' caption='Product Type' datatype='string' name='[Product_Type]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='Product_Chats' datatype='table' name='[__tableau_internal_object_id__].[Product_Chats_B0E9A8E87752431498A2A4B04385C44A]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Product_Chats_B0E9A8E87752431498A2A4B04385C44A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Product_Chats_B0E9A8E87752431498A2A4B04385C44A:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MsgTime]' derivation='Day-Trunc' name='[tdy:MsgTime:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MsgTime]' derivation='Week-Trunc' name='[twk:MsgTime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0uhgnk103r0idc143jqui0nm0w69].[__tableau_internal_object_id__].[cnt:General_Chats_55806F907BF242DBB980A367C83FB0DA:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>7</max>
+          </filter>
+          <filter class='categorical' column='[federated.1x8ciu8019nvox166i8p60d24rvk].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <filter class='categorical' column='[federated.1x8ciu8019nvox166i8p60d24rvk].[Action (WEEK(Msg Time),Product Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_93CFBC5D6A33480385EB5657B9D9D643]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[twk:MsgTime:ok]' />
+              <groupfilter function='level-members' level='[Product_Type]' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.1x8ciu8019nvox166i8p60d24rvk].[__tableau_internal_object_id__].[cnt:Product_Chats_B0E9A8E87752431498A2A4B04385C44A:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>11</max>
+          </filter>
+          <slices>
+            <column>[federated.1x8ciu8019nvox166i8p60d24rvk].[:Measure Names]</column>
+            <column>[federated.1x8ciu8019nvox166i8p60d24rvk].[__tableau_internal_object_id__].[cnt:Product_Chats_B0E9A8E87752431498A2A4B04385C44A:qk]</column>
+            <column>[federated.0uhgnk103r0idc143jqui0nm0w69].[__tableau_internal_object_id__].[cnt:General_Chats_55806F907BF242DBB980A367C83FB0DA:qk]</column>
+            <column>[federated.1x8ciu8019nvox166i8p60d24rvk].[Action (WEEK(Msg Time),Product Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='stroke-color' id='refline0' value='#000000' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#dfedeb' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#a0cbe8' />
+                <format attr='line-interpolation' value='linear' />
+                <_.fcp.PatternedLineMarks.true...format attr='mark-line-pattern' value='solid' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1x8ciu8019nvox166i8p60d24rvk].[__tableau_internal_object_id__].[cnt:Product_Chats_B0E9A8E87752431498A2A4B04385C44A:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a7' />
+                <format attr='line-interpolation' value='linear' />
+                <_.fcp.PatternedLineMarks.true...format attr='mark-line-pattern' value='solid' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0uhgnk103r0idc143jqui0nm0w69].[__tableau_internal_object_id__].[cnt:General_Chats_55806F907BF242DBB980A367C83FB0DA:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#75a1c7' />
+                <format attr='line-interpolation' value='linear' />
+                <_.fcp.PatternedLineMarks.true...format attr='mark-line-pattern' value='solid' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1x8ciu8019nvox166i8p60d24rvk].[__tableau_internal_object_id__].[cnt:Product_Chats_B0E9A8E87752431498A2A4B04385C44A:qk] + [federated.0uhgnk103r0idc143jqui0nm0w69].[__tableau_internal_object_id__].[cnt:General_Chats_55806F907BF242DBB980A367C83FB0DA:qk])</rows>
+        <cols total='true'>[federated.1x8ciu8019nvox166i8p60d24rvk].[tdy:MsgTime:qk]</cols>
+      </table>
+      <simple-id uuid='{B24581B7-9A49-45A1-BB06-45A59FC3B9C0}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options export-orientation='portrait'>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Product Analysis</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/t/newsite/workbooks/ChatbotDashboard/Sheet3?rev=' id='Sheet3' path='/t/newsite/workbooks/ChatbotDashboard' revision='' site='newsite' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Product_Chats (information_schema)' name='federated.1x8ciu8019nvox166i8p60d24rvk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1x8ciu8019nvox166i8p60d24rvk'>
+            <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+            <column caption='Msg Time' datatype='datetime' name='[MsgTime]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Product]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='Product_Chats' datatype='integer' name='[__tableau_internal_object_id__].[Product_Chats_B0E9A8E87752431498A2A4B04385C44A]' role='measure' type='quantitative' />
+            <column aggregation='CountD' caption='Product Type' datatype='string' name='[Product_Type]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='Product_Chats' datatype='table' name='[__tableau_internal_object_id__].[Product_Chats_B0E9A8E87752431498A2A4B04385C44A]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Product_Chats_B0E9A8E87752431498A2A4B04385C44A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Product_Chats_B0E9A8E87752431498A2A4B04385C44A:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ID]' derivation='Count' name='[cnt:ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Product]' derivation='None' name='[none:Product:nk]' pivot='key' type='nominal' />
+            <column-instance column='[MsgTime]' derivation='Week-Trunc' name='[twk:MsgTime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1x8ciu8019nvox166i8p60d24rvk].[Action (WEEK(Msg Time),Product Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_93CFBC5D6A33480385EB5657B9D9D643]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[twk:MsgTime:ok]' />
+              <groupfilter function='level-members' level='[Product_Type]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1x8ciu8019nvox166i8p60d24rvk].[Action (WEEK(Msg Time),Product Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1x8ciu8019nvox166i8p60d24rvk].[cnt:ID:qk]' scope='cols' value='No. of inquiries' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#dfedeb' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <text column='[federated.1x8ciu8019nvox166i8p60d24rvk].[__tableau_internal_object_id__].[cnt:Product_Chats_B0E9A8E87752431498A2A4B04385C44A:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a7' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.502500057220459' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Product:nk]</rows>
+        <cols>[federated.1x8ciu8019nvox166i8p60d24rvk].[cnt:ID:qk]</cols>
+      </table>
+      <simple-id uuid='{272F08B9-981B-4663-95C5-EE2BB3019032}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <layout-options export-orientation='portrait'>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>General Intent Analysis</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/t/newsite/workbooks/ChatbotDashboard/Sheet6?rev=' id='Sheet6' path='/t/newsite/workbooks/ChatbotDashboard' revision='' site='newsite' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tracktec_inuka1' name='federated.0uhgnk103r0idc143jqui0nm0w69' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0uhgnk103r0idc143jqui0nm0w69'>
+            <column datatype='string' name='[Intent]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='General_Chats' datatype='integer' name='[__tableau_internal_object_id__].[General_Chats_55806F907BF242DBB980A367C83FB0DA]' role='measure' type='quantitative' />
+            <column caption='Msg Time' datatype='datetime' name='[MsgTime]' role='dimension' type='ordinal' />
+            <_.fcp.ObjectModelTableType.true...column caption='General_Chats' datatype='table' name='[__tableau_internal_object_id__].[General_Chats_55806F907BF242DBB980A367C83FB0DA]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[General_Chats_55806F907BF242DBB980A367C83FB0DA]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:General_Chats_55806F907BF242DBB980A367C83FB0DA:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Intent]' derivation='Count' name='[cnt:Intent:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Intent]' derivation='None' name='[none:Intent:nk]' pivot='key' type='nominal' />
+            <column-instance column='[MsgTime]' derivation='Week-Trunc' name='[twk:MsgTime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0uhgnk103r0idc143jqui0nm0w69].[Action (WEEK(Msg Time))]'>
+            <groupfilter function='level-members' level='[twk:MsgTime:ok]' user:ui-action-filter='[Action3_93CFBC5D6A33480385EB5657B9D9D643]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0uhgnk103r0idc143jqui0nm0w69].[none:Intent:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0uhgnk103r0idc143jqui0nm0w69].[cnt:Intent:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0uhgnk103r0idc143jqui0nm0w69].[Action (WEEK(Msg Time))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#dfedeb' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='background-color' value='#dfedeb' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <text column='[federated.0uhgnk103r0idc143jqui0nm0w69].[__tableau_internal_object_id__].[cnt:General_Chats_55806F907BF242DBB980A367C83FB0DA:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a7' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0uhgnk103r0idc143jqui0nm0w69].[cnt:Intent:qk]</rows>
+        <cols>[federated.0uhgnk103r0idc143jqui0nm0w69].[none:Intent:nk]</cols>
+      </table>
+      <simple-id uuid='{762990D1-F422-4230-9DA3-A4A1A40ACAA6}' />
+    </worksheet>
+    <worksheet name='Sheet 7'>
+      <layout-options export-orientation='portrait'>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000'>Language usage</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/t/newsite/workbooks/ChatbotDashboard/Sheet7?rev=' id='Sheet7' path='/t/newsite/workbooks/ChatbotDashboard' revision='' site='newsite' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tracktec_inuka1' name='federated.0uhgnk103r0idc143jqui0nm0w69' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0uhgnk103r0idc143jqui0nm0w69'>
+            <column datatype='string' name='[Lang]' role='dimension' type='nominal' />
+            <column caption='Msg Time' datatype='datetime' name='[MsgTime]' role='dimension' type='ordinal' />
+            <column-instance column='[Lang]' derivation='Count' name='[cnt:Lang:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Lang]' derivation='None' name='[none:Lang:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Lang]' derivation='Count' name='[pcto:cnt:Lang:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[MsgTime]' derivation='Week-Trunc' name='[twk:MsgTime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0uhgnk103r0idc143jqui0nm0w69].[Action (WEEK(Msg Time))]'>
+            <groupfilter function='level-members' level='[twk:MsgTime:ok]' user:ui-action-filter='[Action3_93CFBC5D6A33480385EB5657B9D9D643]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0uhgnk103r0idc143jqui0nm0w69].[Action (WEEK(Msg Time))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='title'>
+            <format attr='background-color' value='#dfedeb' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='background-color' value='#dfedeb' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0uhgnk103r0idc143jqui0nm0w69].[none:Lang:nk]' />
+              <size column='[federated.0uhgnk103r0idc143jqui0nm0w69].[cnt:Lang:qk]' />
+              <text column='[federated.0uhgnk103r0idc143jqui0nm0w69].[none:Lang:nk]' />
+              <text column='[federated.0uhgnk103r0idc143jqui0nm0w69].[pcto:cnt:Lang:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B4013F70-A626-44A8-9177-1F4BA8442C46}' />
+    </worksheet>
+    <worksheet name='Sheet 8'>
+      <layout-options export-orientation='portrait'>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Product types with the time</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/t/newsite/workbooks/ChatbotDashboard/Sheet8?rev=' id='Sheet8' path='/t/newsite/workbooks/ChatbotDashboard' revision='' site='newsite' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Product_Chats (information_schema)' name='federated.1x8ciu8019nvox166i8p60d24rvk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1x8ciu8019nvox166i8p60d24rvk'>
+            <column caption='Msg Time' datatype='datetime' name='[MsgTime]' role='dimension' type='ordinal' />
+            <column aggregation='CountD' caption='Product Type' datatype='string' name='[Product_Type]' role='dimension' type='nominal' />
+            <column-instance column='[Product_Type]' derivation='Count' name='[cnt:Product_Type:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Product_Type]' derivation='None' name='[none:Product_Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[MsgTime]' derivation='Day-Trunc' name='[tdy:MsgTime:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MsgTime]' derivation='Week-Trunc' name='[twk:MsgTime:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Product_Type:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Product_Type:nk]' />
+              <groupfilter function='member' level='[none:Product_Type:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='relative-date' column='[federated.1x8ciu8019nvox166i8p60d24rvk].[tdy:MsgTime:qk]' first-period='0' include-future='true' include-null='false' last-period='0' period-type-v2='year' />
+          <slices>
+            <column>[federated.1x8ciu8019nvox166i8p60d24rvk].[tdy:MsgTime:qk]</column>
+            <column>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Product_Type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1x8ciu8019nvox166i8p60d24rvk].[cnt:Product_Type:qk]' scope='rows' value='No. of interactions used products' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#dfedeb' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Product_Type:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a799' />
+                <format attr='mark-transparency' value='255' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1x8ciu8019nvox166i8p60d24rvk].[cnt:Product_Type:qk]</rows>
+        <cols>[federated.1x8ciu8019nvox166i8p60d24rvk].[twk:MsgTime:qk]</cols>
+      </table>
+      <simple-id uuid='{425AFCE9-D355-46DF-ABA8-BAB8BA8BF1EF}' />
+    </worksheet>
+    <worksheet name='Sheet 9'>
+      <layout-options export-orientation='portrait'>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='15'>Average Chats Per Month</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/t/newsite/workbooks/ChatbotDashboard/Sheet9?rev=' id='Sheet9' path='/t/newsite/workbooks/ChatbotDashboard' revision='' site='newsite' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tracktec_inuka1' name='federated.0uhgnk103r0idc143jqui0nm0w69' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0uhgnk103r0idc143jqui0nm0w69'>
+            <column caption='No. of Days' datatype='integer' name='[Calculation_14214503633993743]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{FIXED (MONTH([MsgTime])) : COUNTD([ID])}' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+            <column caption='Msg Time' datatype='datetime' name='[MsgTime]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_14214503633993743]' derivation='Avg' name='[avg:Calculation_14214503633993743:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MsgTime]' derivation='Week-Trunc' name='[twk:MsgTime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0uhgnk103r0idc143jqui0nm0w69].[Action (WEEK(Msg Time))]'>
+            <groupfilter function='level-members' level='[twk:MsgTime:ok]' user:ui-action-filter='[Action3_93CFBC5D6A33480385EB5657B9D9D643]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0uhgnk103r0idc143jqui0nm0w69].[Action (WEEK(Msg Time))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='title'>
+            <format attr='background-color' value='#dfedeb' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0uhgnk103r0idc143jqui0nm0w69].[avg:Calculation_14214503633993743:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='20'><![CDATA[<[federated.0uhgnk103r0idc143jqui0nm0w69].[avg:Calculation_14214503633993743:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0A67E889-BDCF-41BA-A390-0FD725AAAD4A}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Banking Chatbot Dashboard'>
+      <layout-options export-orientation='portrait'>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Noto Serif CJK SC' fontsize='20'>BotAdmin Dashboard</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/t/newsite/workbooks/ChatbotDashboard/Dashboard3?rev=' id='BankingChatbotDashboard' path='/t/newsite/workbooks/ChatbotDashboard' revision='' site='newsite' />
+      <style />
+      <size maxheight='1200' maxwidth='1600' minheight='1200' minwidth='1200' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98666' id='76' param='horz' type-v2='layout-flow' w='98772' x='614' y='667'>
+            <zone h='98666' id='42' param='vert' type-v2='layout-flow' w='98772' x='614' y='667'>
+              <zone fixed-size='122' h='10834' id='43' is-fixed='true' type-v2='title' w='98772' x='614' y='667'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='87832' id='40' param='horz' type-v2='layout-flow' w='98772' x='614' y='11501'>
+                <zone h='87832' id='7' type-v2='layout-basic' w='98772' x='614' y='11501'>
+                  <zone h='34703' id='17' name='Sheet 2' w='38765' x='34609' y='64630'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                      <format attr='padding-top' value='4' />
+                      <format attr='padding-left' value='5' />
+                    </zone-style>
+                  </zone>
+                  <zone h='39951' id='18' name='Sheet 3' w='38943' x='614' y='24679'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='5' />
+                      <format attr='margin-bottom' value='6' />
+                      <format attr='padding-top' value='0' />
+                      <format attr='padding-right' value='3' />
+                      <format attr='padding-bottom' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='39956' id='20' name='Sheet 8' w='33923' x='65463' y='24674'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='39951' id='29' name='Sheet 7' w='25906' x='39557' y='24679'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                      <format attr='padding-right' value='4' />
+                      <format attr='padding-bottom' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='34703' id='34' name='Sheet 6' w='26012' x='73374' y='64630'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                      <format attr='padding' value='0' />
+                      <format attr='padding-top' value='4' />
+                      <format attr='padding-left' value='3' />
+                    </zone-style>
+                  </zone>
+                  <zone h='34703' id='38' name='Sheet 12' w='33995' x='614' y='64630'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='3' />
+                      <format attr='padding-top' value='3' />
+                      <format attr='padding-right' value='2' />
+                      <format attr='padding-bottom' value='2' />
+                    </zone-style>
+                  </zone>
+                  <zone h='13178' id='68' name='Sheet 10' w='32698' x='614' y='11501'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='13178' id='69' name='Sheet 9' w='32151' x='33312' y='11501'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='13173' id='74' name='Sheet 13' w='33923' x='65463' y='11501'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout name='Desktop' />
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options export-orientation='portrait'>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Noto Serif CJK SC' fontsize='20'>BotAdmin Dashboard</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='2300' minheight='2300' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='80' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98666' id='79' param='vert' type-v2='layout-flow' w='98772' x='614' y='667'>
+                <zone fixed-size='122' h='10834' id='43' type-v2='title' w='98772' x='614' y='667'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='150' h='13178' id='68' is-fixed='true' name='Sheet 10' w='32698' x='614' y='11501'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='150' h='13178' id='69' is-fixed='true' name='Sheet 9' w='32151' x='33312' y='11501'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='150' h='13173' id='74' is-fixed='true' name='Sheet 13' w='33923' x='65463' y='11501'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='39956' id='20' is-fixed='true' name='Sheet 8' w='33923' x='65463' y='24674'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='39951' id='18' is-fixed='true' name='Sheet 3' w='38943' x='614' y='24679'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='39951' id='29' is-fixed='true' name='Sheet 7' w='25906' x='39557' y='24679'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='34703' id='38' is-fixed='true' name='Sheet 12' w='33995' x='614' y='64630'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='34703' id='17' is-fixed='true' name='Sheet 2' w='38765' x='34609' y='64630'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='34703' id='34' is-fixed='true' name='Sheet 6' w='26012' x='73374' y='64630'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{92CFF631-A048-47E3-A429-631811706198}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <layout-options export-orientation='portrait' />
+      <repository-location derived-from='http://localhost:9100/t/newsite/workbooks/ChatbotDashboard/Dashboard1?rev=' id='Dashboard1' path='/t/newsite/workbooks/ChatbotDashboard' revision='' site='newsite' />
+      <style />
+      <size maxheight='900' maxwidth='1580' minheight='900' minwidth='1580' sizing-mode='fixed' />
+      <zones />
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options export-orientation='portrait' />
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='34' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98222' id='33' param='vert' type-v2='layout-flow' w='98988' x='506' y='889' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{6618A244-A779-4DCB-B91E-4289CA8479CE}' />
+    </dashboard>
+  </dashboards>
+  <windows>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160' />
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0uhgnk103r0idc143jqui0nm0w69].[none:ID:ok]</field>
+            <field>[federated.0uhgnk103r0idc143jqui0nm0w69].[none:Intent:nk]</field>
+            <field>[federated.0uhgnk103r0idc143jqui0nm0w69].[none:Lang:nk]</field>
+            <field>[federated.0uhgnk103r0idc143jqui0nm0w69].[yr:MsgTime:ok]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Calculation_2001357469726699524:qk]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Intent:nk]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Lang:nk]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Product:nk]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Product_Type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{7E8C5312-C4E3-4E05-95DD-AED3EF2799C9}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160' />
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0uhgnk103r0idc143jqui0nm0w69].[attr:ID:ok]</field>
+            <field>[federated.0uhgnk103r0idc143jqui0nm0w69].[attr:Intent:nk]</field>
+            <field>[federated.0uhgnk103r0idc143jqui0nm0w69].[none:Intent:nk]</field>
+            <field>[federated.0uhgnk103r0idc143jqui0nm0w69].[yr:MsgTime:ok]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[:Measure Names]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[my:MsgTime:ok]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Intent:nk]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Lang:nk]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[qr:MsgTime:ok]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[tsc:MsgTime:qk]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[yr:MsgTime:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{EF286BFF-2E75-4243-89EB-CF1CF914CF61}' />
+    </window>
+    <window class='worksheet' name='Sheet 13'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checklist' param='[federated.1x8ciu8019nvox166i8p60d24rvk].[tdy:MsgTime:qk]' type='filter' values='database' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:ID:ok]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[yr:MsgTime:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A9DCC0D9-0AB5-4EE1-B98D-547EC8AF0DAB}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{A214F51C-6B41-4E3E-96F5-098747F206A0}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Banking Chatbot Dashboard'>
+      <viewpoints>
+        <viewpoint name='Sheet 10'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Sheet 12'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 13'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Sheet 2'>
+          <zoom type='entire-view' />
+          <selection-collection>
+            <tuple-selection>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields>
+                      <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[tdy:MsgTime:qk]</field>
+                    </x-fields>
+                    <y-fields>
+                      <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[__tableau_internal_object_id__].[cnt:Product_Chats_B0E9A8E87752431498A2A4B04385C44A:qk]</field>
+                    </y-fields>
+                  </pane-descriptor>
+                  <columns>
+                    <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[__tableau_internal_object_id__].[cnt:Product_Chats_B0E9A8E87752431498A2A4B04385C44A:qk]</field>
+                    <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[tdy:MsgTime:qk]</field>
+                    <field>[federated.0uhgnk103r0idc143jqui0nm0w69].[__tableau_internal_object_id__].[cnt:General_Chats_55806F907BF242DBB980A367C83FB0DA:qk]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>5</value>
+                  <value>#2023-06-07 00:00:00#</value>
+                  <value>6</value>
+                </tuple>
+              </tuple-reference>
+            </tuple-selection>
+          </selection-collection>
+        </viewpoint>
+        <viewpoint name='Sheet 3'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 6'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 7'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.0uhgnk103r0idc143jqui0nm0w69].[none:Lang:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Sheet 8'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 9'>
+          <zoom type='fit-width' />
+          <floating-toolbar-visibility value='1' />
+        </viewpoint>
+      </viewpoints>
+      <active id='43' />
+      <device-preview visible='true' />
+      <simple-id uuid='{5D8C572B-6C95-4F00-9612-DF4E77CA2BEA}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:ID:ok]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Product:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{DC63E96F-6782-4A32-8209-C07DB3772CB7}' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160' />
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0uhgnk103r0idc143jqui0nm0w69].[none:Intent:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{4774E9EF-7086-4811-B51B-DC950D28F4FD}' />
+    </window>
+    <window class='worksheet' name='Sheet 7'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0uhgnk103r0idc143jqui0nm0w69].[none:Lang:nk]' type='color' />
+            <card param='[federated.0uhgnk103r0idc143jqui0nm0w69].[cnt:Lang:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0uhgnk103r0idc143jqui0nm0w69].[none:ID:ok]</field>
+            <field>[federated.0uhgnk103r0idc143jqui0nm0w69].[none:Lang:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3C0BF92E-396C-4BBE-9303-303BF65C025B}' />
+    </window>
+    <window class='worksheet' name='Sheet 8'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checklist' param='[federated.1x8ciu8019nvox166i8p60d24rvk].[tdy:MsgTime:qk]' type='filter' values='database' />
+            <card param='[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Product_Type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight field='[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Product_Type:nk]'>
+          <color-one-way>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Calculation_1055548937142284:qk]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Calculation_15973722069299285:qk]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Product_Type:nk]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[yr:MsgTime:ok]</field>
+          </color-one-way>
+          <bucket-selection>
+            <bucket>&quot;fixed_deposits&quot;</bucket>
+            <bucket>&quot;savings&quot;</bucket>
+          </bucket-selection>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3B8001FE-23EE-4461-8AD9-29DDCE375C50}' />
+    </window>
+    <window class='worksheet' name='Sheet 9'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160' />
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0uhgnk103r0idc143jqui0nm0w69].[yr:MsgTime:ok]</field>
+          </color-one-way>
+        </highlight>
+        <floating-toolbar-visibility value='1' />
+      </viewpoint>
+      <simple-id uuid='{85CB5F7E-7D74-42C5-B9DB-E89EC6FA24BA}' />
+    </window>
+    <window class='worksheet' name='Sheet 10'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0uhgnk103r0idc143jqui0nm0w69].[none:ID:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1AAC63F6-914C-40B3-8A38-9145AFA8D7E8}' />
+    </window>
+    <window class='worksheet' name='Sheet 12'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160' />
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:ID:ok]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Intent:nk]</field>
+            <field>[federated.1x8ciu8019nvox166i8p60d24rvk].[none:Product:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{22146CAE-4EAE-4806-A70E-C4F37100BADD}' />
+    </window>
+  </windows>
+</workbook>
